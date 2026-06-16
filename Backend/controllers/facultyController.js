@@ -1,5 +1,5 @@
 const Faculty = require('../models/Faculty');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 exports.createFaculty = async (req, res) => {
   try {
