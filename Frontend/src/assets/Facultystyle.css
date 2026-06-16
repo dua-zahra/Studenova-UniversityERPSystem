@@ -1,0 +1,108 @@
+/* === Profile Image === */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* === Faculty Dashboard Theme === */
+:root {
+  --primary-color: #4a3c8c;
+  --secondary-color: #a594d4;
+  --accent-color: #d9cfff;
+  --text-color: #2e2e3a;
+  --white: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.faculty-dashboard {
+  background-color: var(--accent-color);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+/* Cards */
+.faculty-dashboard .ant-card {
+  border-radius: 14px !important;
+  box-shadow: 0 4px 12px var(--shadow-color) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.faculty-dashboard .ant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+/* Stat Cards */
+.faculty-dashboard .stat-card {
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.faculty-dashboard .stat-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Buttons */
+.faculty-dashboard .ant-btn {
+  background-color: var(--secondary-color) !important;
+  color: var(--white) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.faculty-dashboard .ant-btn:hover {
+  background-color: var(--primary-color) !important;
+}
+
+/* Tags */
+.faculty-dashboard .ant-tag {
+  background-color: var(--secondary-color) !important;
+  color: var(--white) !important;
+  font-weight: 500;
+  border-radius: 6px !important;
+}
+
+/* Progress Bars */
+.faculty-dashboard .ant-progress-bg {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)) !important;
+}
+
+/* Typography */
+.faculty-dashboard .ant-typography,
+.faculty-dashboard .ant-statistic-content {
+  color: var(--text-color) !important;
+}
+
+/* Bell Icon */
+.faculty-dashboard .bell-icon {
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faculty-dashboard .stat-card {
+    margin-bottom: 16px;
+  }
+}

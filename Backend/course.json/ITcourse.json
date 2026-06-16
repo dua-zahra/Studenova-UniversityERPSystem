@@ -1,0 +1,85 @@
+{
+  "degreeLevel": "Undergraduate",
+  "department": "information technology",
+  "semesters": [
+    {
+      "semesterNumber": 1,
+      "courses": [
+        { "courseName": "Introduction to Information Technology", "courseCode": "IT101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Introduction to Programming", "courseCode": "IT102", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Calculus I", "courseCode": "MATH101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "English Composition", "courseCode": "ENG101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Physics I", "courseCode": "PHY101", "creditHrs": 4, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 2,
+      "courses": [
+        { "courseName": "Data Structures", "courseCode": "IT201", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Calculus II", "courseCode": "MATH102", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Communication Skills", "courseCode": "COM101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Digital Logic", "courseCode": "IT202", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Computer Organization", "courseCode": "IT203", "creditHrs": 4, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 3,
+      "courses": [
+        { "courseName": "Database Systems", "courseCode": "IT301", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Networking Fundamentals", "courseCode": "IT302", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Operating Systems", "courseCode": "IT303", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Discrete Mathematics", "courseCode": "MATH202", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Statistics", "courseCode": "STAT201", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 4,
+      "courses": [
+        { "courseName": "Web Development", "courseCode": "IT401", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Information Security", "courseCode": "IT402", "creditHrs": 4, "type": "Core" },
+        { "courseName": "System Analysis and Design", "courseCode": "IT403", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Human Computer Interaction", "courseCode": "IT404", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Environmental Science", "courseCode": "ENV101", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 5,
+      "courses": [
+        { "courseName": "Mobile Application Development", "courseCode": "IT501", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Cloud Computing", "courseCode": "IT502", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Project Management", "courseCode": "MGMT301", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Technical Writing", "courseCode": "ENG201", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Artificial Intelligence", "courseCode": "CS402", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 6,
+      "courses": [
+        { "courseName": "Advanced Networking", "courseCode": "IT503", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Cyber Security", "courseCode": "IT504", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Data Analytics", "courseCode": "IT505", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Ethics in IT", "courseCode": "PHIL101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Entrepreneurship", "courseCode": "MGMT302", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 7,
+      "courses": [
+        { "courseName": "Information Systems Management", "courseCode": "IT601", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Final Year Project I", "courseCode": "IT602", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Cloud Infrastructure", "courseCode": "IT603", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Big Data Technologies", "courseCode": "IT604", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Freelancing", "courseCode": "IT605", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 8,
+      "courses": [
+        { "courseName": "Final Year Project II", "courseCode": "IT701", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Professional Practices", "courseCode": "IT702", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Deep Learning", "courseCode": "CS602", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Language Course", "courseCode": "IT703", "creditHrs": 2, "type": "Elective" }
+      ]
+    }
+  ]
+}

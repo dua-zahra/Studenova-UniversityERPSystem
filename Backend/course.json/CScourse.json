@@ -1,0 +1,85 @@
+{
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "semesters": [
+    {
+      "semesterNumber": 1,
+      "courses": [
+        { "courseName": "Introduction to Programming", "courseCode": "CS101", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Calculus I", "courseCode": "MATH101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Physics I", "courseCode": "PHY101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "English Composition", "courseCode": "ENG101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Introduction to IT", "courseCode": "IT101", "creditHrs": 4, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 2,
+      "courses": [
+        { "courseName": "Data Structures", "courseCode": "CS102", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Calculus II", "courseCode": "MATH102", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Physics II", "courseCode": "PHY102", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Communication Skills", "courseCode": "COM101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Digital Logic", "courseCode": "CS103", "creditHrs": 3, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 3,
+      "courses": [
+        { "courseName": "Algorithms", "courseCode": "CS201", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Linear Algebra", "courseCode": "MATH201", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Computer Organization", "courseCode": "CS202", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Discrete Mathematics", "courseCode": "MATH202", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Statistics", "courseCode": "STAT201", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 4,
+      "courses": [
+        { "courseName": "Operating Systems", "courseCode": "CS301", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Database Systems", "courseCode": "CS302", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Computer Networks", "courseCode": "CS303", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Software Engineering", "courseCode": "CS304", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Environmental Science", "courseCode": "ENV101", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 5,
+      "courses": [
+        { "courseName": "Theory of Computation", "courseCode": "CS401", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Artificial Intelligence", "courseCode": "CS402", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Human Computer Interaction", "courseCode": "CS403", "creditHrs": 2, "type": "Elective" },
+        { "courseName": "Web Development", "courseCode": "CS404", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Technical Writing", "courseCode": "ENG201", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 6,
+      "courses": [
+        { "courseName": "Machine Learning", "courseCode": "CS405", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Mobile Application Development", "courseCode": "CS406", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Cloud Computing", "courseCode": "CS407", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Technoprenership", "courseCode": "MGMT301", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Ethics in IT", "courseCode": "PHIL101", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 7,
+      "courses": [
+        { "courseName": "Security & Cryptography", "courseCode": "CS501", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Final Year Project I", "courseCode": "CS502", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Parallel and distributing computing", "courseCode": "CS503", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Compiler construction", "courseCode": "CS504", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Freelancing", "courseCode": "CS505", "creditHrs": 3, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 8,
+      "courses": [
+        { "courseName": "Final Year Project II", "courseCode": "CS601", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Deep Learning", "courseCode": "CS602", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Professional Practicies", "courseCode": "CS603", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Language Cousre", "courseCode": "CS604", "creditHrs": 2, "type": "Elective" }
+      ]
+    }
+  ]
+}

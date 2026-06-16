@@ -1,0 +1,1590 @@
+[{
+  "_id": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "batchName": "BSCS-FALL-2025",
+  "degreeLevel": "undergraduate",
+  "department": {
+    "$oid": "685024af7f9cdd6f25e76d2d"
+  },
+  "departmentName": "Computer Science",
+  "departmentCode": "BSCS",
+  "enrollmentYear": 2025,
+  "graduationYear": 2029,
+  "semesterStart": "fall",
+  "totalSemesters": 8,
+  "currentSemester": 1,
+  "admissionStartDate": {
+    "$date": "2025-06-18T00:00:00.000Z"
+  },
+  "admissionEndDate": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "name": "Section A",
+      "students": [
+        {
+          "studentId": "BSCS-F25-001",
+          "firstName": "mehreen",
+          "lastName": "khalid",
+          "photo": "uploads\\photo-1757443584646-669366457.jpg",
+          "universityEmail": "bscs-f25-001@university.edu.pk",
+          "contact": "03243567845",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:46:25.109Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-003",
+          "firstName": "Qamar",
+          "lastName": "Hasan",
+          "photo": "uploads\\photo-1757443967179-231437933.jpg",
+          "universityEmail": "bscs-f25-003@university.edu.pk",
+          "contact": "03214533888",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:52:47.624Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-005",
+          "firstName": "sehar",
+          "lastName": "syed",
+          "photo": "uploads\\photo-1757444161370-312996531.jpg",
+          "universityEmail": "bscs-f25-005@university.edu.pk",
+          "contact": "03234434346",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:56:01.888Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-007",
+          "firstName": "doaa",
+          "lastName": "asif",
+          "photo": "uploads\\photo-1757444423548-800998584.jpg",
+          "universityEmail": "bscs-f25-007@university.edu.pk",
+          "contact": "03246712003",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:00:23.957Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-009",
+          "firstName": "Rehman",
+          "lastName": "khaleel",
+          "photo": "uploads\\photo-1757444847023-51185921.jpg",
+          "universityEmail": "bscs-f25-009@university.edu.pk",
+          "contact": "03234342349",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:07:28.261Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-011",
+          "firstName": "deema",
+          "lastName": "khan",
+          "photo": "uploads\\photo-1757445057924-433617349.jpg",
+          "universityEmail": "bscs-f25-011@university.edu.pk",
+          "contact": "03234342389",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:10:59.003Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-013",
+          "firstName": "hamad",
+          "lastName": "asif",
+          "photo": "uploads\\photo-1757445280566-968869241.jpg",
+          "universityEmail": "bscs-f25-013@university.edu.pk",
+          "contact": "03334342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:14:41.747Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-015",
+          "firstName": "wasay",
+          "lastName": "khaliq",
+          "photo": "uploads\\photo-1757445459783-570181333.jpg",
+          "universityEmail": "bscs-f25-015@university.edu.pk",
+          "contact": "03294342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:17:41.022Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-017",
+          "firstName": "hina",
+          "lastName": "fawad",
+          "photo": "uploads\\photo-1757445654030-925509993.jpg",
+          "universityEmail": "bscs-f25-017@university.edu.pk",
+          "contact": "03233342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:20:55.093Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-019",
+          "firstName": "tahir",
+          "lastName": "ahmad",
+          "photo": "uploads\\photo-1757445830441-698832382.jpg",
+          "universityEmail": "bscs-f25-019@university.edu.pk",
+          "contact": "03234362345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:23:51.611Z"
+          },
+          "status": "active"
+        }
+      ],
+      "currentStrength": 10
+    },
+    {
+      "name": "Section B",
+      "students": [
+        {
+          "studentId": "BSCS-F25-002",
+          "firstName": "Ahmar",
+          "lastName": "ali",
+          "photo": "uploads\\photo-1757443678945-917199056.jpg",
+          "universityEmail": "bscs-f25-002@university.edu.pk",
+          "contact": "03234232123",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:47:59.342Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-004",
+          "firstName": "Fatima",
+          "lastName": "sohail",
+          "photo": "uploads\\photo-1757444064756-742957929.jpg",
+          "universityEmail": "bscs-f25-004@university.edu.pk",
+          "contact": "03214533213",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:54:25.160Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-006",
+          "firstName": "sonia",
+          "lastName": "qamar",
+          "photo": "uploads\\photo-1757444341246-829210731.jpg",
+          "universityEmail": "bscs-f25-006@university.edu.pk",
+          "contact": "03214533888",
+          "enrollmentDate": {
+            "$date": "2025-09-09T18:59:01.779Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-008",
+          "firstName": "mustafa",
+          "lastName": "ahmad",
+          "photo": "uploads\\photo-1757444588369-332204700.jpg",
+          "universityEmail": "bscs-f25-008@university.edu.pk",
+          "contact": "03234342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:03:08.821Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-010",
+          "firstName": "waqar",
+          "lastName": "sajjad",
+          "photo": "uploads\\photo-1757444960156-389478399.jpg",
+          "universityEmail": "bscs-f25-010@university.edu.pk",
+          "contact": "03234342388",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:09:21.336Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-012",
+          "firstName": "reena",
+          "lastName": "majeed",
+          "photo": "uploads\\photo-1757445180985-686282622.jpg",
+          "universityEmail": "bscs-f25-012@university.edu.pk",
+          "contact": "03234342355",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:13:02.057Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-014",
+          "firstName": "momina",
+          "lastName": "ahmad",
+          "photo": "uploads\\photo-1757445368281-978559515.jpg",
+          "universityEmail": "bscs-f25-014@university.edu.pk",
+          "contact": "03234342342",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:16:09.363Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-016",
+          "firstName": "arsalan",
+          "lastName": "mansoor",
+          "photo": "uploads\\photo-1757445576658-461476729.jpg",
+          "universityEmail": "bscs-f25-016@university.edu.pk",
+          "contact": "03254342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:19:37.806Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-018",
+          "firstName": "komal",
+          "lastName": "rizwan",
+          "photo": "uploads\\photo-1757445735620-510743883.jpg",
+          "universityEmail": "bscs-f25-018@university.edu.pk",
+          "contact": "03237342345",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:22:16.673Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F25-020",
+          "firstName": "rayan",
+          "lastName": "basit",
+          "photo": "uploads\\photo-1757445937100-944923977.jpg",
+          "universityEmail": "bscs-f25-020@university.edu.pk",
+          "contact": "03423215467",
+          "enrollmentDate": {
+            "$date": "2025-09-09T19:25:38.181Z"
+          },
+          "status": "active"
+        }
+      ],
+      "currentStrength": 10
+    }
+  ],
+  "totalStudentsEnrolled": 20,
+  "statusCounts": {
+    "active": 20,
+    "inactive": 0,
+    "dropped": 0,
+    "graduated": 0,
+    "suspended": 0
+  },
+  "totalSections": 2,
+  "sectionRules": {
+    "maxStudents": 20,
+    "minStudents": 15,
+    "assignmentMethod": "enrollmentDate"
+  },
+  "isActive": true,
+  "enrollmentStatus": "open",
+  "graduationStatus": "pending",
+  "academicCalendar": [
+    {
+      "semester": 1,
+      "name": "Fall 2025",
+      "startDate": {
+        "$date": "2025-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2025-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "name": "Spring 2026",
+      "startDate": {
+        "$date": "2026-01-11T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-02-15T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-03-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-05-14T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2026-05-29T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "name": "Fall 2026",
+      "startDate": {
+        "$date": "2026-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2026-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-01-10T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "name": "Spring 2027",
+      "startDate": {
+        "$date": "2027-01-10T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-02-14T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-02-28T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-05-13T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2027-05-28T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 5,
+      "name": "Fall 2027",
+      "startDate": {
+        "$date": "2027-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2027-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-01-09T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 6,
+      "name": "Spring 2028",
+      "startDate": {
+        "$date": "2028-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2028-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2028-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2028-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2028-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 7,
+      "name": "Fall 2028",
+      "startDate": {
+        "$date": "2028-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2028-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2028-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2028-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2028-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2028-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2028-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2029-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 8,
+      "name": "Spring 2029",
+      "startDate": {
+        "$date": "2029-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2029-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2029-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2029-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2029-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2029-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2029-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2029-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-09-09T18:44:00.386Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-29T21:28:18.908Z"
+  },
+  "__v": 30
+},
+{
+  "_id": {
+    "$oid": "68ea9f746eb2bbd7e12a9e91"
+  },
+  "batchName": "BSCS-SPRING-2024",
+  "degreeLevel": "undergraduate",
+  "department": {
+    "$oid": "685024af7f9cdd6f25e76d2d"
+  },
+  "departmentName": "Computer Science",
+  "departmentCode": "BSCS",
+  "enrollmentYear": 2024,
+  "graduationYear": 2028,
+  "semesterStart": "spring",
+  "totalSemesters": 8,
+  "currentSemester": 4,
+  "admissionStartDate": {
+    "$date": "2024-01-14T00:00:00.000Z"
+  },
+  "admissionEndDate": {
+    "$date": "2025-11-17T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "name": "Section A",
+      "students": [
+        {
+          "studentId": "BSCS-S24-001",
+          "firstName": "rohail",
+          "lastName": "shehzad",
+          "photo": "uploads\\photo-1760209998646-500645734.jpg",
+          "universityEmail": "bscs-s24-001@university.edu.pk",
+          "contact": "03219933400",
+          "enrollmentDate": {
+            "$date": "2025-10-11T19:13:19.099Z"
+          },
+          "status": "active"
+        }
+      ],
+      "currentStrength": 1
+    }
+  ],
+  "totalStudentsEnrolled": 1,
+  "statusCounts": {
+    "active": 1,
+    "inactive": 0,
+    "dropped": 0,
+    "graduated": 0,
+    "suspended": 0
+  },
+  "totalSections": 1,
+  "sectionRules": {
+    "maxStudents": 20,
+    "minStudents": 15,
+    "assignmentMethod": "enrollmentDate"
+  },
+  "isActive": true,
+  "enrollmentStatus": "open",
+  "graduationStatus": "pending",
+  "academicCalendar": [
+    {
+      "semester": 1,
+      "name": "Spring 2024",
+      "startDate": {
+        "$date": "2024-03-13T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2024-08-14T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2024-04-17T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2024-05-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2024-07-31T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2024-08-14T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2024-08-15T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2024-08-18T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "name": "Fall 2024",
+      "startDate": {
+        "$date": "2024-08-18T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2024-12-19T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2024-09-22T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2024-10-06T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2024-12-05T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2024-12-19T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2024-12-20T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2025-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "name": "Spring 2025",
+      "startDate": {
+        "$date": "2025-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2025-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2025-08-17T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "name": "Fall 2025",
+      "startDate": {
+        "$date": "2025-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2025-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 5,
+      "name": "Spring 2026",
+      "startDate": {
+        "$date": "2026-01-11T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-02-15T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-03-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-05-14T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2026-05-29T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 6,
+      "name": "Fall 2026",
+      "startDate": {
+        "$date": "2026-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2026-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-01-10T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 7,
+      "name": "Spring 2027",
+      "startDate": {
+        "$date": "2027-01-10T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-02-14T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-02-28T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-05-13T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2027-05-28T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 8,
+      "name": "Fall 2027",
+      "startDate": {
+        "$date": "2027-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2027-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-01-09T21:00:00.000Z"
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-11T18:18:29.721Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-27T13:41:40.735Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68ea9f836eb2bbd7e12a9ec5"
+  },
+  "batchName": "BSCS-FALL-2024",
+  "degreeLevel": "undergraduate",
+  "department": {
+    "$oid": "685024af7f9cdd6f25e76d2d"
+  },
+  "departmentName": "Computer Science",
+  "departmentCode": "BSCS",
+  "enrollmentYear": 2024,
+  "graduationYear": 2028,
+  "semesterStart": "fall",
+  "totalSemesters": 8,
+  "currentSemester": 3,
+  "admissionStartDate": {
+    "$date": "2024-06-18T00:00:00.000Z"
+  },
+  "admissionEndDate": {
+    "$date": "2025-11-21T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "name": "Section A",
+      "students": [
+        {
+          "studentId": "BSCS-F24-001",
+          "firstName": "saba",
+          "lastName": "rameez",
+          "photo": "uploads\\photo-1760209324749-12368163.jpg",
+          "universityEmail": "bscs-f24-001@university.edu.pk",
+          "contact": "03219933458",
+          "enrollmentDate": {
+            "$date": "2025-10-11T19:02:07.595Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-F24-002",
+          "firstName": "Meera",
+          "lastName": "Majeed",
+          "photo": "uploads\\photo-1760209492371-45648971.jpg",
+          "universityEmail": "bscs-f24-002@university.edu.pk",
+          "contact": "03456734546",
+          "enrollmentDate": {
+            "$date": "2025-10-11T19:04:52.839Z"
+          },
+          "status": "active"
+        }
+      ],
+      "currentStrength": 2
+    }
+  ],
+  "totalStudentsEnrolled": 2,
+  "statusCounts": {
+    "active": 2,
+    "inactive": 0,
+    "dropped": 0,
+    "graduated": 0,
+    "suspended": 0
+  },
+  "totalSections": 1,
+  "sectionRules": {
+    "maxStudents": 20,
+    "minStudents": 15,
+    "assignmentMethod": "enrollmentDate"
+  },
+  "isActive": true,
+  "enrollmentStatus": "open",
+  "graduationStatus": "pending",
+  "academicCalendar": [
+    {
+      "semester": 1,
+      "name": "Fall 2024",
+      "startDate": {
+        "$date": "2024-08-18T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2024-12-19T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2024-09-22T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2024-10-06T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2024-12-05T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2024-12-19T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2024-12-20T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2025-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "name": "Spring 2025",
+      "startDate": {
+        "$date": "2025-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2025-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2025-08-17T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "name": "Fall 2025",
+      "startDate": {
+        "$date": "2025-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2025-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "name": "Spring 2026",
+      "startDate": {
+        "$date": "2026-01-11T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-02-15T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-03-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-05-14T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2026-05-29T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 5,
+      "name": "Fall 2026",
+      "startDate": {
+        "$date": "2026-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2026-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-01-10T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 6,
+      "name": "Spring 2027",
+      "startDate": {
+        "$date": "2027-01-10T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-02-14T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-02-28T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-05-13T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2027-05-28T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 7,
+      "name": "Fall 2027",
+      "startDate": {
+        "$date": "2027-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2027-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-01-09T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 8,
+      "name": "Spring 2028",
+      "startDate": {
+        "$date": "2028-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2028-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2028-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2028-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2028-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-11T18:18:43.051Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-11T18:18:43.051Z"
+  },
+  "__v": 6
+},
+{
+  "_id": {
+    "$oid": "68ea9f8a6eb2bbd7e12a9ef9"
+  },
+  "batchName": "BSCS-SPRING-2025",
+  "degreeLevel": "undergraduate",
+  "department": {
+    "$oid": "685024af7f9cdd6f25e76d2d"
+  },
+  "departmentName": "Computer Science",
+  "departmentCode": "BSCS",
+  "enrollmentYear": 2025,
+  "graduationYear": 2029,
+  "semesterStart": "spring",
+  "totalSemesters": 8,
+  "currentSemester": 2,
+  "admissionStartDate": {
+    "$date": "2025-01-14T00:00:00.000Z"
+  },
+  "admissionEndDate": {
+    "$date": "2025-11-17T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "name": "Section A",
+      "students": [
+        {
+          "studentId": "BSCS-S25-001",
+          "firstName": "samar",
+          "lastName": "walid",
+          "photo": "uploads\\photo-1760210115188-503820032.jpg",
+          "universityEmail": "bscs-s25-001@university.edu.pk",
+          "contact": "03219939999",
+          "enrollmentDate": {
+            "$date": "2025-10-11T19:15:15.635Z"
+          },
+          "status": "active"
+        },
+        {
+          "studentId": "BSCS-S25-002",
+          "firstName": "faria",
+          "lastName": "sultan",
+          "photo": "uploads\\photo-1761571548282-159079598.jpg",
+          "universityEmail": "bscs-s25-002@university.edu.pk",
+          "contact": "03453423875",
+          "enrollmentDate": {
+            "$date": "2025-10-27T13:25:48.808Z"
+          },
+          "status": "active"
+        }
+      ],
+      "currentStrength": 2
+    }
+  ],
+  "totalStudentsEnrolled": 2,
+  "statusCounts": {
+    "active": 2,
+    "inactive": 0,
+    "dropped": 0,
+    "graduated": 0,
+    "suspended": 0
+  },
+  "totalSections": 1,
+  "sectionRules": {
+    "maxStudents": 20,
+    "minStudents": 15,
+    "assignmentMethod": "enrollmentDate"
+  },
+  "isActive": true,
+  "enrollmentStatus": "open",
+  "graduationStatus": "pending",
+  "academicCalendar": [
+    {
+      "semester": 1,
+      "name": "Spring 2025",
+      "startDate": {
+        "$date": "2025-03-13T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-08-14T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-04-17T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-05-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-07-31T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-08-14T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2025-08-15T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2025-08-17T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 2,
+      "name": "Fall 2025",
+      "startDate": {
+        "$date": "2025-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2025-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2025-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2025-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2025-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2025-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 3,
+      "name": "Spring 2026",
+      "startDate": {
+        "$date": "2026-01-11T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-02-15T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-03-01T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-05-14T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-05-28T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2026-05-29T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2026-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 4,
+      "name": "Fall 2026",
+      "startDate": {
+        "$date": "2026-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2026-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2026-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2026-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2026-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2026-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-01-10T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 5,
+      "name": "Spring 2027",
+      "startDate": {
+        "$date": "2027-01-10T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-02-14T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-02-28T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-05-13T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-05-27T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2027-05-28T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2027-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 6,
+      "name": "Fall 2027",
+      "startDate": {
+        "$date": "2027-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2027-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2027-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2027-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2027-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2027-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-01-09T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 7,
+      "name": "Spring 2028",
+      "startDate": {
+        "$date": "2028-01-09T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2028-02-13T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2028-02-27T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2028-05-15T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2028-05-29T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Summer Break",
+          "startDate": {
+            "$date": "2028-05-30T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2028-08-16T21:00:00.000Z"
+          }
+        }
+      ]
+    },
+    {
+      "semester": 8,
+      "name": "Fall 2028",
+      "startDate": {
+        "$date": "2028-08-17T21:00:00.000Z"
+      },
+      "endDate": {
+        "$date": "2028-12-21T21:00:00.000Z"
+      },
+      "midtermStart": {
+        "$date": "2028-09-21T21:00:00.000Z"
+      },
+      "midtermEnd": {
+        "$date": "2028-10-05T21:00:00.000Z"
+      },
+      "finalStart": {
+        "$date": "2028-12-07T21:00:00.000Z"
+      },
+      "finalEnd": {
+        "$date": "2028-12-21T21:00:00.000Z"
+      },
+      "breaks": [
+        {
+          "name": "Winter Break",
+          "startDate": {
+            "$date": "2028-12-22T21:00:00.000Z"
+          },
+          "endDate": {
+            "$date": "2029-01-08T21:00:00.000Z"
+          }
+        }
+      ]
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-10-11T18:18:50.690Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-27T13:25:48.815Z"
+  },
+  "__v": 2
+}]

@@ -1,0 +1,187 @@
+// ✅ FacultySidebar.js (final clean - no name below profile, fixed profile pic loading)
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTachometerAlt,
+  faBook,
+  faClipboardCheck,
+  faCalendarAlt,
+  faChartLine,
+  faBell,
+  faSignOutAlt,
+  faBars,
+  faTasks, // ✅ added task manager icon
+} from "@fortawesome/free-solid-svg-icons";
+import { Button } from "react-bootstrap";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+
+import FacultyDashboard from "./FacultyDashboard";
+import FacultyCourses from "../../pages/Faculty/FacultyCourses";
+import FacultyAttendance from "../../pages/Faculty/FacultyAttendance";
+import FacultyNotifications from "../../pages/Faculty/FacultyNotifications";
+import FacultySchedule from "../../pages/Faculty/FacultySchedule";
+import FacultyResultsPage from "../../pages/Faculty/FacultyResultsPage";
+import FacultyTaskManager from "../../pages/Faculty/FacultyTaskManager"; // ✅ new page
+
+import MaleAvatar from "../../assets/Male-avatar.png";
+import FemaleAvatar from "../../assets/Female-avatar.png";
+import "../../assets/Facultystyle.css";
+
+const FacultySidebar = () => {
+  const { logout } = useAuth();
+  const navigate = useNavigate();
+
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [activeModule, setActiveModule] = useState("Dashboard");
+
+  // ✅ faculty info
+  const [faculty, setFaculty] = useState(null);
+
+  // ---------------- NEW CODE ----------------
+  // Load faculty info from localStorage first, fallback to backend if needed
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser?.role === "faculty") {
+      // use localStorage data immediately
+      setFaculty(storedUser);
+
+      // fetch latest data from backend
+      axios
+        .get(`http://localhost:65000/api/faculty/email/${storedUser.universityEmail}`)
+        .then((res) => setFaculty(res.data))
+        .catch(() => {
+          /* fallback already set from localStorage */
+        });
+    }
+  }, []);
+
+  // ✅ Profile pic fallback (working logic)
+  const imageBasePath = "http://localhost:65000/uploads/";
+
+ const profileImage = faculty?.profilePic
+  ? `${imageBasePath}${faculty.profilePic}` 
+  : faculty?.photo
+  ? `${imageBasePath}${faculty.photo}`       
+  : faculty?.gender?.toLowerCase() === "female"
+  ? FemaleAvatar
+  : MaleAvatar;
+
+  // Responsive handling
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setIsOpen(!mobile);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
+
+  const menuItems = [
+    { name: "Dashboard", icon: faTachometerAlt },
+    { name: "My Courses", icon: faBook },
+    { name: "Attendance", icon: faClipboardCheck },
+    { name: "Schedule", icon: faCalendarAlt },
+    { name: "Results", icon: faChartLine },
+    { name: "Notifications", icon: faBell },
+    { name: "Task Manager", icon: faTasks }, // ✅ new menu item
+  ];
+
+  return (
+    <div className="d-flex admin-layout" style={{ height: "100vh", overflow: "hidden" }}>
+      <ToastContainer position="top-right" autoClose={3000} />
+
+      {!isOpen && (
+        <button className="main-toggle-btn" onClick={() => setIsOpen(true)}>
+          <FontAwesomeIcon icon={faBars} style={{ color: "#8a7aa8" }} />
+        </button>
+      )}
+
+      {/* Sidebar */}
+      <aside className={`sidebar custom-scrollbar p-3 d-flex flex-column ${isOpen ? "open" : "collapsed"}`}>
+        <div className="d-flex justify-content-between align-items-center">
+          <button className="sidebar-toggle-btn" onClick={() => setIsOpen(false)}>
+            <FontAwesomeIcon icon={faBars} style={{ color: "#8a7aa8" }} />
+          </button>
+          <div style={{ width: "40px" }}></div>
+        </div>
+
+        {/* Profile */}
+        <div className="mt-4 text-center position-relative">
+          <div className="profile-container d-inline-block position-relative">
+           <img
+  src={profileImage}
+  alt="Faculty"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = MaleAvatar;
+  }}
+  className="profile-img"
+/>
+
+          </div>
+          {/* only showing avatar & email */}
+          <p className="small text-truncate fw-bold text-white">
+            {faculty?.universityEmail || ""}
+          </p>
+        </div>
+
+        {/* Menu */}
+        <nav className="mt-4 flex-grow-1 menu-container">
+          <ul className="list-unstyled menu-list">
+            {menuItems.map((item, index) => (
+              <li
+                key={index}
+                className={`menu-item text-white fw-bold ${activeModule === item.name ? "active-item" : ""}`}
+                onClick={() => setActiveModule(item.name)}
+              >
+                <FontAwesomeIcon 
+                  icon={item.icon} 
+                  className="me-3" 
+                  style={{ color: "#8a7aa8" }} 
+                />
+                <span>{item.name}</span>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Logout */}
+        <div className="mt-auto pt-3 text-center">
+          <Button onClick={handleLogout} className="sidebar-logout-btn">
+            <FontAwesomeIcon 
+              icon={faSignOutAlt} 
+              className="me-2" 
+              style={{ color: "#8a7aa8" }} 
+            />
+            Logout
+          </Button>
+        </div>
+      </aside>
+
+      {/* Main Content */}
+      <div className={`main-content flex-grow-1 p-3  ${isOpen ? "" : "collapsed"}`}>
+        {activeModule === "Dashboard" && <FacultyDashboard faculty={faculty} />}
+        {activeModule === "My Courses" && <FacultyCourses />}
+        {activeModule === "Attendance" && <FacultyAttendance facultyId={faculty?._id} />}
+        {activeModule === "Schedule" && <FacultySchedule />}
+        {activeModule === "Results" && <FacultyResultsPage />}
+        {activeModule === "Notifications" && <FacultyNotifications />}
+        {activeModule === "Task Manager" && <FacultyTaskManager />}
+      </div>
+    </div>
+  );
+};
+
+export default FacultySidebar;

@@ -1,0 +1,7067 @@
+[{
+  "_id": {
+    "$oid": "68c07601833d05a82c71e968"
+  },
+  "studentId": "BSCS-F25-001",
+  "universityEmail": "bscs-f25-001@university.edu.pk",
+  "username": "BSCS-F25-001",
+  "password": "$2b$12$g1AltfQjJgOLUZ7qVhflguz7/6PEH7Zi6b3sOPgg8QpikFbMn0yJy",
+  "firstName": "mehreen",
+  "lastName": "khalid",
+  "fatherFirstName": "khalid",
+  "fatherLastName": "majeed",
+  "gender": "Female",
+  "cnic": "0324578947360",
+  "birthDate": {
+    "$date": "2002-04-03T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "mehreenkhalid@gmail.com",
+  "contactNumber": "03243567845",
+  "emergencyContact": "03234321234",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 50,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757443584663-499004973.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757443584664-764260346.jpg"
+  },
+  "photoPath": "uploads\\photo-1757443584646-669366457.jpg",
+  "domicilePath": "uploads\\domicile-1757443584662-809768432.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T18:46:25.074Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.498Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c0765f833d05a82c71ea05"
+  },
+  "studentId": "BSCS-F25-002",
+  "universityEmail": "bscs-f25-002@university.edu.pk",
+  "username": "BSCS-F25-002",
+  "password": "$2b$12$CS50RvuLwwLwfSy0xw/rwulzbOXMqljPrBTdznybu6V6Zv6kRTwfC",
+  "firstName": "Ahmar",
+  "lastName": "ali",
+  "fatherFirstName": "ali",
+  "fatherLastName": "majeed",
+  "gender": "Male",
+  "cnic": "0323423432123",
+  "birthDate": {
+    "$date": "2002-04-03T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "Ahmar@gmail.com",
+  "contactNumber": "03234232123",
+  "emergencyContact": "03212123434",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 50,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757443678947-425080437.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757443678948-112352713.jpg"
+  },
+  "photoPath": "uploads\\photo-1757443678945-917199056.jpg",
+  "domicilePath": "uploads\\domicile-1757443678947-681956831.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T18:47:59.327Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.523Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c0777f833d05a82c71eb3e"
+  },
+  "studentId": "BSCS-F25-003",
+  "universityEmail": "bscs-f25-003@university.edu.pk",
+  "username": "BSCS-F25-003",
+  "password": "$2b$12$n3PcYXLOcfOkFb285qrZ2.xaNg8vL2WqbEheYut6aSDHjk0jZiHM6",
+  "firstName": "Qamar",
+  "lastName": "Hasan",
+  "fatherFirstName": "hasan",
+  "fatherLastName": "Hasan",
+  "gender": "Male",
+  "cnic": "0323453234320",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "qamar@gmail.com",
+  "contactNumber": "03214533888",
+  "emergencyContact": "03929495967",
+  "address": "Lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757443967181-186729176.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757443967182-259818989.jpg"
+  },
+  "photoPath": "uploads\\photo-1757443967179-231437933.jpg",
+  "domicilePath": "uploads\\domicile-1757443967181-784857292.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T18:52:47.607Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.535Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c077e1833d05a82c71ebdb"
+  },
+  "studentId": "BSCS-F25-004",
+  "universityEmail": "bscs-f25-004@university.edu.pk",
+  "username": "BSCS-F25-004",
+  "password": "$2b$12$wDCcSZd0uR7tRuNZRXzPXejeL7IB5DhQTRbGMH2qw/EaiGIQ27x/i",
+  "firstName": "Fatima",
+  "lastName": "sohail",
+  "fatherFirstName": "ahmad",
+  "fatherLastName": "sohail",
+  "gender": "Female",
+  "cnic": "0324343234540",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "fatimasohail@gmail.com",
+  "contactNumber": "03214533213",
+  "emergencyContact": "03929495962",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 80,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444064759-868723299.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444064759-727425361.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444064756-742957929.jpg",
+  "domicilePath": "uploads\\domicile-1757444064758-340301832.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T18:54:25.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.544Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07841833d05a82c71ec78"
+  },
+  "studentId": "BSCS-F25-005",
+  "universityEmail": "bscs-f25-005@university.edu.pk",
+  "username": "BSCS-F25-005",
+  "password": "$2b$12$VnZjhFTGxeYOQWWhQn0nnOBz3vyjZcnQCKXyzRSafILZGmEHebM9m",
+  "firstName": "sehar",
+  "lastName": "syed",
+  "fatherFirstName": "syed",
+  "fatherLastName": "yaqoob",
+  "gender": "Female",
+  "cnic": "0324567382243",
+  "birthDate": {
+    "$date": "2002-02-03T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "sehar@gmail.com",
+  "contactNumber": "03234434346",
+  "emergencyContact": "03234434344",
+  "address": "Lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 79.98,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444161372-110662293.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444161373-460037796.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444161370-312996531.jpg",
+  "domicilePath": "uploads\\domicile-1757444161372-831499010.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T18:56:01.832Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.555Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c078f5833d05a82c71edad"
+  },
+  "studentId": "BSCS-F25-006",
+  "universityEmail": "bscs-f25-006@university.edu.pk",
+  "username": "BSCS-F25-006",
+  "password": "$2b$12$s4sXqUD.hDPfGY1Z6CmXJulKom0rFReF5s6qKuc5vOCA4rl.RcAVy",
+  "firstName": "sonia",
+  "lastName": "qamar",
+  "fatherFirstName": "qamar",
+  "fatherLastName": "hasan",
+  "gender": "Female",
+  "cnic": "0323453234325",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "soniaqamar@gmail.com",
+  "contactNumber": "03214533888",
+  "emergencyContact": "03929495967",
+  "address": "Lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 110,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444341249-26154606.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 100,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444341251-915847243.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444341246-829210731.jpg",
+  "domicilePath": "uploads\\domicile-1757444341249-436970388.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-09-09T18:59:01.728Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.566Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07947833d05a82c71ee4a"
+  },
+  "studentId": "BSCS-F25-007",
+  "universityEmail": "bscs-f25-007@university.edu.pk",
+  "username": "BSCS-F25-007",
+  "password": "$2b$12$D1IiNozJkcOBC6RLGOk4n.aNtDd9ym68Z.zOUw1uysPayEP3SzVRu",
+  "firstName": "doaa",
+  "lastName": "asif",
+  "fatherFirstName": "asif",
+  "fatherLastName": "asif",
+  "gender": "Female",
+  "cnic": "0323453234323",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "armeena.asif@gmail.com",
+  "contactNumber": "03246712003",
+  "emergencyContact": "03929495962",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 80,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444423550-917098632.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444423551-748471214.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444423548-800998584.jpg",
+  "domicilePath": "uploads\\domicile-1757444423550-794015518.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:00:23.946Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.593Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c079ec833d05a82c71eeee"
+  },
+  "studentId": "BSCS-F25-008",
+  "universityEmail": "bscs-f25-008@university.edu.pk",
+  "username": "BSCS-F25-008",
+  "password": "$2b$12$qZQik.fzQcxhwv0FJJoR1ez533MOjoXuZWrKKlSTHxJasBcYsd/Mi",
+  "firstName": "mustafa",
+  "lastName": "ahmad",
+  "fatherFirstName": "ahamd",
+  "fatherLastName": "ahmad",
+  "gender": "Male",
+  "cnic": "0328675948596",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "mustafa@gmail.com",
+  "contactNumber": "03234342345",
+  "emergencyContact": "03929495969",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 70,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444588372-913506077.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444588373-500403847.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444588369-332204700.jpg",
+  "domicilePath": "uploads\\domicile-1757444588372-869974757.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:03:08.804Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.618Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07af0e420d5b673387887"
+  },
+  "studentId": "BSCS-F25-009",
+  "universityEmail": "bscs-f25-009@university.edu.pk",
+  "username": "BSCS-F25-009",
+  "password": "$2b$12$q/4g5fo/90aVc8/pZo.8kOH67pBdzlowcT7a4R7Wi1Ga0NnBVdDa2",
+  "firstName": "Rehman",
+  "lastName": "khaleel",
+  "fatherFirstName": "khaleel",
+  "fatherLastName": "rayan",
+  "gender": "Male",
+  "cnic": "0324343748394",
+  "birthDate": {
+    "$date": "2002-05-04T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "rehman@outlook.com",
+  "contactNumber": "03234342349",
+  "emergencyContact": "03929495960",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 110,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444847037-400805271.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 120,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444847039-665046324.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444847023-51185921.jpg",
+  "domicilePath": "uploads\\domicile-1757444847036-151425490.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:07:28.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.626Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07b61e420d5b6733879bc"
+  },
+  "studentId": "BSCS-F25-010",
+  "universityEmail": "bscs-f25-010@university.edu.pk",
+  "username": "BSCS-F25-010",
+  "password": "$2b$12$dYT8Vj3P.orGGhaYv2tHtuiT5jBjAvnRG5ZaRlUl8OliJJ9o1Op/q",
+  "firstName": "waqar",
+  "lastName": "sajjad",
+  "fatherFirstName": "sajjad",
+  "fatherLastName": "ahmad",
+  "gender": "Male",
+  "cnic": "0328675948597",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "waqar@gmail.com",
+  "contactNumber": "03234342388",
+  "emergencyContact": "03929495999",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 60,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757444960163-87048042.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 155,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757444960166-549257878.jpg"
+  },
+  "photoPath": "uploads\\photo-1757444960156-389478399.jpg",
+  "domicilePath": "uploads\\domicile-1757444960162-571622153.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:09:21.288Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.636Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07bc2e420d5b673387a59"
+  },
+  "studentId": "BSCS-F25-011",
+  "universityEmail": "bscs-f25-011@university.edu.pk",
+  "username": "BSCS-F25-011",
+  "password": "$2b$12$ziSt9oeq3G3X1MBFdSF10.yGOF3G6Pg4/lHi4HRd82aqfNHMeHrnC",
+  "firstName": "deema",
+  "lastName": "khan",
+  "fatherFirstName": "waqar",
+  "fatherLastName": "khan",
+  "gender": "Female",
+  "cnic": "0324993234568",
+  "birthDate": {
+    "$date": "2002-03-04T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "deema@gmail.com",
+  "contactNumber": "03234342389",
+  "emergencyContact": "03929495923",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 85,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 180,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445057927-119240845.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445057927-335236855.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445057924-433617349.jpg",
+  "domicilePath": "uploads\\domicile-1757445057926-766414303.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:10:58.966Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.646Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07c3ee420d5b673387af6"
+  },
+  "studentId": "BSCS-F25-012",
+  "universityEmail": "bscs-f25-012@university.edu.pk",
+  "username": "BSCS-F25-012",
+  "password": "$2b$12$35bM8R/Ae752yU0IVwHuMuVMAd7dsegCMs.uneIzdf6KYFonPcEh.",
+  "firstName": "reena",
+  "lastName": "majeed",
+  "fatherFirstName": "atif",
+  "fatherLastName": "majeed",
+  "gender": "Female",
+  "cnic": "0328675948594",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082979200000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "reena2@gmail.com",
+  "contactNumber": "03234342355",
+  "emergencyContact": "03929495669",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 108,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445180989-694799597.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 123,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445180990-110193226.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445180985-686282622.jpg",
+  "domicilePath": "uploads\\domicile-1757445180988-417136140.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:13:02.017Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.653Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07ca1e420d5b673387bc6"
+  },
+  "studentId": "BSCS-F25-013",
+  "universityEmail": "bscs-f25-013@university.edu.pk",
+  "username": "BSCS-F25-013",
+  "password": "$2b$12$aoEvIMVy7bHviCIk8H3OOOzA9gMn0T1I/6b67VJDHezpw3W9iot2i",
+  "firstName": "hamad",
+  "lastName": "asif",
+  "fatherFirstName": "asif",
+  "fatherLastName": "khan",
+  "gender": "Male",
+  "cnic": "0328675948094",
+  "birthDate": {
+    "$date": "2002-02-04T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "hamad@gmail.com",
+  "contactNumber": "03334342345",
+  "emergencyContact": "03329495969",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 74.97,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445280569-266373828.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445280572-570701594.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445280566-968869241.jpg",
+  "domicilePath": "uploads\\domicile-1757445280568-139050521.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-07-09T19:14:41.696Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.663Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07cf9e420d5b673387c63"
+  },
+  "studentId": "BSCS-F25-014",
+  "universityEmail": "bscs-f25-014@university.edu.pk",
+  "username": "BSCS-F25-014",
+  "password": "$2b$12$zRFZ/2iBnjFqqttEQon.BuzXXq8lUJjQOTUKhurOOkmOk7KUAAAOa",
+  "firstName": "momina",
+  "lastName": "ahmad",
+  "fatherFirstName": "ahamd",
+  "fatherLastName": "waleed",
+  "gender": "Female",
+  "cnic": "0328645948596",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "mominawaleed@gmail.com",
+  "contactNumber": "03234342342",
+  "emergencyContact": "03929495962",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 110,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445368284-838139482.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 135,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445368286-963229956.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445368281-978559515.jpg",
+  "domicilePath": "uploads\\domicile-1757445368284-640120482.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-08-09T19:16:09.330Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.672Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07d54e420d5b673387d00"
+  },
+  "studentId": "BSCS-F25-015",
+  "universityEmail": "bscs-f25-015@university.edu.pk",
+  "username": "BSCS-F25-015",
+  "password": "$2b$12$EcbLlFz5NgyYDrUN3dJ3FehshiI3cj9c4rI.rXLFvkTAMtReF99Jm",
+  "firstName": "wasay",
+  "lastName": "khaliq",
+  "fatherFirstName": "khaliq",
+  "fatherLastName": "ahmad",
+  "gender": "Male",
+  "cnic": "0328660948598",
+  "birthDate": {
+    "$date": "2002-03-01T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "wasaykhaliq@gmail.com",
+  "contactNumber": "03294342345",
+  "emergencyContact": "03920495969",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 60,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445459787-368378293.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 155,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445459788-288184256.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445459783-570181333.jpg",
+  "domicilePath": "uploads\\domicile-1757445459786-839177810.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-09-09T19:17:40.877Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.682Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07dc9e420d5b673387d9d"
+  },
+  "studentId": "BSCS-F25-016",
+  "universityEmail": "bscs-f25-016@university.edu.pk",
+  "username": "BSCS-F25-016",
+  "password": "$2b$12$B6SyHIVCLbCJNeE0XihUzuWW32EfZFJ52ByYN4Q8djZ2KVpFud76C",
+  "firstName": "arsalan",
+  "lastName": "mansoor",
+  "fatherFirstName": "mansoor",
+  "fatherLastName": "khan",
+  "gender": "Male",
+  "cnic": "0328679948596",
+  "birthDate": {
+    "$date": "2002-01-06T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "arsalan@gmail.com",
+  "contactNumber": "03254342345",
+  "emergencyContact": "03929595969",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 75,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445576662-502851037.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445576663-920150596.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445576658-461476729.jpg",
+  "domicilePath": "uploads\\domicile-1757445576661-803161376.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-08-09T19:19:37.765Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.690Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07e17e420d5b673387e3a"
+  },
+  "studentId": "BSCS-F25-017",
+  "universityEmail": "bscs-f25-017@university.edu.pk",
+  "username": "BSCS-F25-017",
+  "password": "$2b$12$Pdq8MHogEkhXROSOA6VqEOTXFHY71Y7udR9lTyN0ReUPKcBfApAcC",
+  "firstName": "hina",
+  "lastName": "fawad",
+  "fatherFirstName": "fawad",
+  "fatherLastName": "hameed",
+  "gender": "Female",
+  "cnic": "0348675948596",
+  "birthDate": {
+    "$date": "2002-06-05T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "hina@gmail.com",
+  "contactNumber": "03233342345",
+  "emergencyContact": "03929495966",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 100,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445654034-165598690.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 145,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445654036-566201330.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445654030-925509993.jpg",
+  "domicilePath": "uploads\\domicile-1757445654033-721624583.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-09-09T19:20:55.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.701Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07e68e420d5b673387ed7"
+  },
+  "studentId": "BSCS-F25-018",
+  "universityEmail": "bscs-f25-018@university.edu.pk",
+  "username": "BSCS-F25-018",
+  "password": "$2b$12$/M2S1DG3LoCyAM0sKNMGN.H6JMQ3TuCBoThduaiPHLxsKk9JhgSlW",
+  "firstName": "komal",
+  "lastName": "rizwan",
+  "fatherFirstName": "rizwan",
+  "fatherLastName": "basit",
+  "gender": "Female",
+  "cnic": "0328675908596",
+  "birthDate": {
+    "$date": "2002-09-23T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "komal@gmail.com",
+  "contactNumber": "03237342345",
+  "emergencyContact": "03929495967",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 75,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445735623-968972465.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445735626-639477019.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445735620-510743883.jpg",
+  "domicilePath": "uploads\\domicile-1757445735623-319129737.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-08-09T19:22:16.643Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.709Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07ec7e420d5b673387f74"
+  },
+  "studentId": "BSCS-F25-019",
+  "universityEmail": "bscs-f25-019@university.edu.pk",
+  "username": "BSCS-F25-019",
+  "password": "$2b$12$H1//kXbgG/W5wZVYX0fnjOuYgGokVI9JguDkpLvl.MdGx1lXJZ0pK",
+  "firstName": "tahir",
+  "lastName": "ahmad",
+  "fatherFirstName": "ahamd",
+  "fatherLastName": "bashir",
+  "gender": "Male",
+  "cnic": "0328675968595",
+  "birthDate": {
+    "$date": "2002-03-21T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "tahir@gmail.com",
+  "contactNumber": "03234362345",
+  "emergencyContact": "03929465969",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 84.99,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 190,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445830445-125525085.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 182,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445830447-17398602.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445830441-698832382.jpg",
+  "domicilePath": "uploads\\domicile-1757445830445-163964060.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-09-09T19:23:51.568Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.720Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68c07f32e420d5b673388011"
+  },
+  "studentId": "BSCS-F25-020",
+  "universityEmail": "bscs-f25-020@university.edu.pk",
+  "username": "BSCS-F25-020",
+  "password": "$2b$12$eMvNQMx7H3hs0WZsRcPl7.bCPXYxYg5kDsTryacNfW1qpYANACh.O",
+  "firstName": "rayan",
+  "lastName": "basit",
+  "fatherFirstName": "basit",
+  "fatherLastName": "syed",
+  "gender": "Male",
+  "cnic": "0324343234530",
+  "birthDate": {
+    "$date": {
+      "$numberLong": "-62082806400000"
+    }
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "rayan@outlook.com",
+  "contactNumber": "03423215467",
+  "emergencyContact": "03989456782",
+  "address": "Lahore, Punjab",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68c07570833d05a82c71e5d2"
+  },
+  "degreeLevel": "Undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 1,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 60,
+  "matricQualification": {
+    "institution": "Lahore school",
+    "year": 2023,
+    "totalMarks": 200,
+    "obtainedMarks": 160,
+    "boardUniversity": "O level",
+    "documentPath": "uploads\\matricDocument-1757445937103-295611423.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "Lahore school",
+    "year": 2025,
+    "totalMarks": 200,
+    "obtainedMarks": 175,
+    "boardUniversity": "A level",
+    "documentPath": "uploads\\intermediateDocument-1757445937105-739793668.jpg"
+  },
+  "photoPath": "uploads\\photo-1757445937100-944923977.jpg",
+  "domicilePath": "uploads\\domicile-1757445937102-887822877.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-09-09T19:25:38.147Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.728Z"
+  },
+  "__v": 0,
+  "section": "Section B",
+  "academicProgress": {
+    "currentSemester": 1,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 2,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2029-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2029-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 0,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 0,
+    "completionPercentage": 0,
+    "totalQualityPoints": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68eaa9af8366a146a5817b94"
+  },
+  "studentId": "BSCS-F24-001",
+  "universityEmail": "bscs-f24-001@university.edu.pk",
+  "username": "BSCS-F24-001",
+  "password": "$2b$12$lAsVoqbmtN3wR5nRRhS41eE3Gb5EpeV95RSKAeKHJUL/b4snpAyFK",
+  "firstName": "saba",
+  "lastName": "rameez",
+  "fatherFirstName": "rameez",
+  "fatherLastName": "fazal",
+  "gender": "Female",
+  "cnic": "0328675948599",
+  "birthDate": {
+    "$date": "2000-02-03T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "saba@gmail.com",
+  "contactNumber": "03219933458",
+  "emergencyContact": "03219933458",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68ea9f836eb2bbd7e12a9ec5"
+  },
+  "degreeLevel": "undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 3,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "lahore school",
+    "year": 2019,
+    "totalMarks": 200,
+    "obtainedMarks": 140,
+    "boardUniversity": "o level",
+    "documentPath": "uploads\\matricDocument-1760209324824-133535837.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "lahore school",
+    "year": 2022,
+    "totalMarks": 200,
+    "obtainedMarks": 130,
+    "boardUniversity": "a level",
+    "documentPath": "uploads\\intermediateDocument-1760209324826-484062874.jpg"
+  },
+  "photoPath": "uploads\\photo-1760209324749-12368163.jpg",
+  "domicilePath": "uploads\\domicile-1760209324824-918571044.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-10-11T19:02:07.184Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.736Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 3,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "completed",
+        "startDate": {
+          "$date": "2024-08-18T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2024-12-19T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 2,
+        "status": "completed",
+        "startDate": {
+          "$date": "2025-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-05-29T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afc"
+            },
+            "courseCode": "CS102",
+            "courseName": "Data Structures",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afd"
+            },
+            "courseCode": "MATH102",
+            "courseName": "Calculus II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afe"
+            },
+            "courseCode": "PHY102",
+            "courseName": "Physics II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56aff"
+            },
+            "courseCode": "COM101",
+            "courseName": "Communication Skills",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b00"
+            },
+            "courseCode": "CS103",
+            "courseName": "Digital Logic",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 3,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b02"
+            },
+            "courseCode": "CS201",
+            "courseName": "Algorithms",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b03"
+            },
+            "courseCode": "MATH201",
+            "courseName": "Linear Algebra",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b04"
+            },
+            "courseCode": "CS202",
+            "courseName": "Computer Organization",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b05"
+            },
+            "courseCode": "MATH202",
+            "courseName": "Discrete Mathematics",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b06"
+            },
+            "courseCode": "STAT201",
+            "courseName": "Statistics",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 36,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 3,
+    "completionPercentage": 27,
+    "totalQualityPoints": 108
+  }
+},
+{
+  "_id": {
+    "$oid": "68eaaa548366a146a5817c31"
+  },
+  "studentId": "BSCS-F24-002",
+  "universityEmail": "bscs-f24-002@university.edu.pk",
+  "username": "BSCS-F24-002",
+  "password": "$2b$12$i1gI.1diIxZ9GAX2ILSxhutRysqoqDVgPpzOAEc6j/9dDQu4wf/va",
+  "firstName": "Meera",
+  "lastName": "Majeed",
+  "fatherFirstName": "majeed",
+  "fatherLastName": "samar",
+  "gender": "Female",
+  "cnic": "0324283847389",
+  "birthDate": {
+    "$date": "2000-03-02T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "meera@outlook.com",
+  "contactNumber": "03456734546",
+  "emergencyContact": "03456734546",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68ea9f836eb2bbd7e12a9ec5"
+  },
+  "degreeLevel": "undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 3,
+  "admissionType": "Regular",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": false,
+  "scholarshipPercentage": 0,
+  "matricQualification": {
+    "institution": "lahore school",
+    "year": 2019,
+    "totalMarks": 200,
+    "obtainedMarks": 120,
+    "boardUniversity": "o level",
+    "documentPath": "uploads\\matricDocument-1760209492374-139107704.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "lahore school",
+    "year": 2022,
+    "totalMarks": 200,
+    "obtainedMarks": 100,
+    "boardUniversity": "a level",
+    "documentPath": "uploads\\intermediateDocument-1760209492375-87545143.jpg"
+  },
+  "photoPath": "uploads\\photo-1760209492371-45648971.jpg",
+  "domicilePath": "uploads\\domicile-1760209492373-843693692.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-10-11T19:04:52.818Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.756Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 3,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "completed",
+        "startDate": {
+          "$date": "2024-08-18T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2024-12-19T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 2,
+        "status": "completed",
+        "startDate": {
+          "$date": "2025-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-05-29T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afc"
+            },
+            "courseCode": "CS102",
+            "courseName": "Data Structures",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afd"
+            },
+            "courseCode": "MATH102",
+            "courseName": "Calculus II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afe"
+            },
+            "courseCode": "PHY102",
+            "courseName": "Physics II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56aff"
+            },
+            "courseCode": "COM101",
+            "courseName": "Communication Skills",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b00"
+            },
+            "courseCode": "CS103",
+            "courseName": "Digital Logic",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 3,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b02"
+            },
+            "courseCode": "CS201",
+            "courseName": "Algorithms",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b03"
+            },
+            "courseCode": "MATH201",
+            "courseName": "Linear Algebra",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b04"
+            },
+            "courseCode": "CS202",
+            "courseName": "Computer Organization",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b05"
+            },
+            "courseCode": "MATH202",
+            "courseName": "Discrete Mathematics",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b06"
+            },
+            "courseCode": "STAT201",
+            "courseName": "Statistics",
+            "semesterTaken": 3,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 36,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 3,
+    "completionPercentage": 27,
+    "totalQualityPoints": 108
+  }
+},
+{
+  "_id": {
+    "$oid": "68eaac4f8366a146a5818d09"
+  },
+  "studentId": "BSCS-S24-001",
+  "universityEmail": "bscs-s24-001@university.edu.pk",
+  "username": "BSCS-S24-001",
+  "password": "$2b$12$W4pLJqtI7QUdB3mn3OLDfebaBrGZwLklkA1f3wCVrMDg7XiaBDjN.",
+  "firstName": "rohail",
+  "lastName": "shehzad",
+  "fatherFirstName": "shehzad",
+  "fatherLastName": "ali",
+  "gender": "Male",
+  "cnic": "0328675940094",
+  "birthDate": {
+    "$date": "2000-02-03T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "rohail12@gmail.com",
+  "contactNumber": "03219933400",
+  "emergencyContact": "03219933400",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68ea9f746eb2bbd7e12a9e91"
+  },
+  "degreeLevel": "undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 4,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 40,
+  "matricQualification": {
+    "institution": "lahore school",
+    "year": 2019,
+    "totalMarks": 200,
+    "obtainedMarks": 140,
+    "boardUniversity": "o level",
+    "documentPath": "uploads\\matricDocument-1760209998649-936676520.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "lahore school",
+    "year": 2022,
+    "totalMarks": 200,
+    "obtainedMarks": 130,
+    "boardUniversity": "a level",
+    "documentPath": "uploads\\intermediateDocument-1760209998651-814715798.jpg"
+  },
+  "photoPath": "uploads\\photo-1760209998646-500645734.jpg",
+  "domicilePath": "uploads\\domicile-1760209998649-285885420.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-10-11T19:13:19.080Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.774Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 4,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "completed",
+        "startDate": {
+          "$date": "2024-03-13T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2024-08-14T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 2,
+        "status": "completed",
+        "startDate": {
+          "$date": "2024-08-18T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2024-12-19T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afc"
+            },
+            "courseCode": "CS102",
+            "courseName": "Data Structures",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afd"
+            },
+            "courseCode": "MATH102",
+            "courseName": "Calculus II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afe"
+            },
+            "courseCode": "PHY102",
+            "courseName": "Physics II",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56aff"
+            },
+            "courseCode": "COM101",
+            "courseName": "Communication Skills",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b00"
+            },
+            "courseCode": "CS103",
+            "courseName": "Digital Logic",
+            "semesterTaken": 2,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 3,
+        "status": "completed",
+        "startDate": {
+          "$date": "2025-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-05-29T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b02"
+            },
+            "courseCode": "CS201",
+            "courseName": "Algorithms",
+            "semesterTaken": 3,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b03"
+            },
+            "courseCode": "MATH201",
+            "courseName": "Linear Algebra",
+            "semesterTaken": 3,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b04"
+            },
+            "courseCode": "CS202",
+            "courseName": "Computer Organization",
+            "semesterTaken": 3,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b05"
+            },
+            "courseCode": "MATH202",
+            "courseName": "Discrete Mathematics",
+            "semesterTaken": 3,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b06"
+            },
+            "courseCode": "STAT201",
+            "courseName": "Statistics",
+            "semesterTaken": 3,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 4,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b08"
+            },
+            "courseCode": "CS301",
+            "courseName": "Operating Systems",
+            "semesterTaken": 4,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b09"
+            },
+            "courseCode": "CS302",
+            "courseName": "Database Systems",
+            "semesterTaken": 4,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b0a"
+            },
+            "courseCode": "CS303",
+            "courseName": "Computer Networks",
+            "semesterTaken": 4,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b0b"
+            },
+            "courseCode": "CS304",
+            "courseName": "Software Engineering",
+            "semesterTaken": 4,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b0c"
+            },
+            "courseCode": "ENV101",
+            "courseName": "Environmental Science",
+            "semesterTaken": 4,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 54,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 3,
+    "completionPercentage": 41,
+    "totalQualityPoints": 162
+  }
+},
+{
+  "_id": {
+    "$oid": "68eaacc38366a146a5818da6"
+  },
+  "studentId": "BSCS-S25-001",
+  "universityEmail": "bscs-s25-001@university.edu.pk",
+  "username": "BSCS-S25-001",
+  "password": "$2b$12$3tLNblnCkYOUY0TpvCyTh.LG5KXY9oemnX9A7tRSjdHyJQzqXwwkm",
+  "firstName": "samar",
+  "lastName": "walid",
+  "fatherFirstName": "walid",
+  "fatherLastName": "ahmad",
+  "gender": "Male",
+  "cnic": "0324222227383",
+  "birthDate": {
+    "$date": "2005-03-04T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "samar@gmail.com",
+  "contactNumber": "03219939999",
+  "emergencyContact": "03219939999",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68ea9f8a6eb2bbd7e12a9ef9"
+  },
+  "degreeLevel": "undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 2,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 30,
+  "matricQualification": {
+    "institution": "lahore school",
+    "year": 2019,
+    "totalMarks": 200,
+    "obtainedMarks": 140,
+    "boardUniversity": "o level",
+    "documentPath": "uploads\\matricDocument-1760210115190-140723709.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "lahore school",
+    "year": 2022,
+    "totalMarks": 200,
+    "obtainedMarks": 130,
+    "boardUniversity": "a level",
+    "documentPath": "uploads\\intermediateDocument-1760210115192-573784840.jpg"
+  },
+  "photoPath": "uploads\\photo-1760210115188-503820032.jpg",
+  "domicilePath": "uploads\\domicile-1760210115190-675128101.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-10-11T19:15:15.615Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.786Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 2,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "completed",
+        "startDate": {
+          "$date": "2025-03-13T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-08-14T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 2,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afc"
+            },
+            "courseCode": "CS102",
+            "courseName": "Data Structures",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afd"
+            },
+            "courseCode": "MATH102",
+            "courseName": "Calculus II",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afe"
+            },
+            "courseCode": "PHY102",
+            "courseName": "Physics II",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56aff"
+            },
+            "courseCode": "COM101",
+            "courseName": "Communication Skills",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b00"
+            },
+            "courseCode": "CS103",
+            "courseName": "Digital Logic",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 18,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 3,
+    "completionPercentage": 14,
+    "totalQualityPoints": 54
+  }
+},
+{
+  "_id": {
+    "$oid": "68ff72dc08cc22cd1f5554ee"
+  },
+  "studentId": "BSCS-S25-002",
+  "universityEmail": "bscs-s25-002@university.edu.pk",
+  "username": "BSCS-S25-002",
+  "password": "$2b$12$BBEZKbkH06nEPRyX6RIaMOuuhwKE84Y7B6PMM5/jM4a6ej04Jezkm",
+  "firstName": "faria",
+  "lastName": "sultan",
+  "fatherFirstName": "sultan",
+  "fatherLastName": "ameen",
+  "gender": "Female",
+  "cnic": "0345334532343",
+  "birthDate": {
+    "$date": "2000-03-04T00:00:00.000Z"
+  },
+  "bloodGroup": "A+",
+  "maritalStatus": "Single",
+  "religion": "Islam",
+  "personalEmail": "fariasultan@gmail.com",
+  "contactNumber": "03453423875",
+  "emergencyContact": "03453240547",
+  "address": "lahore",
+  "city": "lahore",
+  "province": "Punjab",
+  "country": "Pakistan",
+  "postalCode": "02933",
+  "batch": {
+    "$oid": "68ea9f8a6eb2bbd7e12a9ef9"
+  },
+  "degreeLevel": "undergraduate",
+  "department": "Computer Science",
+  "departmentCode": "BSCS",
+  "currentSemester": 2,
+  "admissionType": "Scholarship",
+  "studyMode": "FullTime",
+  "domicileProvince": "Punjab",
+  "isScholarshipApplicant": true,
+  "scholarshipPercentage": 50,
+  "matricQualification": {
+    "institution": "lahore school",
+    "year": 2022,
+    "totalMarks": 200,
+    "obtainedMarks": 150,
+    "boardUniversity": "o level",
+    "documentPath": "uploads\\matricDocument-1761571548285-632407559.jpg"
+  },
+  "intermediateQualification": {
+    "institution": "lahore school",
+    "year": 2024,
+    "totalMarks": 200,
+    "obtainedMarks": 130,
+    "boardUniversity": "a level",
+    "documentPath": "uploads\\intermediateDocument-1761571548286-869971624.jpg"
+  },
+  "photoPath": "uploads\\photo-1761571548282-159079598.jpg",
+  "domicilePath": "uploads\\domicile-1761571548285-576500050.jpg",
+  "status": "active",
+  "role": "student",
+  "createdAt": {
+    "$date": "2025-10-27T13:25:48.731Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-03T11:59:54.809Z"
+  },
+  "__v": 0,
+  "section": "Section A",
+  "academicProgress": {
+    "currentSemester": 2,
+    "semesters": [
+      {
+        "semesterNumber": 1,
+        "status": "completed",
+        "startDate": {
+          "$date": "2025-03-13T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-08-14T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af6"
+            },
+            "courseCode": "CS101",
+            "courseName": "Introduction to Programming",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af7"
+            },
+            "courseCode": "MATH101",
+            "courseName": "Calculus I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af8"
+            },
+            "courseCode": "PHY101",
+            "courseName": "Physics I",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56af9"
+            },
+            "courseCode": "ENG101",
+            "courseName": "English Composition",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 3,
+            "attendance": 85
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afa"
+            },
+            "courseCode": "IT101",
+            "courseName": "Introduction to IT",
+            "semesterTaken": 1,
+            "status": "completed",
+            "grade": "B",
+            "creditsEarned": 4,
+            "attendance": 85
+          }
+        ],
+        "semesterGPA": 3,
+        "creditsAttempted": 18,
+        "creditsEarned": 18,
+        "qualityPoints": 54
+      },
+      {
+        "semesterNumber": 2,
+        "status": "in-progress",
+        "startDate": {
+          "$date": "2025-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2025-12-21T21:00:00.000Z"
+        },
+        "courses": [
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afc"
+            },
+            "courseCode": "CS102",
+            "courseName": "Data Structures",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afd"
+            },
+            "courseCode": "MATH102",
+            "courseName": "Calculus II",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56afe"
+            },
+            "courseCode": "PHY102",
+            "courseName": "Physics II",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 4,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56aff"
+            },
+            "courseCode": "COM101",
+            "courseName": "Communication Skills",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          },
+          {
+            "course": {
+              "$oid": "6908993a3b6ab71d42d56b00"
+            },
+            "courseCode": "CS103",
+            "courseName": "Digital Logic",
+            "semesterTaken": 2,
+            "status": "registered",
+            "grade": null,
+            "creditsEarned": 3,
+            "attendance": 0
+          }
+        ],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 3,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-01-11T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-05-28T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 4,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2026-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2026-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 5,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-01-10T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-05-27T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 6,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2027-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2027-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 7,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-01-09T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-05-29T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      },
+      {
+        "semesterNumber": 8,
+        "status": "upcoming",
+        "startDate": {
+          "$date": "2028-08-17T21:00:00.000Z"
+        },
+        "endDate": {
+          "$date": "2028-12-21T21:00:00.000Z"
+        },
+        "courses": [],
+        "semesterGPA": 0,
+        "creditsAttempted": 0,
+        "creditsEarned": 0,
+        "qualityPoints": 0
+      }
+    ],
+    "totalCreditsEarned": 18,
+    "totalCreditsRequired": 133,
+    "cumulativeGPA": 3,
+    "completionPercentage": 14,
+    "totalQualityPoints": 54
+  }
+}]

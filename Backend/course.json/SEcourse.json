@@ -1,0 +1,85 @@
+{
+  "degreeLevel": "Undergraduate",
+  "department": "software engineering",
+  "semesters": [
+    {
+      "semesterNumber": 1,
+      "courses": [
+        { "courseName": "Introduction to Programming", "courseCode": "SE101", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Calculus I", "courseCode": "MATH101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Physics I", "courseCode": "PHY101", "creditHrs": 4, "type": "Core" },
+        { "courseName": "English Composition", "courseCode": "ENG101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Fundamentals of Software Engineering", "courseCode": "SE102", "creditHrs": 4, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 2,
+      "courses": [
+        { "courseName": "Data Structures", "courseCode": "SE103", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Calculus II", "courseCode": "MATH102", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Discrete Mathematics", "courseCode": "MATH202", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Communication Skills", "courseCode": "COM101", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Object Oriented Programming", "courseCode": "SE104", "creditHrs": 3, "type": "Core" }
+      ]
+    },
+    {
+      "semesterNumber": 3,
+      "courses": [
+        { "courseName": "Algorithms", "courseCode": "SE201", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Software Requirements Engineering", "courseCode": "SE202", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Software Design and Architecture", "courseCode": "SE203", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Database Systems", "courseCode": "SE204", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Statistics", "courseCode": "STAT201", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 4,
+      "courses": [
+        { "courseName": "Operating Systems", "courseCode": "CS301", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Software Testing and Quality Assurance", "courseCode": "SE301", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Software Project Management", "courseCode": "SE302", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Human Computer Interaction", "courseCode": "SE303", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Environmental Science", "courseCode": "ENV101", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 5,
+      "courses": [
+        { "courseName": "Software Maintenance and Evolution", "courseCode": "SE401", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Web Application Development", "courseCode": "SE402", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Cloud Computing for Software Engineers", "courseCode": "SE403", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Technical Writing", "courseCode": "ENG201", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Artificial Intelligence", "courseCode": "CS402", "creditHrs": 4, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 6,
+      "courses": [
+        { "courseName": "Advanced Software Engineering", "courseCode": "SE404", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Mobile Application Development", "courseCode": "SE405", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Software Security", "courseCode": "SE406", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Entrepreneurship and Innovation", "courseCode": "MGMT301", "creditHrs": 4, "type": "Elective" },
+        { "courseName": "Ethics in IT", "courseCode": "PHIL101", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 7,
+      "courses": [
+        { "courseName": "Software Metrics and Measurement", "courseCode": "SE501", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Final Year Project I", "courseCode": "SE502", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Agile Software Development", "courseCode": "SE503", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Compiler Construction", "courseCode": "CS504", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Freelancing", "courseCode": "SE505", "creditHrs": 3, "type": "Elective" }
+      ]
+    },
+    {
+      "semesterNumber": 8,
+      "courses": [
+        { "courseName": "Final Year Project II", "courseCode": "SE601", "creditHrs": 4, "type": "Core" },
+        { "courseName": "Deep Learning", "courseCode": "CS602", "creditHrs": 3, "type": "Elective" },
+        { "courseName": "Professional Practices", "courseCode": "SE603", "creditHrs": 3, "type": "Core" },
+        { "courseName": "Language Course", "courseCode": "SE604", "creditHrs": 2, "type": "Elective" }
+      ]
+    }
+  ]
+}
