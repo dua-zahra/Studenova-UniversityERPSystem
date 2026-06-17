@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../context/AuthContext";
 import "../assets/style.css";
-import API_URL from '../../config';
+import API_URL from './config';
 const Login = () => {
   const [isFlipped, setIsFlipped] = useState(true);
   const [email, setEmail] = useState("");

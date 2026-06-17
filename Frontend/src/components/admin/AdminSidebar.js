@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import API_URL from '../../config';
+import API_URL from '../config';
 import { faSignOutAlt, faCamera, faBars } from "@fortawesome/free-solid-svg-icons";
 import {
   faTachometerAlt,
