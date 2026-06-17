@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Button } from 'antd';
 import { SaveOutlined } from '@ant-design/icons';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const initialFormState = {
   firstName: '',
@@ -62,7 +63,6 @@ const religions = ['Islam', 'Christianity', 'Hinduism', 'Other'];
 const admissionTypes = ['Regular', 'SelfFinance', 'Overseas', 'Scholarship'];
 const studyModes = ['FullTime', 'PartTime'];
 
-// Validation utility functions
 const validationUtils = {
   isValidText: (text) => {
     return /^[a-zA-Z\s\-'.]*$/.test(text);
@@ -109,12 +109,11 @@ const StudentEnrollmentPage = ({ onClose }) => {
   const [validationErrors, setValidationErrors] = useState({});
   const [availableSemesters, setAvailableSemesters] = useState([1]);
 
-  // Fetch degree levels
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
         setLoadingDegreeLevels(true);
-        const response = await axios.get('http://localhost:65000/api/degree-levels');
+        const response = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels');
@@ -126,7 +125,6 @@ const StudentEnrollmentPage = ({ onClose }) => {
     fetchDegreeLevels();
   }, []);
 
-  // Fetch departments when degree level changes
   useEffect(() => {
     if (!formData.degreeLevel) {
       setDepartments([]);
@@ -136,7 +134,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const fetchDepartments = async () => {
       try {
         setLoadingDepartments(true);
-        const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: formData.degreeLevel }
         });
         setDepartments(response.data.departments || []);
@@ -150,7 +148,6 @@ const StudentEnrollmentPage = ({ onClose }) => {
     fetchDepartments();
   }, [formData.degreeLevel]);
 
-  // Fetch batches when department changes - CORRECTED VERSION
   useEffect(() => {
     if (!formData.degreeLevel || !formData.department) {
       setBatches([]);
@@ -167,7 +164,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
           degreeLevel: formData.degreeLevel
         });
 
-        const response = await axios.get('http://localhost:65000/api/batches/open/enrollment', {
+        const response = await axios.get(`${API_URL}/api/batches/open/enrollment`, {
           params: {
             department: formData.department,
             degreeLevel: formData.degreeLevel
@@ -413,7 +410,6 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const errors = {};
     let isValid = true;
 
-    // Required field validations
     if (!formData.firstName.trim()) {
       errors.firstName = 'First name is required';
     } else if (!validationUtils.isValidText(formData.firstName)) {
@@ -600,7 +596,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:65000/api/students/enroll',
+        `${API_URL}/api/students/enroll`,
         formDataToSend,
         { 
           headers: { 'Content-Type': 'multipart/form-data' },

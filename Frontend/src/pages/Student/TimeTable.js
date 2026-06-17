@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import API_URL from '../../../config';
+
 import {
   Container,
   Accordion,
@@ -20,7 +22,7 @@ export default function TimeTable() {
   useEffect(() => {
     const fetchTimeTable = async () => {
       try {
-        const res = await fetch("http://localhost:65000/api/students/gettimetable", {
+        const res = await fetch(`${API_URL}/api/students/gettimetable`, {
           credentials: "include",
         });
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Spin, Typography, Row, Col, 
   Divider, Statistic, Tag, Space, Modal, Input, Select,
@@ -66,8 +68,7 @@ const InvoiceManagement = () => {
 
   console.log('📤 Downloading invoice for:', cleanStudentId, cleanInvoiceNumber);
 
-  // CORRECT URL - No extra /invoiceNumber at the end
-  const downloadUrl = `http://localhost:65000/api/fees/invoices/download/${cleanStudentId}/${cleanInvoiceNumber}`;
+  const downloadUrl = `${API_URL}/api/fees/invoices/download/${cleanStudentId}/${cleanInvoiceNumber}`;
   
   console.log('🔗 Final URL:', downloadUrl);
   
@@ -88,7 +89,7 @@ const InvoiceManagement = () => {
       setLoading(true);
       
       const response = await axios.get(
-        `http://localhost:65000/api/fees/invoices/student/${encodeURIComponent(cleanStudentId)}`, 
+        `${API_URL}/api/fees/invoices/student/${encodeURIComponent(cleanStudentId)}`, 
         {
           params: { 
             includeFines: true,
@@ -340,7 +341,7 @@ const InvoiceManagement = () => {
     }
   ];
 
-  // Debug Helper
+  
   useEffect(() => {
     if (invoicesModalVisible && selectedStudentInfo) {
       console.log('🔍 MODAL DEBUG INFO:');
@@ -355,7 +356,6 @@ const InvoiceManagement = () => {
     }
   }, [invoicesModalVisible, selectedStudentInfo, selectedStudentInvoices]);
 
-  // ALL YOUR EXISTING FRONTEND CODE REMAINS EXACTLY THE SAME FROM HERE...
   const calculateBatchTotals = (students) => {
     const totals = {
       totalRequiredAmount: 0, 
@@ -474,7 +474,7 @@ const InvoiceManagement = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -483,7 +483,7 @@ const InvoiceManagement = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -494,7 +494,7 @@ const InvoiceManagement = () => {
 
   const fetchBatches = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/batches');
+      const response = await axios.get(`${API_URL}/api/batches`);
       
       if (response.data.success) {
         const filteredBatches = response.data.data.filter(batchItem => 
@@ -523,7 +523,7 @@ const InvoiceManagement = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:65000/api/fees/students-for-batch', {
+      const response = await axios.get(`${API_URL}/api/fees/students-for-batch`, {
         params: { degreeLevel, department: department.trim(), batch }
       });
 
@@ -572,7 +572,7 @@ const InvoiceManagement = () => {
     try {
       console.log(`Generating past+current invoices for batch ${batch} with auto fines detection`);
       
-      const response = await axios.post('http://localhost:65000/api/fees/invoices/generate-all-students', {
+      const response = await axios.post(`${API_URL}/api/fees/invoices/generate-all-students`, {
         degreeLevel,
         department: department.trim(),
         batch,
@@ -700,7 +700,7 @@ const InvoiceManagement = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:65000/api/fees/generate-student-records', {
+      const response = await axios.post(`${API_URL}/api/fees/generate-student-records`, {
         degreeLevel,
         department: department.trim(),
         batch
@@ -725,7 +725,7 @@ const InvoiceManagement = () => {
     try {
       console.log(`Generating past+current invoices for student ${studentId}`);
       
-      const response = await axios.post('http://localhost:65000/api/fees/invoices/generate-student', {
+      const response = await axios.post(`${API_URL}/api/fees/invoices/generate-student`, {
         studentId,
         semesterType: 'past_current',
         includeFines: true,
@@ -750,7 +750,7 @@ const InvoiceManagement = () => {
   const runCleanup = async () => {
     setCleanupLoading(true);
     try {
-      const response = await axios.post('http://localhost:65000/api/fees/invoices/cleanup-duplicates', {
+      const response = await axios.post(`${API_URL}/api/fees/invoices/cleanup-duplicates`, {
         studentId: null 
       });
 

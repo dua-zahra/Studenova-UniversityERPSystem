@@ -1,4 +1,4 @@
-// src/components/StudentFeeDashboard.jsx
+import API_URL from '../../../config';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
@@ -14,7 +14,7 @@ const StudentFeeDashboard = () => {
 
   const fetchStudentFee = async () => {
     try {
-      const res = await axios.get("http://localhost:65000/api/students/getStudentFee", {
+      const res = await axios.get(`${API_URL}/api/students/getStudentFee`, {
         withCredentials: true
       });
       setData(res.data);

@@ -1,6 +1,6 @@
 import React from "react";
 import AdminSidebar from "./AdminSidebar";
-
+import API_URL from '../config';
 const AdminLayout = ({ children }) => {
   return (
     <div className="flex">

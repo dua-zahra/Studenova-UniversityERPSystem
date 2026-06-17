@@ -5,6 +5,8 @@ import {
 import { TeamOutlined, EditOutlined, SaveOutlined, CalendarOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "../../../assets/style.css";
+import API_URL from '../../../config';
+
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -29,8 +31,8 @@ const ManageResults = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [assessmentDetails, setAssessmentDetails] = useState({});
 
-  const backendURL = "http://localhost:65000/api";
-
+  // const backendURL = "http://localhost:65000/api";
+const backendURL = API_URL;
   useEffect(() => {
     const fetchDegrees = async () => {
       setLoading(prev => ({ ...prev, degree: true }));

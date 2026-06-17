@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Button } from 'antd';
 import { SaveOutlined } from '@ant-design/icons';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const emptyCourse = { courseName: '', courseCode: '', creditHrs: 1, type: 'Core' };
 const emptySemester = { semesterNumber: 1, courses: [{ ...emptyCourse }] };
@@ -24,11 +25,11 @@ export default function AddCoursesForm() {
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
-        const levelsRes = await axios.get('http://localhost:65000/api/degree-levels');
+        const levelsRes = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(levelsRes.data);
         setIsLoadingDegreeLevels(false);
 
-        const configRes = await axios.get('http://localhost:65000/api/degree-config');
+        const configRes = await axios.get(`${API_URL}/api/degree-config`);
         setDegreeConfig(configRes.data);
       } catch (err) {
         console.error('Error fetching initial data:', err);
@@ -71,7 +72,7 @@ export default function AddCoursesForm() {
     const fetchDepartments = async () => {
       try {
         setLoading(true);
-        const res = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const res = await axios.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel }
         });
         setDepartments(res.data.departments || []);
@@ -98,7 +99,7 @@ export default function AddCoursesForm() {
         let used = {};
 
         if (department) {
-          const res = await axios.get('http://localhost:65000/api/semester-credits', {
+          const res = await axios.get(`${API_URL}/api/semester-credits`, {
             params: { degreeLevel, department }
           });
           limits = res.data.limits || {};
@@ -341,10 +342,10 @@ export default function AddCoursesForm() {
         semesters 
       };
       
-      await axios.post('http://localhost:65000/api/courses', payload);
+      await axios.post(`${API_URL}/api/courses`, payload);
       toast.success('Courses saved successfully');
       
-      const res = await axios.get('http://localhost:65000/api/semester-credits', {
+      const res = await axios.get(`${API_URL}/api/semester-credits`, {
         params: { degreeLevel, department }
       });
       setCreditData({

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
+
 import { 
   Table, Button, Select, Card, Row, Col, 
   message, Modal, Form, Input, 
@@ -75,7 +77,7 @@ const TimetableManagement = () => {
   const fetchDegreeLevels = async () => {
     try {
       setLoading(prev => ({ ...prev, degree: true }));
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -87,7 +89,7 @@ const TimetableManagement = () => {
 
   const fetchPublishedTimetables = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/timetables/published-timetables');
+      const response = await axios.get(`${API_URL}/api/timetables/published-timetables`);
       setPublishedTimetables(response.data.data || []);
     } catch (error) {
       console.error('Error fetching published timetables:', error);
@@ -106,7 +108,7 @@ const TimetableManagement = () => {
   const fetchDepartments = async () => {
     try {
       setLoading(prev => ({ ...prev, department: true }));
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel: selectedDegree }
       });
       
@@ -140,7 +142,7 @@ const TimetableManagement = () => {
   const fetchBatches = async () => {
     try {
       setLoading(prev => ({ ...prev, batch: true }));
-      const response = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: selectedDegree,
           department: selectedDepartment 
@@ -173,7 +175,7 @@ const TimetableManagement = () => {
       setLoading(prev => ({ ...prev, allBatches: true }));
       console.log('🔄 Fetching timetables for all batches in department:', selectedDepartment);
       
-      const batchesResponse = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+      const batchesResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: selectedDegree,
           department: selectedDepartment 
@@ -197,7 +199,7 @@ const TimetableManagement = () => {
           batchesDetailsMap[batch._id] = batch;
           
           const timetableResponse = await axios.get(
-            `http://localhost:65000/api/timetables/batches/${batch._id}/semesters/${batch.currentSemester || 1}/timetable`
+            `${API_URL}/api/timetables/batches/${batch._id}/semesters/${batch.currentSemester || 1}/timetable`
           );
           
           if (timetableResponse.data.data?.timetable) {
@@ -266,7 +268,7 @@ const TimetableManagement = () => {
 
  const fetchBatchDetails = async () => {
   try {
-    const response = await axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`);
+    const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`);
     const batchData = response.data;
     const actualBatchData = batchData.data || batchData;
     
@@ -286,7 +288,7 @@ const TimetableManagement = () => {
   const fetchSemesterDates = async () => {
     try {
       setLoading(prev => ({ ...prev, semesterDates: true }));
-      const response = await axios.get(`http://localhost:65000/api/timetables/batches/${selectedBatch}/current-semester-dates`);
+      const response = await axios.get(`${API_URL}/api/timetables/batches/${selectedBatch}/current-semester-dates`);
       
       if (response.data.success && response.data.data) {
         const semesterData = response.data.data;
@@ -305,7 +307,7 @@ const TimetableManagement = () => {
     if (!timetable?._id) return;
     
     try {
-      const response = await axios.get(`http://localhost:65000/api/timetables/timetables/${timetable._id}/changes-since-publish`);
+      const response = await axios.get(`${API_URL}/api/timetables/timetables/${timetable._id}/changes-since-publish`);
       setChangesSincePublish(response.data.data?.changesSincePublish || []);
     } catch (error) {
       console.error('Error fetching changes since publish:', error);
@@ -390,13 +392,13 @@ const TimetableManagement = () => {
     try {
       setLoading(prev => ({ ...prev, courses: true }));
       
-      const batchResponse = await axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`);
+      const batchResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`);
       const currentBatch = batchResponse.data;
       const actualBatchData = currentBatch.data || currentBatch;
       const currentSemester = actualBatchData.currentSemester || 1;
       
       const coursesResponse = await axios.get(
-        `http://localhost:65000/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/courses`
+        `${API_URL}/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/courses`
       );
 
       const coursesData = coursesResponse.data.data || [];
@@ -419,7 +421,7 @@ const TimetableManagement = () => {
       setLoading(prev => ({ ...prev, sync: true }));
       
       const response = await axios.post(
-        `http://localhost:65000/api/timetables/timetables/${timetable._id}/sync-faculty`
+        `${API_URL}/api/timetables/timetables/${timetable._id}/sync-faculty`
       );
       
       if (response.data.data?.removedCount > 0) {
@@ -509,7 +511,7 @@ const TimetableManagement = () => {
     try {
       setLoading(prev => ({ ...prev, sync: true }));
       const response = await axios.get(
-        `http://localhost:65000/api/timetables/timetables/${timetable._id}/sync-status`
+        `${API_URL}/api/timetables/timetables/${timetable._id}/sync-status`
       );
       setSyncStatus(response.data.data);
       
@@ -528,13 +530,13 @@ const TimetableManagement = () => {
     try {
       setLoading(prev => ({ ...prev, timetable: true }));
       
-      const batchResponse = await axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`);
+      const batchResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`);
       const currentBatch = batchResponse.data;
       const actualBatchData = currentBatch.data || currentBatch;
       const currentSemester = actualBatchData.currentSemester || 1;
       
       const response = await axios.get(
-        `http://localhost:65000/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/timetable`
+        `${API_URL}/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/timetable`
       );
       
       if (response.data.data?.timetable) {
@@ -559,7 +561,7 @@ const TimetableManagement = () => {
 
   const initializeTimetable = async () => {
     try {
-      const batchResponse = await axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`);
+      const batchResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`);
       const currentBatch = batchResponse.data;
       const actualBatchData = currentBatch.data || currentBatch;
       const currentSemester = actualBatchData.currentSemester || 1;
@@ -568,7 +570,7 @@ const TimetableManagement = () => {
       const timetableName = `${actualBatchData.batchName}_Sem${currentSemester}_${academicYear}`;
       
       const response = await axios.post(
-        `http://localhost:65000/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/timetable`,
+        `${API_URL}/api/timetables/batches/${selectedBatch}/semesters/${currentSemester}/timetable`,
         {
           timetableName,
           academicYear,
@@ -598,7 +600,7 @@ const TimetableManagement = () => {
       setLoading(prev => ({ ...prev, publish: true }));
       
       const response = await axios.post(
-        `http://localhost:65000/api/timetables/timetables/${timetable._id}/publish`
+        `${API_URL}/api/timetables/timetables/${timetable._id}/publish`
       );
 
       if (response.data.success) {
@@ -636,7 +638,7 @@ const TimetableManagement = () => {
       setLoading(prev => ({ ...prev, republish: true }));
       
       const response = await axios.post(
-        `http://localhost:65000/api/timetables/timetables/${timetable._id}/republish`
+        `${API_URL}/api/timetables/timetables/${timetable._id}/republish`
       );
 
       if (response.data.success) {
@@ -699,7 +701,7 @@ const TimetableManagement = () => {
   const exportTimetable = async (timetableId, timetableName) => {
     try {
       const response = await axios.get(
-        `http://localhost:65000/api/timetables/timetables/${timetableId}/export-pdf`,
+        `${API_URL}/api/timetables/timetables/${timetableId}/export-pdf`,
         {
           responseType: 'blob'
         }
@@ -724,7 +726,7 @@ const TimetableManagement = () => {
 
   const createNewTimetableForNextSemester = async () => {
     try {
-      const batchResponse = await axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`);
+      const batchResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`);
       const currentBatch = batchResponse.data;
       const actualBatchData = currentBatch.data || currentBatch;
       const nextSemester = (actualBatchData.currentSemester || 1) + 1;
@@ -746,7 +748,7 @@ const TimetableManagement = () => {
       const timetableName = `${actualBatchData.batchName}_Sem${nextSemester}_${nextAcademicYearDisplay}`;
       
       const response = await axios.post(
-        `http://localhost:65000/api/timetables/batches/${selectedBatch}/semesters/${nextSemester}/timetable`,
+        `${API_URL}/api/timetables/batches/${selectedBatch}/semesters/${nextSemester}/timetable`,
         {
           timetableName,
           academicYear: nextAcademicYearDisplay,
@@ -842,13 +844,13 @@ const TimetableManagement = () => {
       let response;
       if (currentTimeSlot?._id) {
         response = await axios.put(
-          `http://localhost:65000/api/timetables/timetables/${timetable._id}/slots/${currentTimeSlot._id}`,
+          `${API_URL}/api/timetables/timetables/${timetable._id}/slots/${currentTimeSlot._id}`,
           timeSlotData
         );
         message.success('Time slot updated successfully');
       } else {
         response = await axios.post(
-          `http://localhost:65000/api/timetables/timetables/${timetable._id}/slots`,
+          `${API_URL}/api/timetables/timetables/${timetable._id}/slots`,
           timeSlotData
         );
         message.success('Time slot added successfully');
@@ -930,7 +932,7 @@ const TimetableManagement = () => {
         onOk: async () => {
           try {
             const response = await axios.delete(
-              `http://localhost:65000/api/timetables/timetables/${timetable._id}/slots/${slotId}`
+              `${API_URL}/api/timetables/timetables/${timetable._id}/slots/${slotId}`
             );
             
             message.success('Time slot deleted successfully');

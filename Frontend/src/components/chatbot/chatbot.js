@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./Chatbot.css";
-
+import API_URL from '../config';
 export default function Chatbot() {
   const [messages, setMessages] = useState([
     { sender: "ai", text: "Hello! How can I assist you today?" }
@@ -26,7 +26,7 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:65000/api/students/chatbotQuery", {
+      const res = await fetch(`${API_URL}/api/students/chatbotQuery`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),

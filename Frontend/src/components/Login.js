@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../context/AuthContext";
 import "../assets/style.css";
-
+import API_URL from '../config';
 const Login = () => {
   const [isFlipped, setIsFlipped] = useState(true);
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ const Login = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:65000/api/auth/login", {
+      const response = await fetch(`${API_URL}/api/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

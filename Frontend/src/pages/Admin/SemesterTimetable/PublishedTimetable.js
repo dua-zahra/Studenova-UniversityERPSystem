@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Tag, Space, Input, Select, 
   Row, Col, Typography, Spin, Empty, Tooltip, Tabs,
@@ -22,7 +24,6 @@ const { TabPane } = Tabs;
 const { Panel } = Collapse;
 
 const AllBatchesTimetable = () => {
-  // State variables
   const [degreeLevels, setDegreeLevels] = useState([]);
   const [departments, setDepartments] = useState([]);
   const [batches, setBatches] = useState([]);
@@ -106,7 +107,7 @@ const AllBatchesTimetable = () => {
   const fetchDegreeLevels = async () => {
     try {
       setLoading(prev => ({ ...prev, degree: true }));
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       
       let degreeData = [];
       if (Array.isArray(response.data)) {
@@ -134,7 +135,7 @@ const AllBatchesTimetable = () => {
 
       setLoading(prev => ({ ...prev, department: true }));
       
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel: selectedDegree }
       });
       
@@ -165,7 +166,7 @@ const AllBatchesTimetable = () => {
     
     try {
       setLoading(prev => ({ ...prev, batch: true }));
-      const response = await axios.get('http://localhost:65000/api/timetables/batches', {
+      const response = await axios.get(`${API_URL}/api/timetables/batches`, {
         params: { 
           degreeLevel: selectedDegree,
           department: selectedDepartment 
@@ -196,7 +197,7 @@ const AllBatchesTimetable = () => {
     try {
       setLoading(prev => ({ ...prev, facultyStatus: true }));
       
-      const facultyResponse = await axios.get('http://localhost:65000/api/faculty', {
+      const facultyResponse = await axios.get(`${API_URL}/api/faculty`, {
         params: { department: selectedDepartment }
       });
       
@@ -227,7 +228,7 @@ const AllBatchesTimetable = () => {
     try {
       setLoading(prev => ({ ...prev, batches: true }));
       
-      const batchesResponse = await axios.get('http://localhost:65000/api/timetables/batches', {
+      const batchesResponse = await axios.get(`${API_URL}/api/timetables/batches`, {
         params: { 
           degreeLevel: selectedDegree,
           department: selectedDepartment
@@ -249,7 +250,7 @@ const AllBatchesTimetable = () => {
           batchesDetailsMap[batch._id] = batch;
           
           const timetableResponse = await axios.get(
-            `http://localhost:65000/api/timetables/batches/${batch._id}/semesters/${batch.currentSemester || 1}/timetable`
+            `${API_URL}/api/timetables/batches/${batch._id}/semesters/${batch.currentSemester || 1}/timetable`
           );
           
           if (timetableResponse.data.data?.timetable) {
@@ -277,7 +278,7 @@ const AllBatchesTimetable = () => {
 
   const fetchPublishedTimetables = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/timetables/published-timetables');
+      const response = await axios.get(`${API_URL}/api/timetables/published-timetables`);
       
       if (response.data.success) {
         const publishedMap = {};
@@ -298,7 +299,7 @@ const AllBatchesTimetable = () => {
       setLoading(prev => ({ ...prev, faculty: true }));
       
       const response = await axios.get(
-        `http://localhost:65000/api/timetables/faculty-timetables/department/${selectedDepartment}`
+        `${API_URL}/api/timetables/faculty-timetables/department/${selectedDepartment}`
       );
       
       if (response.data.success) {
@@ -420,7 +421,7 @@ const AllBatchesTimetable = () => {
     try {
       setLoadingFacultyDetail(true);
       const response = await axios.get(
-        `http://localhost:65000/api/timetables/faculty-timetables/${facultyId}`
+        `${API_URL}/api/timetables/faculty-timetables/${facultyId}`
       );
       
       if (response.data.success) {

@@ -13,6 +13,7 @@ import {
   ClockCircleOutlined,
   EnvironmentOutlined
 } from "@ant-design/icons";
+import API_URL from '../../../config';
 
 const { Option } = Select;
 
@@ -30,7 +31,6 @@ function FacultyAttendancePage() {
   const facultyUser = JSON.parse(localStorage.getItem("user") || "{}");
   const facultyId = facultyUser?._id;
 
-  // ---------------- Fetch Courses ----------------
   useEffect(() => {
     const fetchCourses = async () => {
       try {
@@ -42,7 +42,7 @@ function FacultyAttendancePage() {
         }
 
         const resCourses = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -53,7 +53,7 @@ function FacultyAttendancePage() {
         for (const course of activeCourses) {
           try {
             const resStudents = await axios.get(
-              `http://localhost:65000/api/students/by-course/${encodeURIComponent(
+              `${API_URL}/api/students/by-course/${encodeURIComponent(
                 course.courseCode
               )}`,
               {
@@ -71,7 +71,7 @@ function FacultyAttendancePage() {
 
           try {
             const resSlots = await axios.get(
-              "http://localhost:65000/api/faculty-timetable/course-slots",
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,
@@ -99,7 +99,6 @@ function FacultyAttendancePage() {
     fetchCourses();
   }, [facultyId]);
 
-  // ---------------- Generate Class Dates ----------------
   const generateClassDates = (course) => {
     const dates = [];
     const dayMap = {
@@ -136,7 +135,6 @@ function FacultyAttendancePage() {
     return uniq;
   };
 
-  // ---------------- Calculate Statistics ----------------
   const calculateStats = (studentsList) => {
     const present = studentsList.filter(s => s.attendance === "Present").length;
     const total = studentsList.length;
@@ -146,10 +144,9 @@ function FacultyAttendancePage() {
     setStats({ present, absent, total, percentage: Math.round(percentage) });
   };
 
-  // ---------------- Fetch Students + Attendance ----------------
   const fetchStudents = async (course, date = null) => {
     try {
-      console.log("🎯 Fetching students for:", course.courseCode);
+      console.log("Fetching students for:", course.courseCode);
       setSelectedCourse(course);
       setLoadingStudents(true);
 
@@ -159,9 +156,8 @@ function FacultyAttendancePage() {
       const selectedClassDate = date || classDates[0] || null;
       setSelectedDate(selectedClassDate);
 
-      // fetch students
       const res = await axios.get(
-        `http://localhost:65000/api/students/by-course/${encodeURIComponent(
+        `${API_URL}/api/students/by-course/${encodeURIComponent(
           course.courseCode
         )}`,
         {
@@ -180,12 +176,12 @@ function FacultyAttendancePage() {
         percentage: s.percentage || 0,
       }));
 
-      console.log("🧩 Students fetched:", studentsWithAttendance.length);
+      console.log("Students fetched:", studentsWithAttendance.length);
 
       if (selectedClassDate) {
         try {
           const resAttendance = await axios.get(
-            "http://localhost:65000/api/attendance/by-date",
+            `${API_URL}/api/attendance/by-date`,
             {
               params: {
                 courseCode: course.courseCode,
@@ -198,7 +194,7 @@ function FacultyAttendancePage() {
             }
           );
 
-          console.log("📘 Attendance API Response:", resAttendance.data);
+          console.log(" Attendance API Response:", resAttendance.data);
 
           let existingAttendance = [];
           if (resAttendance?.data) {
@@ -241,7 +237,6 @@ function FacultyAttendancePage() {
     }
   };
 
-  // ---------------- Handlers ----------------
   const handleDateChange = (dateStr) => {
     const d = new Date(dateStr);
     setSelectedDate(d);
@@ -297,11 +292,11 @@ function FacultyAttendancePage() {
       };
 
       const res = await axios.post(
-        "http://localhost:65000/api/attendance/save",
+        `${API_URL}/api/attendance/save`,
         payload
       );
 
-      message.success("✅ Attendance saved successfully");
+      message.success(" Attendance saved successfully");
       fetchStudents(selectedCourse, selectedDate);
     } catch (err) {
       console.error("Save attendance error:", err?.response?.data || err.message || err);
@@ -309,7 +304,6 @@ function FacultyAttendancePage() {
     }
   };
 
-  // ---------------- Enhanced Card Style Function ----------------
   const getCardStyle = (course) => {
     const baseStyle = {
       border: "none",
@@ -343,7 +337,6 @@ function FacultyAttendancePage() {
     };
   };
 
-  // ---------------- Table Columns ----------------
   const attendanceColumns = [
     { 
       title: "Student ID", 

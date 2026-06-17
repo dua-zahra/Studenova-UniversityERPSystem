@@ -2,6 +2,8 @@ import React from 'react';
 import AddProfessor from './AddProfessor';
 import FacultyList from './FacultyList';
 import AddStudent from './AddStudent';
+import API_URL from '../../../config';
+
 const UserManagementPage = () => {
   return (
     <div>

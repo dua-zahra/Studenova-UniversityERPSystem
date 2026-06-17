@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import API_URL from '../../../config';
+
 import axios from 'axios';
 import { 
   Card, Table, Button, Tag, Space, Input, Select, 
@@ -36,7 +38,7 @@ const TeacherAssignmentsListView = () => {
 
   const fetchFiltersData = async () => {
     try {
-      const degreeResponse = await axios.get('http://localhost:65000/api/degree-levels');
+      const degreeResponse = await axios.get(`${API_URL}/api/degree-levels`);
       console.log('Degree Levels Response:', degreeResponse.data);
       
       let degreeData = [];
@@ -56,7 +58,7 @@ const TeacherAssignmentsListView = () => {
       setDegreeLevels(formattedDegreeLevels);
       console.log('Formatted Degree Levels:', formattedDegreeLevels);
 
-      const deptResponse = await axios.get('http://localhost:65000/api/departments/by-degree');
+      const deptResponse = await axios.get(`${API_URL}/api/departments/by-degree`);
       console.log('Departments Response:', deptResponse.data);
       
       let deptData = [];
@@ -84,7 +86,7 @@ const TeacherAssignmentsListView = () => {
   const fetchTeacherAssignments = async () => {
     setLoading(true);
     try {
-      const batchesResponse = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active');
+      const batchesResponse = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`);
       
       let batchesData = [];
       if (Array.isArray(batchesResponse.data)) {
@@ -93,7 +95,7 @@ const TeacherAssignmentsListView = () => {
         batchesData = batchesResponse.data.data;
       }
 
-      const facultyResponse = await axios.get('http://localhost:65000/api/teacher-assignment/faculty/with-teaching-status');
+      const facultyResponse = await axios.get(`${API_URL}/api/teacher-assignment/faculty/with-teaching-status`);
       
       let facultyData = [];
       if (Array.isArray(facultyResponse.data)) {
@@ -111,7 +113,7 @@ const TeacherAssignmentsListView = () => {
         
         try {
           const coursesResponse = await axios.get(
-            `http://localhost:65000/api/teacher-assignment/batches/${batch._id}/semesters/${currentSemester}/courses`
+            `${API_URL}/api/teacher-assignment/batches/${batch._id}/semesters/${currentSemester}/courses`
           );
 
           const coursesData = coursesResponse.data.data || coursesResponse.data || [];

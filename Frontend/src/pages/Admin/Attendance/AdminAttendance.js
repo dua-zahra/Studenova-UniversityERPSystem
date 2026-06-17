@@ -7,6 +7,7 @@ import { TeamOutlined, EditOutlined, SaveOutlined, CalendarOutlined } from "@ant
 import axios from "axios";
 import moment from "moment";
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 const { Title, Text } = Typography;
 const { Option } = Select;
 
@@ -35,7 +36,9 @@ const ManageAttendance = () => {
   });
   const [isEditing, setIsEditing] = useState(false);
 
-  const backendURL = "http://localhost:65000/api";
+  // const backendURL = "http://localhost:65000/api";
+const backendURL = API_URL;
+
 
   useEffect(() => {
     const fetchDegrees = async () => {

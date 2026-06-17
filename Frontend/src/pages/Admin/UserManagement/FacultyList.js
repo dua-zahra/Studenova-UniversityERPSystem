@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Tag, Space, Input,Select, 
   Row, Col, Typography, Alert, Spin, Empty, Tooltip
@@ -43,12 +45,11 @@ const FacultyList = () => {
   const fetchFaculty = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:65000/api/faculty");
+      const res = await axios.get(`${API_URL}/api/faculty`);
       const facultyData = Array.isArray(res.data) ? res.data : (res.data.data || []);
       setFaculty(facultyData);
       setFilteredFaculty(facultyData);
       
-      // Extract unique departments for filter
       const uniqueDepartments = [...new Set(facultyData.map(f => f.department).filter(Boolean))];
       setDepartments(uniqueDepartments.map(dept => ({
         value: dept,
@@ -79,7 +80,7 @@ const FacultyList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.put(`http://localhost:65000/api/faculty/block/${id}`, { isActive: false });
+          await axios.put(`${API_URL}/api/faculty/block/${id}`, { isActive: false });
           toast.success("Professor blocked successfully!");
           fetchFaculty();
         } catch (err) {
@@ -102,7 +103,7 @@ const FacultyList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.put(`http://localhost:65000/api/faculty/unblock/${id}`, { isActive: true });
+          await axios.put(`${API_URL}/api/faculty/unblock/${id}`, { isActive: true });
           toast.success("Professor unblocked successfully!");
           fetchFaculty();
         } catch (err) {
@@ -208,7 +209,7 @@ const FacultyList = () => {
       render: (photo, record) => (
         <div style={{ textAlign: 'center' }}>
           <img
-            src={`http://localhost:65000/uploads/${photo}`}
+            src={`${API_URL}/uploads/${photo}`}
             alt="Profile"
             style={{
               width: "50px",
@@ -343,7 +344,7 @@ const FacultyList = () => {
         >
           <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
             <img
-              src={`http://localhost:65000/uploads/${record.photo}`}
+              src={`${API_URL}/uploads/${record.photo}`}
               alt="Profile"
               style={{
                 width: "50px",

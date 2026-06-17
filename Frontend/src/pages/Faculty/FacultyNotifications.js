@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, message, Spin } from "antd";
 import { BellOutlined } from "@ant-design/icons";
 import axios from "axios";
+import API_URL from '../../../config';
 
 function NotificationsPage() {
   const [todayClasses, setTodayClasses] = useState([]);
@@ -15,7 +16,7 @@ function NotificationsPage() {
         if (!facultyEmail) return;
 
         const resCourses = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -39,7 +40,7 @@ function NotificationsPage() {
         for (const course of activeCourses) {
           try {
             const resSlots = await axios.get(
-              "http://localhost:65000/api/faculty-timetable/course-slots",
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId: facultyUser?._id,

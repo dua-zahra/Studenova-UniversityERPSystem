@@ -11,21 +11,21 @@ import {
   faBell,
   faSignOutAlt,
   faBars,
-  faTasks, // ✅ added task manager icon
+  faTasks, 
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
+import API_URL from '../config';
 import FacultyDashboard from "./FacultyDashboard";
 import FacultyCourses from "../../pages/Faculty/FacultyCourses";
 import FacultyAttendance from "../../pages/Faculty/FacultyAttendance";
 import FacultyNotifications from "../../pages/Faculty/FacultyNotifications";
 import FacultySchedule from "../../pages/Faculty/FacultySchedule";
 import FacultyResultsPage from "../../pages/Faculty/FacultyResultsPage";
-import FacultyTaskManager from "../../pages/Faculty/FacultyTaskManager"; // ✅ new page
+import FacultyTaskManager from "../../pages/Faculty/FacultyTaskManager"; 
 
 import MaleAvatar from "../../assets/Male-avatar.png";
 import FemaleAvatar from "../../assets/Female-avatar.png";
@@ -39,29 +39,22 @@ const FacultySidebar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [activeModule, setActiveModule] = useState("Dashboard");
 
-  // ✅ faculty info
   const [faculty, setFaculty] = useState(null);
 
-  // ---------------- NEW CODE ----------------
-  // Load faculty info from localStorage first, fallback to backend if needed
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser?.role === "faculty") {
-      // use localStorage data immediately
       setFaculty(storedUser);
 
-      // fetch latest data from backend
       axios
-        .get(`http://localhost:65000/api/faculty/email/${storedUser.universityEmail}`)
+        .get(`${API_URL}/api/faculty/email/${storedUser.universityEmail}`)
         .then((res) => setFaculty(res.data))
         .catch(() => {
-          /* fallback already set from localStorage */
         });
     }
   }, []);
 
-  // ✅ Profile pic fallback (working logic)
-  const imageBasePath = "http://localhost:65000/uploads/";
+  const imageBasePath = `${API_URL}/uploads/`;
 
  const profileImage = faculty?.profilePic
   ? `${imageBasePath}${faculty.profilePic}` 
@@ -71,7 +64,6 @@ const FacultySidebar = () => {
   ? FemaleAvatar
   : MaleAvatar;
 
-  // Responsive handling
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 768;
@@ -95,7 +87,7 @@ const FacultySidebar = () => {
     { name: "Schedule", icon: faCalendarAlt },
     { name: "Results", icon: faChartLine },
     { name: "Notifications", icon: faBell },
-    { name: "Task Manager", icon: faTasks }, // ✅ new menu item
+    { name: "Task Manager", icon: faTasks }, 
   ];
 
   return (
@@ -117,7 +109,6 @@ const FacultySidebar = () => {
           <div style={{ width: "40px" }}></div>
         </div>
 
-        {/* Profile */}
         <div className="mt-4 text-center position-relative">
           <div className="profile-container d-inline-block position-relative">
            <img
@@ -131,7 +122,6 @@ const FacultySidebar = () => {
 />
 
           </div>
-          {/* only showing avatar & email */}
           <p className="small text-truncate fw-bold text-white">
             {faculty?.universityEmail || ""}
           </p>
@@ -157,7 +147,6 @@ const FacultySidebar = () => {
           </ul>
         </nav>
 
-        {/* Logout */}
         <div className="mt-auto pt-3 text-center">
           <Button onClick={handleLogout} className="sidebar-logout-btn">
             <FontAwesomeIcon 
@@ -170,7 +159,6 @@ const FacultySidebar = () => {
         </div>
       </aside>
 
-      {/* Main Content */}
       <div className={`main-content flex-grow-1 p-3  ${isOpen ? "" : "collapsed"}`}>
         {activeModule === "Dashboard" && <FacultyDashboard faculty={faculty} />}
         {activeModule === "My Courses" && <FacultyCourses />}

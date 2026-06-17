@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, InputNumber, Button, Spin, Modal, Input, message } from "antd";
 import "antd/dist/reset.css";
+import API_URL from '../../../config';
 
 const ResultsTable = ({ courseId, batchId, sectionName }) => {
   const [students, setStudents] = useState([]);
@@ -22,12 +23,11 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
     setComponents(defaultComponents);
   }, []);
 
-  // Fetch students with saved results
   const fetchStudents = async () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:65000/api/results/${batchId}/course-students`,
+        `${API_URL}/api/results/${batchId}/course-students`,
         { params: { courseCode: courseId, sectionName } }
       );
 
@@ -221,7 +221,7 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
     }
 
     try {
-      await axios.post(`http://localhost:65000/api/results/save-results`, {
+      await axios.post(`${API_URL}/api/results/save-results`, {
         results: students,
         components,
         batchId,

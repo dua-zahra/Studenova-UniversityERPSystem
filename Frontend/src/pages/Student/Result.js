@@ -10,6 +10,7 @@ import {
   Alert,
   Card,
 } from "react-bootstrap";
+import API_URL from '../../../config';
 
 export default function Results() {
   const [resultsData, setResultsData] = useState(null);
@@ -17,7 +18,7 @@ export default function Results() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:65000/api/students/getstudentresults", {
+    fetch(`${API_URL}/api/students/getstudentresults`, {
       method: "GET",
       credentials: "include",
     })

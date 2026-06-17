@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Loader2 } from 'lucide-react';
-// REMOVE this import: import AIChatbot from '../ERPChatBot/ERPChatBot';
-
+import API_URL from '../config';
 const api = axios.create({
-  baseURL: 'http://localhost:65000',
+  baseURL: `${API_URL}`,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json'
@@ -19,7 +18,6 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     loadDashboard();
-    // eslint-disable-next-line
   }, []);
 
   const loadDashboard = async () => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash, faSync, faSearch, faCheckCircle, faClock, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -56,7 +57,6 @@ const FacultyManagement = () => {
     );
   });
 
-  // Fetch all faculty data on component mount
   useEffect(() => {
     const fetchAllFacultyData = async () => {
       try {
@@ -64,8 +64,7 @@ const FacultyManagement = () => {
         
         let facultyData = [];
         try {
-          // Try to get all faculty regardless of department
-          const response = await axios.get('http://localhost:65000/api/faculty');
+          const response = await axios.get(`${API_URL}/api/faculty`);
           
           if (response.data.data && Array.isArray(response.data.data)) {
             facultyData = response.data.data;
@@ -77,7 +76,7 @@ const FacultyManagement = () => {
         } catch (error) {
           console.log('General faculty endpoint failed, trying teacher assignment endpoint');
           
-          const fallbackResponse = await axios.get('http://localhost:65000/api/teacher-assignment/faculty');
+          const fallbackResponse = await axios.get(`${API_URL}/api/teacher-assignment/faculty`);
           
           if (fallbackResponse.data.data && Array.isArray(fallbackResponse.data.data)) {
             facultyData = fallbackResponse.data.data;
@@ -140,7 +139,7 @@ const FacultyManagement = () => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(prev => ({ ...prev, degree: true }));
-        const response = await axios.get('http://localhost:65000/api/degree-levels');
+        const response = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         message.error('Failed to load degree levels');
@@ -161,7 +160,7 @@ const FacultyManagement = () => {
     const fetchDepartments = async () => {
       try {
         setLoading(prev => ({ ...prev, department: true }));
-        const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: selectedDegree }
         });
         
@@ -194,7 +193,7 @@ const FacultyManagement = () => {
     const fetchBatches = async () => {
       try {
         setLoading(prev => ({ ...prev, batch: true }));
-        const response = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+        const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
           params: { 
             degreeLevel: selectedDegree,
             department: selectedDepartment 
@@ -234,8 +233,8 @@ const FacultyManagement = () => {
         setLoading(prev => ({ ...prev, details: true, courses: true }));
         
         const [detailsResponse, advancementResponse] = await Promise.all([
-          axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`),
-          axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
+          axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+          axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
         ]);
 
         const batchData = detailsResponse.data;
@@ -289,7 +288,7 @@ const FacultyManagement = () => {
     for (let sem = 1; sem <= totalSemesters; sem++) {
       try {
         const response = await axios.get(
-          `http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/semesters/${sem}/courses`
+          `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${sem}/courses`
         );
         
         const coursesData = response.data.data || response.data || [];
@@ -321,8 +320,8 @@ const FacultyManagement = () => {
       setLoading(prev => ({ ...prev, details: true, courses: true, faculty: true }));
       
       const [detailsResponse, advancementResponse] = await Promise.all([
-        axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`),
-        axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
+        axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+        axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
       ]);
 
       const batchData = detailsResponse.data;
@@ -404,7 +403,6 @@ const FacultyManagement = () => {
       
       setLoading(prev => ({ ...prev, faculty: true }));
       
-      // Use the already loaded allFaculty data
       const facultyData = allFaculty.map(faculty => ({
         ...faculty,
         name: `${faculty.firstName} ${faculty.lastName}`,
@@ -429,7 +427,7 @@ const FacultyManagement = () => {
         throw new Error('Missing required assignment data');
       }
 
-      const url = `http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${currentAssignment.courseCode}/sections/${encodeURIComponent(currentAssignment.sectionName)}`;
+      const url = `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${currentAssignment.courseCode}/sections/${encodeURIComponent(currentAssignment.sectionName)}`;
 
       const response = await axios.put(
         url,
@@ -484,7 +482,7 @@ const FacultyManagement = () => {
           }
 
           const response = await axios.delete(
-            `http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${courseCode}/sections/${encodeURIComponent(sectionName)}`
+            `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${courseCode}/sections/${encodeURIComponent(sectionName)}`
           );
 
           if (response.data.success) {
@@ -508,7 +506,7 @@ const FacultyManagement = () => {
       content: 'Are you sure you want to advance this batch to the next semester? This action cannot be undone.',
       onOk: async () => {
         try {
-          await axios.post(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}/advance-semester`);
+          await axios.post(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/advance-semester`);
           message.success('Semester advanced successfully');
           await refreshBatchData();
         } catch (error) {

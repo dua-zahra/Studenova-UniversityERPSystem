@@ -12,7 +12,7 @@ import facultyImg from '../../assets/faculty.webp';
 import departmentImg from '../../assets/departments.jpg';
 import batchImg from '../../assets/batches.png';
 import "../../assets/style.css";
-
+import API_URL from '../config';
 const localizer = momentLocalizer(moment);
 
 const AdminDashboard = () => {
@@ -132,15 +132,15 @@ const AdminDashboard = () => {
         batchesRes, 
         facultyRes
       ] = await Promise.allSettled([
-        axios.get('http://localhost:65000/api/students/count'),
-        axios.get('http://localhost:65000/api/courses/count'),
-        axios.get('http://localhost:65000/api/departments/count'),
-        axios.get('http://localhost:65000/api/batches/count'),
-        axios.get('http://localhost:65000/api/faculty/count')
+        axios.get(`${API_URL}/api/students/count`),
+        axios.get(`${API_URL}/api/courses/count`),
+        axios.get(`${API_URL}/api/departments/count`),
+        axios.get(`${API_URL}/api/batches/count`),
+        axios.get(`${API_URL}/api/faculty/count`)
       ]);
 
       const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-      const recentStudentsRes = await axios.get('http://localhost:65000/api/students/recent/count', {
+      const recentStudentsRes = await axios.get(`${API_URL}/api/students/recent/count`, {
         params: { enrolledAfter: thirtyDaysAgo.toISOString() }
       });
 
@@ -192,7 +192,7 @@ const AdminDashboard = () => {
     try {
       setTrendLoading(true);
       
-      const response = await axios.get('http://localhost:65000/api/students/enrollment-trend');
+      const response = await axios.get(`${API_URL}/api/students/enrollment-trend`);
       
       if (response.data.success) {
         setEnrollmentData(response.data.data);
@@ -213,7 +213,7 @@ const AdminDashboard = () => {
     try {
       setDistributionLoading(true);
       
-      const response = await axios.get('http://localhost:65000/api/counts');
+      const response = await axios.get(`${API_URL}/api/counts`);
       
       if (response.data.success) {
         setCourseDistributionData(response.data.data);
@@ -232,7 +232,7 @@ const AdminDashboard = () => {
 
   const fetchRecentActivities = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/activities/recent');
+      const response = await axios.get(`${API_URL}/api/activities/recent`);
       
       if (response.data.success) {
         setRecentActivities(response.data.data);
@@ -247,7 +247,7 @@ const AdminDashboard = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setCalendarData(prev => ({
         ...prev,
         degreeLevels: response.data
@@ -260,7 +260,7 @@ const AdminDashboard = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setCalendarData(prev => ({
@@ -280,7 +280,7 @@ const AdminDashboard = () => {
   const fetchBatches = async (departmentId) => {
     try {
       const degreeLevel = calendarData.selectedDegree;
-      const response = await axios.get('http://localhost:65000/api/batches', {
+      const response = await axios.get(`${API_URL}/api/batches`, {
         params: { department: departmentId, degreeLevel }
       });
       setCalendarData(prev => ({
@@ -299,13 +299,12 @@ const AdminDashboard = () => {
   const fetchCalendar = async (batchId) => {
     try {
       setCalendarLoading(true);
-      const response = await axios.get(`http://localhost:65000/api/batches/${batchId}/calendar`);
+      const response = await axios.get(`${API_URL}/api/batches/${batchId}/calendar`);
       
       const transformCalendarData = (academicCalendar) => {
         return academicCalendar.flatMap(semester => {
           const semesterEvents = [];
           
-          // Semester period
           semesterEvents.push({
             title: `${semester.name} Semester`,
             start: new Date(semester.startDate),
@@ -316,7 +315,6 @@ const AdminDashboard = () => {
             type: 'semester'
           });
           
-          // Midterm exams
           if (semester.midtermStart && semester.midtermEnd) {
             semesterEvents.push({
               title: 'Midterm Exams',
@@ -329,7 +327,6 @@ const AdminDashboard = () => {
             });
           }
           
-          // Final exams
           if (semester.finalStart && semester.finalEnd) {
             semesterEvents.push({
               title: 'Final Exams',

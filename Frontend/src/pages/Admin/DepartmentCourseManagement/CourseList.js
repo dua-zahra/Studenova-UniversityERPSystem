@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const CourseList = () => {
   const [degreeLevel, setDegreeLevel] = useState('');
@@ -15,7 +16,7 @@ const CourseList = () => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const res = await axios.get('http://localhost:65000/api/degree-levels');
+        const res = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(res.data);
       } catch (err) {
         console.error('Error fetching degree levels:', err);
@@ -36,7 +37,7 @@ const CourseList = () => {
 
       try {
         setIsLoading(true);
-        const res = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const res = await axios.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel }
         });
         setDepartments(res.data.departments || []);
@@ -67,7 +68,7 @@ const CourseList = () => {
 
     try {
       setIsLoading(true);
-      const res = await axios.get('http://localhost:65000/api/course-entries', {
+      const res = await axios.get(`${API_URL}/api/course-entries`, {
         params: { 
           degreeLevel, 
           department: department.trim() 

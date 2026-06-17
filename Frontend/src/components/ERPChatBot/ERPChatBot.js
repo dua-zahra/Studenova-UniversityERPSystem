@@ -17,9 +17,9 @@ import {
   GraduationCap,
   HelpCircle
 } from 'lucide-react';
-
+import API_URL from '../config';
 const api = axios.create({
-  baseURL: 'http://localhost:65000',
+  baseURL: `${API_URL}`,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json'

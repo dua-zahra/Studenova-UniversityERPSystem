@@ -7,6 +7,8 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../assets/style.css";
+import API_URL from '../../../config';
+
 import { 
   CalendarOutlined, 
   FilterOutlined, 
@@ -61,7 +63,7 @@ function FacultySchedulePage() {
         }
 
         const resCourses = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -73,7 +75,7 @@ function FacultySchedulePage() {
         for (const course of activeCourses) {
           try {
             const resSlots = await axios.get(
-              "http://localhost:65000/api/faculty-timetable/course-slots",
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,

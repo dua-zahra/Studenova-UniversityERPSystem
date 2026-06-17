@@ -17,7 +17,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
+import API_URL from '../config';
 import StudentDashboard from "./StudentDashboard";
 import Attendance from "../../pages/Student/Attendance";
 import TimeTable from "../../pages/Student/TimeTable";
@@ -47,14 +47,14 @@ const StudentSidebar = () => {
       setFaculty(storedUser);
 
       axios
-        .get(`http://localhost:65000/api/faculty/email/${storedUser.universityEmail}`)
+        .get(`${API_URL}/api/faculty/email/${storedUser.universityEmail}`)
         .then((res) => setFaculty(res.data))
         .catch(() => {
         });
     }
   }, []);
 
-  const imageBasePath = "http://localhost:65000/uploads/";
+  const imageBasePath = `${API_URL}/uploads/`;
 
  const profileImage = faculty?.profilePic
   ? `${imageBasePath}${faculty.profilePic}` 

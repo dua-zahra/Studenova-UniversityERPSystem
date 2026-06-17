@@ -22,7 +22,7 @@ import {
 import moment from "moment";
 import "antd/dist/reset.css";
 import "../../assets/Facultystyle.css";
-
+import API_URL from '../config';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, ChartTooltip, Legend);
 
 const { Text, Title: AntTitle } = Typography;
@@ -46,9 +46,8 @@ const FacultyDashboard = () => {
         const email = facultyUser?.universityEmail || facultyUser?.email;
         if (!email) return;
 
-        // Fetch Courses
         const resCourses = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: email } }
         );
         if (resCourses.data.success) {
@@ -56,7 +55,6 @@ const FacultyDashboard = () => {
           setFacultyInfo(resCourses.data.faculty);
         }
 
-        // Fetch Today's Classes for Notifications
         const activeCourses = (resCourses.data.courses || []).filter(
           (c) => c.teachingStatus === "in-progress" && c.isActive
         );
@@ -77,7 +75,7 @@ const FacultyDashboard = () => {
         for (const course of activeCourses) {
           try {
             const resSlots = await axios.get(
-              "http://localhost:65000/api/faculty-timetable/course-slots",
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId: facultyUser?._id,
@@ -114,26 +112,23 @@ const FacultyDashboard = () => {
         }
 
         setTodayClasses(todayClassesArr);
-        setNotifications(todayClassesArr); // Set notifications as today's classes
+        setNotifications(todayClassesArr); 
 
-        // Fetch Exam Dates from Academic Calendar
         let allExams = [];
 
         for (const course of activeCourses) {
           try {
             const resCalendar = await axios.get(
-              `http://localhost:65000/api/batches/${course.batchId}/calendar`
+              `${API_URL}/api/batches/${course.batchId}/calendar`
             );
 
             const academicCalendar = resCalendar.data.academicCalendar || [];
             
             academicCalendar.forEach((semester) => {
-              // Add Midterm Exam if dates exist
               if (semester.midtermStart && semester.midtermEnd) {
                 const midtermStart = new Date(semester.midtermStart);
                 const midtermEnd = new Date(semester.midtermEnd);
                 
-                // Only show upcoming or current exams
                 if (midtermEnd >= new Date()) {
                   allExams.push({
                     title: `Midterm Exam`,
@@ -146,12 +141,10 @@ const FacultyDashboard = () => {
                 }
               }
 
-              // Add Final Exam if dates exist
               if (semester.finalStart && semester.finalEnd) {
                 const finalStart = new Date(semester.finalStart);
                 const finalEnd = new Date(semester.finalEnd);
                 
-                // Only show upcoming or current exams
                 if (finalEnd >= new Date()) {
                   allExams.push({
                     title: `Final Exam`,
@@ -169,10 +162,8 @@ const FacultyDashboard = () => {
           }
         }
 
-        // Sort exams by start date (closest first)
         allExams.sort((a, b) => new Date(a.start) - new Date(b.start));
         
-        // Take only the next 5 upcoming exams for Recent Activities
         setUpcomingExams(allExams.slice(0, 5));
 
       } catch (err) {
@@ -204,10 +195,10 @@ const FacultyDashboard = () => {
   };
 
   const getProgressColor = (percent) => {
-    if (percent >= 90) return "#8a7aa8"; // darker purple
-    if (percent >= 70) return "#9a8ab8"; // medium dark purple
-    if (percent >= 50) return "#b2a4c2"; // base purple
-    return "#c8bcd4"; // lighter purple
+    if (percent >= 90) return "#8a7aa8"; 
+    if (percent >= 70) return "#9a8ab8"; 
+    if (percent >= 50) return "#b2a4c2"; 
+    return "#c8bcd4"; 
   };
 
   const getProgressStatus = (percent) => {
@@ -260,9 +251,9 @@ const FacultyDashboard = () => {
   const getExamTagColor = (examType) => {
     switch (examType) {
       case "midterm":
-        return "#ffa940"; // orange for midterm
+        return "#ffa940"; 
       case "final":
-        return "#ff4d4f"; // red for final
+        return "#ff4d4f"; 
       default:
         return "#8a7aa8";
     }

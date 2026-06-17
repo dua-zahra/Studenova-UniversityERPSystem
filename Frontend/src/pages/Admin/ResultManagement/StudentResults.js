@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import API_URL from '../../../config';
+
 import { 
   faSearch, faEye, faDownload, faSync, 
   faCheckCircle, faTimesCircle, faExclamationTriangle,
@@ -49,7 +51,6 @@ const BatchResultsManagement = () => {
     data: null
   });
 
-  // Filter students based on search
   const filteredStudents = Object.values(studentResults).filter(student => {
     const searchLower = searchTerm.toLowerCase();
     return (
@@ -59,12 +60,11 @@ const BatchResultsManagement = () => {
     );
   });
 
-  // Fetch degree levels
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(prev => ({ ...prev, degree: true }));
-        const response = await axios.get('http://localhost:65000/api/degree-levels');
+        const response = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         console.error('Error fetching degree levels:', error);
@@ -75,7 +75,6 @@ const BatchResultsManagement = () => {
     fetchDegreeLevels();
   }, []);
 
-  // Fetch departments when degree is selected
   useEffect(() => {
     if (!selectedDegree) {
       setDepartments([]);
@@ -86,7 +85,7 @@ const BatchResultsManagement = () => {
     const fetchDepartments = async () => {
       try {
         setLoading(prev => ({ ...prev, department: true }));
-        const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: selectedDegree }
         });
         
@@ -120,7 +119,7 @@ const BatchResultsManagement = () => {
     const fetchBatches = async () => {
       try {
         setLoading(prev => ({ ...prev, batch: true }));
-        const response = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+        const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
           params: { 
             degreeLevel: selectedDegree,
             department: selectedDepartment 
@@ -147,7 +146,6 @@ const BatchResultsManagement = () => {
     fetchBatches();
   }, [selectedDepartment, selectedDegree]);
 
-  // Fetch batch details and results when batch is selected
   useEffect(() => {
     if (!selectedBatch) {
       setBatchDetails(null);
@@ -161,8 +159,8 @@ const BatchResultsManagement = () => {
         setLoading(prev => ({ ...prev, details: true, results: true }));
         
         const [detailsResponse, resultsResponse] = await Promise.all([
-          axios.get(`http://localhost:65000/api/teacher-assignment/batches/${selectedBatch}`),
-          axios.get(`http://localhost:65000/api/results/batch/${selectedBatch}`)
+          axios.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+          axios.get(`${API_URL}/api/results/batch/${selectedBatch}`)
         ]);
 
         const batchData = detailsResponse.data;
@@ -187,7 +185,6 @@ const BatchResultsManagement = () => {
           totalSemesters: actualBatchData.totalSemesters || 8
         });
 
-        // Process batch results
         if (resultsResponse.data.success) {
           const resultsData = resultsResponse.data.data || [];
           setBatchResults(resultsData);
@@ -203,7 +200,6 @@ const BatchResultsManagement = () => {
     fetchBatchData();
   }, [selectedBatch]);
 
-  // Process results to organize by student
   const processStudentResults = async (results) => {
     try {
       setLoading(prev => ({ ...prev, studentResults: true }));
@@ -250,7 +246,6 @@ const BatchResultsManagement = () => {
         });
       });
       
-      // Calculate SGPA for each student
       Object.keys(studentMap).forEach(studentId => {
         const student = studentMap[studentId];
         if (student.totalCredits > 0) {
@@ -266,7 +261,6 @@ const BatchResultsManagement = () => {
     }
   };
 
-  // Calculate batch statistics
   const calculateBatchStatistics = () => {
     const publishedResults = batchResults.filter(result => result.status === 'published');
     const totalStudents = Object.keys(studentResults).length;
@@ -282,15 +276,12 @@ const BatchResultsManagement = () => {
       'D+': 0, 'D': 0, 'F': 0
     };
 
-    // Process grade distribution and courses by semester
     Object.values(studentResults).forEach(student => {
       student.courses.forEach(course => {
-        // Grade distribution
         if (course.grade && gradeDistribution.hasOwnProperty(course.grade)) {
           gradeDistribution[course.grade]++;
         }
         
-        // Courses by semester
         if (!coursesBySemester[course.semester]) {
           coursesBySemester[course.semester] = new Set();
         }
@@ -316,14 +307,13 @@ const BatchResultsManagement = () => {
     };
   };
 
-  // Refresh batch results
   const refreshResults = async () => {
     if (!selectedBatch) return;
     
     try {
       setLoading(prev => ({ ...prev, results: true, studentResults: true }));
       
-      const response = await axios.get(`http://localhost:65000/api/results/batch/${selectedBatch}`);
+      const response = await axios.get(`${API_URL}/api/results/batch/${selectedBatch}`);
       
       if (response.data.success) {
         const resultsData = response.data.data || [];
@@ -336,8 +326,6 @@ const BatchResultsManagement = () => {
       setLoading(prev => ({ ...prev, results: false, studentResults: false }));
     }
   };
-
-  // View detailed result
   const viewResultDetails = (result) => {
     setResultDetailsModal({
       visible: true,
@@ -345,10 +333,9 @@ const BatchResultsManagement = () => {
     });
   };
 
-  // Download results
   const downloadResults = async (format = 'excel') => {
     try {
-      const response = await axios.get(`http://localhost:65000/api/results/batch/${selectedBatch}/export`, {
+      const response = await axios.get(`${API_URL}/api/results/batch/${selectedBatch}/export`, {
         params: { format },
         responseType: 'blob'
       });
@@ -365,7 +352,6 @@ const BatchResultsManagement = () => {
     }
   };
 
-  // Table columns for results overview
   const resultsOverviewColumns = [
     {
       title: 'Course Information',
@@ -470,7 +456,6 @@ const BatchResultsManagement = () => {
     }
   ];
 
-  // Table columns for student results
   const studentResultsColumns = [
     {
       title: 'Student ID',

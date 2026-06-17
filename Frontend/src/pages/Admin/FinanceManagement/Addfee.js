@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Spin, Typography, Row, Col, Input, Form,
   Divider, Statistic, Tag, Space, Tabs, Modal,
@@ -42,7 +44,6 @@ const Addfee = () => {
   const [currentBatchInfo, setCurrentBatchInfo] = useState(null);
   const [isFeeStructureSaved, setIsFeeStructureSaved] = useState(false);
 
-  // Batch-specific master base fee
   const [masterBaseFee, setMasterBaseFee] = useState({
     tuitionFee: 0,
     miscellaneousFee: 0,
@@ -52,7 +53,6 @@ const Addfee = () => {
     totalBaseFee: 0
   });
 
-  // Semester-specific custom fees for this batch
   const [semesterBaseFees, setSemesterBaseFees] = useState({});
 
   const [degreeTotals, setDegreeTotals] = useState({
@@ -72,7 +72,6 @@ const Addfee = () => {
       setBatch('');
       setBatches([]);
       setMaxSemesters(getMaxSemesters(degreeLevel));
-      // Reset master base fee when degree level changes
       resetMasterBaseFee();
     }
   }, [degreeLevel]);
@@ -90,7 +89,6 @@ const Addfee = () => {
       fetchExistingFeeStructure();
       fetchCurrentBatchInfo();
     } else {
-      // Reset when batch is cleared
       resetMasterBaseFee();
       setSemesterBaseFees({});
       setCurrentBatchInfo(null);
@@ -102,7 +100,7 @@ const Addfee = () => {
     if (!batch) return;
     
     try {
-      const response = await axios.get('http://localhost:65000/api/batches');
+      const response = await axios.get(`${API_URL}/api/batches`);
       if (response.data.success) {
         const batchInfo = response.data.data.find(batchItem => 
           batchItem.batchName === batch &&
@@ -146,7 +144,6 @@ const Addfee = () => {
            (Number(baseFeeConfig.labFee) || 0);
   };
 
-  // Check if semester is current or past
   const isSemesterDisabled = (semester) => {
     if (!currentBatchInfo || !currentBatchInfo.currentSemester) return false;
     if (!isFeeStructureSaved && !existingFeeStructure) return false;
@@ -154,7 +151,6 @@ const Addfee = () => {
     return semester <= currentBatchInfo.currentSemester;
   };
 
-  // Update master base fee for current batch
   const updateMasterBaseFee = (field, value) => {
     if (isFeeStructureSaved || existingFeeStructure) {
       toast.warning('Fee structure is already saved. Cannot modify master base fee.');
@@ -171,7 +167,6 @@ const Addfee = () => {
     setMasterBaseFee(newMasterBaseFee);
   };
 
-  // Apply master base fee to all semesters
   const applyToAllSemesters = () => {
     if (isFeeStructureSaved || existingFeeStructure) {
       toast.warning('Fee structure is already saved. Cannot modify semester configurations.');
@@ -180,7 +175,6 @@ const Addfee = () => {
 
     const newSemesterBaseFees = { ...semesterBaseFees };
     
-    // Remove all custom semester fees (they will use master by default)
     for (let i = 1; i <= maxSemesters; i++) {
       delete newSemesterBaseFees[i];
     }
@@ -189,7 +183,6 @@ const Addfee = () => {
     toast.success('Master base fee applied to all semesters! Customizations removed.');
   };
 
-  // Handle semester-specific base fee changes
   const handleSemesterBaseFeeChange = (semester, field, value) => {
     if (isSemesterDisabled(semester)) {
       toast.warning(`Cannot modify fees for Semester ${semester} as it is current or past semester.`);
@@ -211,7 +204,6 @@ const Addfee = () => {
     }));
   };
 
-  // Apply percentage adjustment to a semester
   const applyPercentageAdjustment = (semester, percentage) => {
     if (isSemesterDisabled(semester)) {
       toast.warning(`Cannot modify fees for Semester ${semester} as it is current or past semester.`);
@@ -229,7 +221,7 @@ const Addfee = () => {
       examFee: Math.round(currentSemesterFee.examFee * adjustmentFactor),
       libraryFee: Math.round(currentSemesterFee.libraryFee * adjustmentFactor),
       labFee: Math.round(currentSemesterFee.labFee * adjustmentFactor),
-      totalBaseFee: 0 // Will be calculated
+      totalBaseFee: 0 
     };
     
     adjustedFees.totalBaseFee = calculateTotalBaseFee(adjustedFees);
@@ -244,7 +236,7 @@ const Addfee = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -253,7 +245,7 @@ const Addfee = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -264,7 +256,7 @@ const Addfee = () => {
 
   const fetchBatches = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/batches');
+      const response = await axios.get(`${API_URL}/api/batches`);
       
       if (response.data.success) {
         const filteredBatches = response.data.data.filter(batchItem => 
@@ -287,7 +279,7 @@ const Addfee = () => {
 
   const fetchAssignedFees = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/fees/assigned-course-fees', {
+      const response = await axios.get(`${API_URL}/api/fees/assigned-course-fees`, {
         params: { degreeLevel, department: department.trim() }
       });
       
@@ -311,7 +303,7 @@ const Addfee = () => {
 
       for (const semester of semesters) {
         try {
-          const response = await axios.get('http://localhost:65000/api/fees/courses-for-fees', {
+          const response = await axios.get(`${API_URL}/api/fees/courses-for-fees`, {
             params: { 
               degreeLevel, 
               department: department.trim(),
@@ -346,7 +338,7 @@ const Addfee = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:65000/api/fees/structure', {
+      const response = await axios.get(`${API_URL}/api/fees/structure`, {
         params: { degreeLevel, department: department.trim(), batch }
       });
 
@@ -496,7 +488,7 @@ const Addfee = () => {
         semesterBaseFees: Object.keys(semesterBaseFees).length > 0 ? semesterBaseFees : undefined
       };
 
-      const response = await axios.post('http://localhost:65000/api/fees/structure', payload);
+      const response = await axios.post(`${API_URL}/api/fees/structure`, payload);
       
       if (response.data.success) {
         toast.success(response.data.message);
@@ -589,7 +581,7 @@ const Addfee = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:65000/api/fees/students-for-batch', {
+      const response = await axios.get(`${API_URL}/api/fees/students-for-batch`, {
         params: { degreeLevel, department: department.trim(), batch }
       });
 
@@ -615,7 +607,7 @@ const Addfee = () => {
 
     setSaving(true);
     try {
-      const response = await axios.post('http://localhost:65000/api/fees/generate-student-records', {
+      const response = await axios.post(`${API_URL}/api/fees/generate-student-records`, {
         degreeLevel,
         department: department.trim(),
         batch

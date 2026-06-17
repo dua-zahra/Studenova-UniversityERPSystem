@@ -3,6 +3,8 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Spin, Tabs, Tag, Typography, Empty, Space, Alert 
 } from 'antd';
@@ -44,7 +46,6 @@ const CourseFee = () => {
       fetchCoursesForAllSemesters();
       fetchAssignedFees();
     } else {
-      // Reset course fees when no department is selected
       setCourseFees({});
       setAssignedFees({});
     }
@@ -52,7 +53,7 @@ const CourseFee = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -61,7 +62,7 @@ const CourseFee = () => {
 
   const fetchDegreeConfig = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-config');
+      const response = await axios.get(`${API_URL}/api/degree-config`);
       window.degreeConfig = response.data;
     } catch (error) {
       console.error('Failed to load degree config');
@@ -75,7 +76,7 @@ const CourseFee = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -94,7 +95,7 @@ const CourseFee = () => {
 
       for (const semester of semesters) {
         try {
-          const response = await axios.get('http://localhost:65000/api/fees/courses-for-fees', {
+          const response = await axios.get(`${API_URL}/api/fees/courses-for-fees`, {
             params: { 
               degreeLevel, 
               department: department.trim(),
@@ -126,7 +127,7 @@ const CourseFee = () => {
 
   const fetchAssignedFees = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/fees/assigned-course-fees', {
+      const response = await axios.get(`${API_URL}/api/fees/assigned-course-fees`, {
         params: { degreeLevel, department: department.trim() }
       });
       
@@ -196,7 +197,7 @@ const CourseFee = () => {
         courseFees: feesToSave
       };
 
-      const response = await axios.post('http://localhost:65000/api/fees/save-course-fees', payload);
+      const response = await axios.post(`${API_URL}/api/fees/save-course-fees`, payload);
       
       if (response.data.success) {
         toast.success(`Fees for semester ${semester} saved successfully!`);

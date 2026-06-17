@@ -4,28 +4,29 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import "../../assets/style.css";
+import API_URL from '../../../config'
 
 const localizer = momentLocalizer(moment);
 
 const apiService = {
   fetchDegreeLevels: async () => {
-    const response = await axios.get('http://localhost:65000/api/degree-levels');
+    const response = await axios.get(`${API_URL}/api/degree-levels`);
     return response.data;
   },
   fetchDepartments: async (degreeLevel) => {
-    const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+    const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
       params: { degreeLevel }
     });
     return response.data.departments || [];
   },
   fetchBatches: async (degreeLevel, department) => {
-    const response = await axios.get('http://localhost:65000/api/batches', {
+    const response = await axios.get(`${API_URL}/api/batches`, {
       params: { department, degreeLevel }
     });
     return response.data.data || [];
   },
   fetchCalendar: async (batchId) => {
-    const response = await axios.get(`http://localhost:65000/api/batches/${batchId}/calendar`);
+    const response = await axios.get(`${API_URL}/api/batches/${batchId}/calendar`);
     return response.data;
   }
 };
@@ -45,7 +46,6 @@ const EVENT_TYPES = {
   }
 };
 
-// Default empty calendar data structure
 const DEFAULT_CALENDAR_EVENTS = [
   {
     title: 'Academic Year 2024',
@@ -68,7 +68,7 @@ const AcademicCalendar = () => {
     degreeLevels: [],
     departments: [],
     batches: [],
-    calendarEvents: DEFAULT_CALENDAR_EVENTS // Initialize with default events
+    calendarEvents: DEFAULT_CALENDAR_EVENTS 
   });
   const [batchInfo, setBatchInfo] = useState(null);
   const [loading, setLoading] = useState({
@@ -78,7 +78,7 @@ const AcademicCalendar = () => {
     calendar: false
   });
   const [error, setError] = useState(null);
-  const [showCalendar, setShowCalendar] = useState(true); // Always show calendar by default
+  const [showCalendar, setShowCalendar] = useState(true); 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -111,7 +111,6 @@ const AcademicCalendar = () => {
       if (!formData.degreeLevel) {
         setData(prev => ({ ...prev, departments: [], batches: [] }));
         setFormData(prev => ({ ...prev, department: '', batch: '' }));
-        // Don't hide calendar, just reset to default
         setData(prev => ({ ...prev, calendarEvents: DEFAULT_CALENDAR_EVENTS }));
         setBatchInfo(null);
         return;
@@ -137,7 +136,6 @@ const AcademicCalendar = () => {
       if (!formData.department) {
         setData(prev => ({ ...prev, batches: [] }));
         setFormData(prev => ({ ...prev, batch: '' }));
-        // Don't hide calendar, just reset to default
         setData(prev => ({ ...prev, calendarEvents: DEFAULT_CALENDAR_EVENTS }));
         setBatchInfo(null);
         return;
@@ -161,7 +159,6 @@ const AcademicCalendar = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Don't hide calendar on change, just reset to default events
     setData(prev => ({ ...prev, calendarEvents: DEFAULT_CALENDAR_EVENTS }));
     setBatchInfo(null);
     setError(null);
@@ -182,7 +179,6 @@ const AcademicCalendar = () => {
         type: 'semester'
       });
       
-      // Midterm exams
       if (semester.midtermStart && semester.midtermEnd) {
         semesterEvents.push({
           title: EVENT_TYPES.EXAM.title('Midterm'),
@@ -195,7 +191,6 @@ const AcademicCalendar = () => {
         });
       }
       
-      // Final exams
       if (semester.finalStart && semester.finalEnd) {
         semesterEvents.push({
           title: EVENT_TYPES.EXAM.title('Final'),
@@ -208,7 +203,6 @@ const AcademicCalendar = () => {
         });
       }
       
-      // Breaks
       if (semester.breaks?.length > 0) {
         semester.breaks.forEach(brk => {
           semesterEvents.push({
@@ -229,7 +223,6 @@ const AcademicCalendar = () => {
 
   const handleShowCalendar = async () => {
     if (!formData.batch) {
-      // If no batch selected, show default calendar
       setData(prev => ({ ...prev, calendarEvents: DEFAULT_CALENDAR_EVENTS }));
       setBatchInfo(null);
       setShowCalendar(true);
@@ -252,7 +245,6 @@ const AcademicCalendar = () => {
     } catch (err) {
       setError('Failed to load calendar data');
       console.error('Error fetching calendar:', err);
-      // On error, show default calendar instead of empty
       setData(prev => ({ ...prev, calendarEvents: DEFAULT_CALENDAR_EVENTS }));
       setShowCalendar(true);
     } finally {

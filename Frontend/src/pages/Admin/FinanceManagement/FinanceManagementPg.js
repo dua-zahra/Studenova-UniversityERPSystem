@@ -7,6 +7,7 @@ import EventList from './EventList';
 import EnrolledCourseFee from './EnrolledCourseFee';
 import EnrolledCourseList from './EnrolledCourseList';
 import UniversityExpenseList from './UniversityExpenseList';
+import API_URL from '../../../config';
 
 import FeeInvoiceManagement from './FeeInvoiceManagement';
 const FinanceMangement = () => {

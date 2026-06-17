@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Button } from 'antd';
 import { SaveOutlined } from '@ant-design/icons';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const initialFormState = {
   firstName: "",
@@ -39,7 +40,7 @@ const AddProfessor = ({ onClose }) => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const response = await axios.get('http://localhost:65000/api/degree-levels');
+        const response = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error("Failed to fetch degree levels");
@@ -53,7 +54,7 @@ const AddProfessor = ({ onClose }) => {
     const fetchFacultyDepartments = async () => {
       if (formData.degreeLevel) {
         try {
-          const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+          const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
             params: { degreeLevel: formData.degreeLevel }
           });
           setFacultyDepartments(response.data.departments || []);
@@ -127,7 +128,7 @@ const AddProfessor = ({ onClose }) => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:65000/api/faculty", formPayload);
+      await axios.post(`${API_URL}/api/faculty`, formPayload);
       toast.success("Professor added successfully!");
       setFormData(initialFormState);
     } catch (error) {

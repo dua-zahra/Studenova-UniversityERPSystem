@@ -6,6 +6,7 @@ import { addDays, subMonths, format, parseISO } from 'date-fns';
 import { Button } from 'antd';
 import { SaveOutlined } from '@ant-design/icons';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const AddBatch = ({ existingBatch }) => {
   const currentYear = new Date().getFullYear();
@@ -32,7 +33,6 @@ const AddBatch = ({ existingBatch }) => {
   const [maxSemesters, setMaxSemesters] = useState(0);
   const [autoSetAdmissionDates, setAutoSetAdmissionDates] = useState(false);
 
-  // Calculate semester start date
   const calculateSemesterStartDate = () => {
     if (!formData.enrollmentYear || !formData.semesterStart) return null;
     const year = parseInt(formData.enrollmentYear);
@@ -41,7 +41,6 @@ const AddBatch = ({ existingBatch }) => {
       : new Date(year, 7, 18); // August 18
   };
 
-  // Calculate graduation year based on degree level
   const calculateGraduationYear = () => {
     if (!formData.degreeLevel || !formData.enrollmentYear) return currentYear + 4;
     
@@ -54,7 +53,6 @@ const AddBatch = ({ existingBatch }) => {
     return parseInt(formData.enrollmentYear) + degreeDuration;
   };
 
-  // Update admission dates when auto-set is enabled
   useEffect(() => {
     if (autoSetAdmissionDates) {
       const semesterStartDate = calculateSemesterStartDate();
@@ -68,7 +66,6 @@ const AddBatch = ({ existingBatch }) => {
     }
   }, [formData.enrollmentYear, formData.semesterStart, autoSetAdmissionDates]);
 
-  // Update graduation year and total semesters
   useEffect(() => {
     const graduationYear = calculateGraduationYear();
     const totalSemesters = (graduationYear - parseInt(formData.enrollmentYear || currentYear)) * 2;
@@ -80,12 +77,11 @@ const AddBatch = ({ existingBatch }) => {
     }));
   }, [formData.degreeLevel, formData.enrollmentYear, maxSemesters]);
 
-  // Fetch degree levels
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:65000/api/degree-levels');
+        const response = await axios.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels');
@@ -96,7 +92,6 @@ const AddBatch = ({ existingBatch }) => {
     fetchDegreeLevels();
   }, []);
 
-  // Fetch departments
   useEffect(() => {
     if (!formData.degreeLevel) {
       setDepartments([]);
@@ -107,7 +102,8 @@ const AddBatch = ({ existingBatch }) => {
     const fetchDepartments = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+        const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+        // const response = await axios.get(`${API_URL}/api/departments/by-degree', {
           params: { degreeLevel: formData.degreeLevel, exactMatch: true }
         });
         setDepartments(response.data.departments || []);
@@ -126,7 +122,8 @@ const AddBatch = ({ existingBatch }) => {
     const fetchMaxSemesters = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:65000/api/semester-credits', {
+        const response = await axios.get(`${API_URL}/api/semester-credits`, {
+        // const response = await axios.get(`${API_URL}/api/semester-credits', {
           params: { degreeLevel: formData.degreeLevel, department: formData.departmentName }
         });
         setMaxSemesters(response.data.maxSemester || 8);
@@ -188,8 +185,8 @@ const AddBatch = ({ existingBatch }) => {
       };
 
       const url = existingBatch 
-        ? `http://localhost:65000/api/batches/${existingBatch._id}`
-        : 'http://localhost:65000/api/batches';
+        ? `${API_URL}/api/batches/${existingBatch._id}`
+        : `${API_URL}/api/batches`;
       
       const method = existingBatch ? 'put' : 'post';
       

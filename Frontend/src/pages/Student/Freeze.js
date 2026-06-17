@@ -11,9 +11,9 @@ import {
   Button,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import API_URL from '../../../config';
 
 export default function SemesterFreezePage() {
-  // Hardcoded Freeze/Unfreeze Data
   const [freezeData] = useState({
     studentId: "BSCS-F25-015",
     studentName: "Ayesha Rehman",
@@ -56,13 +56,11 @@ export default function SemesterFreezePage() {
     ],
   });
 
-  // Simple date formatting
   const formatDate = (date) => {
     if (!date) return "N/A";
     return new Date(date).toLocaleDateString("en-GB");
   };
 
-  // Badge colors for statuses
   const getStatusBadge = (status) => {
     switch (status) {
       case "approved":
@@ -82,7 +80,6 @@ export default function SemesterFreezePage() {
         Semester Freeze & Unfreeze Status
       </h2>
 
-      {/* Student Info Card */}
       <Card className="mb-4 shadow-sm">
         <Card.Body>
           <Row>
@@ -109,7 +106,6 @@ export default function SemesterFreezePage() {
         </Card.Body>
       </Card>
 
-      {/* Warning if any freeze request pending */}
       {freezeData.pendingRequests.length > 0 && (
         <Alert variant="warning">
           You have {freezeData.pendingRequests.length} pending freeze request(s).
@@ -156,7 +152,6 @@ export default function SemesterFreezePage() {
           </Accordion.Body>
         </Accordion.Item>
 
-        {/* Pending Freeze Requests */}
         <Accordion.Item eventKey="1">
           <Accordion.Header>
             <strong>Pending Freeze Requests</strong>
@@ -195,7 +190,6 @@ export default function SemesterFreezePage() {
           </Accordion.Body>
         </Accordion.Item>
 
-        {/* Unfreeze History */}
         <Accordion.Item eventKey="2">
           <Accordion.Header>
             <strong>Unfreeze History</strong>

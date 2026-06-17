@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "../../../assets/style.css";
+import API_URL from '../../../config';
+
 import { 
   Form, Input, Button, Select, 
   Row, Col, Typography, Tag, Alert, Card,
@@ -41,7 +43,6 @@ const CourseEnrollment = () => {
   const [studentAcademicData, setStudentAcademicData] = useState(null);
   const [currentStep, setCurrentStep] = useState(0);
 
-  // Repeat Course State
   const [repeatableCourses, setRepeatableCourses] = useState([]);
   const [selectedRepeatCourse, setSelectedRepeatCourse] = useState(null);
   const [repeatData, setRepeatData] = useState({
@@ -50,7 +51,6 @@ const CourseEnrollment = () => {
     reason: 'Academic'
   });
 
-  // Fresh Course State
   const [availableFreshCourses, setAvailableFreshCourses] = useState([]);
   const [selectedFreshCourse, setSelectedFreshCourse] = useState(null);
   const [freshData, setFreshData] = useState({
@@ -59,10 +59,8 @@ const CourseEnrollment = () => {
     reason: 'Makeup course'
   });
 
-  // Batch Information for Fresh Courses
   const [teachingBatches, setTeachingBatches] = useState({});
 
-  // Credit Limits
   const [creditLimits, setCreditLimits] = useState({});
 
   useEffect(() => {
@@ -108,7 +106,7 @@ const CourseEnrollment = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -117,7 +115,7 @@ const CourseEnrollment = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -138,7 +136,7 @@ const CourseEnrollment = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -168,7 +166,7 @@ const CourseEnrollment = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get('http://localhost:65000/api/students/by-batch', {
+      const response = await axios.get(`${API_URL}/api/students/by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -201,7 +199,7 @@ const CourseEnrollment = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:65000/api/students/${selectedStudent._id}/academic-status`);
+      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/academic-status`);
       
       if (response.data.success) {
         setStudentAcademicData(response.data.data);
@@ -221,7 +219,7 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`http://localhost:65000/api/students/${selectedStudent._id}/credit-limits`);
+      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/credit-limits`);
       
       if (response.data.success) {
         setCreditLimits(response.data.data.creditLimits);
@@ -235,7 +233,7 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`http://localhost:65000/api/students/${selectedStudent._id}/repeatable-courses`);
+      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/repeatable-courses`);
       
       if (response.data.success) {
         setRepeatableCourses(response.data.data);
@@ -252,16 +250,14 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`http://localhost:65000/api/students/${selectedStudent._id}/available-fresh-courses`);
+      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/available-fresh-courses`);
       
       if (response.data.success) {
-        // Filter to show only courses from PAST semesters
         const pastCourses = response.data.data.filter(course => 
           course.originalSemester < selectedStudent.currentSemester
         );
         setAvailableFreshCourses(pastCourses);
         
-        // Fetch teaching batch information for each course
         await fetchTeachingBatches(pastCourses);
         
         if (pastCourses.length === 0) {
@@ -282,10 +278,9 @@ const CourseEnrollment = () => {
     const batchInfo = {};
     
     try {
-      // For each course, find which batch is currently teaching it
       for (const course of courses) {
         try {
-          const response = await axios.get(`http://localhost:65000/api/batches/active-for-course`, {
+          const response = await axios.get(`${API_URL}/api/batches/active-for-course`, {
             params: {
               courseCode: course.courseCode,
               targetSemester: course.originalSemester,
@@ -408,7 +403,6 @@ const CourseEnrollment = () => {
       return false;
     }
 
-    // Check if we have a teaching batch for this course
     const teachingBatch = teachingBatches[selectedFreshCourse.courseCode];
     if (!teachingBatch) {
       toast.error(`No active batch found that is currently teaching ${selectedFreshCourse.courseCode}`);
@@ -424,7 +418,7 @@ const CourseEnrollment = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:65000/api/students/${selectedStudent._id}/repeat-course`,
+        `${API_URL}/api/students/${selectedStudent._id}/repeat-course`,
         repeatData
       );
 
@@ -453,7 +447,7 @@ const CourseEnrollment = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:65000/api/students/${selectedStudent._id}/enroll-fresh-course`,
+        `${API_URL}/api/students/${selectedStudent._id}/enroll-fresh-course`,
         freshData
       );
 

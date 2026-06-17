@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch("http://localhost:65000/api/auth/session", {
+        const res = await fetch(`${API_URL}/api/auth/session`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -33,15 +33,15 @@ export const AuthProvider = ({ children }) => {
     };
 
     fetchSession();
-  }, [shouldRefreshSession]); // Add dependency to trigger refresh
+  }, [shouldRefreshSession]);
 
   const triggerSessionRefresh = () => {
-    setShouldRefreshSession(prev => !prev); // Toggle to trigger useEffect
+    setShouldRefreshSession(prev => !prev); 
   };
 
   const logout = async () => {
     try {
-      await fetch("http://localhost:65000/api/auth/logout", {
+      await fetch(`${API_URL}/api/auth/logout`, {
         method: "POST",
         credentials: "include",
       });

@@ -1,4 +1,4 @@
-// src/components/StudentTasks.jsx
+import API_URL from '../../../config';
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -13,7 +13,7 @@ const StudentTasks = () => {
     const fetchTasks = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:65000/api/students/getStudentTasks",
+          `${API_URL}/api/students/getStudentTasks`,
           { withCredentials: true }
         );
         if (data.success) {
@@ -53,7 +53,6 @@ const StudentTasks = () => {
     <div className="p-4 md:p-6">
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">Your Tasks</h2>
 
-      {/* Search Box */}
       <div className="mb-4">
         <input
           type="text"
@@ -64,7 +63,6 @@ const StudentTasks = () => {
         />
       </div>
 
-      {/* Accordion using semantic HTML */}
       <div className="space-y-2">
         {filteredTasks.length === 0 && (
           <div className="text-gray-500 py-4 text-center">No tasks match your search.</div>
@@ -93,7 +91,7 @@ const StudentTasks = () => {
 
               {task.assignmentFile && (
                 <a
-                  href={`http://localhost:65000/api/students/taskfile/${task.assignmentFile}`}
+                  href={`${API_URL}/api/students/taskfile/${task.assignmentFile}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline text-sm mb-2 inline-block"

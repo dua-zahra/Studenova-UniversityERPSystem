@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Tag, Space, Input, Select, DatePicker,
   Row, Col, Typography, Alert, Spin, message, Modal, List, Badge,
@@ -43,7 +45,6 @@ const RepeatFreshCourseFeeList = () => {
     transactionId: ''
   });
 
-  // Fetch course fees on component mount and when filters change
   useEffect(() => {
     fetchCourseFees();
   }, [filters, pagination.current, pagination.pageSize]);
@@ -57,13 +58,12 @@ const RepeatFreshCourseFeeList = () => {
         ...filters
       };
 
-      // Add date range filters if provided
       if (filters.dateRange && filters.dateRange.length === 2) {
         params.startDate = filters.dateRange[0].format('YYYY-MM-DD');
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get('http://localhost:65000/api/repeat-fresh-course-fees', { params });
+      const response = await axios.get(`${API_URL}/api/repeat-fresh-course-fees`, { params });
       
       if (response.data.success) {
         setCourseFees(response.data.data);
@@ -85,7 +85,7 @@ const RepeatFreshCourseFeeList = () => {
     
     try {
       const response = await axios.get(
-        `http://localhost:65000/api/repeat-fresh-course-fees/${courseFeeId}/invoice`,
+        `${API_URL}/api/repeat-fresh-course-fees/${courseFeeId}/invoice`,
         { 
           responseType: 'blob',
           headers: {
@@ -94,7 +94,6 @@ const RepeatFreshCourseFeeList = () => {
         }
       );
       
-      // Create blob link and download
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -139,7 +138,7 @@ const RepeatFreshCourseFeeList = () => {
     setPaymentLoading(true);
     try {
       const response = await axios.post(
-        `http://localhost:65000/api/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
+        `${API_URL}/api/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
         paymentData
       );
 
@@ -151,7 +150,7 @@ const RepeatFreshCourseFeeList = () => {
           paymentMethod: 'cash',
           transactionId: ''
         });
-        fetchCourseFees(); // Refresh the list
+        fetchCourseFees(); t
       }
     } catch (error) {
       console.error('Error recording payment:', error);
@@ -221,7 +220,6 @@ const RepeatFreshCourseFeeList = () => {
     return icons[status] || <ExclamationCircleOutlined />;
   };
 
-  // Desktop columns
   const desktopColumns = [
     {
       title: 'Invoice #',
@@ -382,7 +380,6 @@ const RepeatFreshCourseFeeList = () => {
     }
   ];
 
-  // Mobile columns
   const mobileColumns = [
     {
       title: 'Course Fee Details',
@@ -479,7 +476,6 @@ const RepeatFreshCourseFeeList = () => {
     },
   ];
 
-  // Calculate statistics
   const totalCourseFees = pagination.total;
   const totalRevenue = courseFees.reduce((sum, fee) => sum + (fee.amountPaid || 0), 0);
   const pendingRevenue = courseFees.reduce((sum, fee) => sum + ((fee.amount || 0) - (fee.amountPaid || 0)), 0);
@@ -507,7 +503,6 @@ const RepeatFreshCourseFeeList = () => {
         </Button>
       </div>
 
-      {/* Statistics Cards */}
       <Row gutter={16} style={{ marginBottom: 24 }}>
         <Col xs={24} sm={6} md={6}>
           <Card size="small" style={{ textAlign: 'center', background: '#f0f8ff' }}>
@@ -550,7 +545,6 @@ const RepeatFreshCourseFeeList = () => {
         </Col>
       </Row>
 
-      {/* Filters Section */}
       <Card 
         className="mb-4"
         style={{ borderRadius: '8px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
@@ -658,7 +652,6 @@ const RepeatFreshCourseFeeList = () => {
         </Row>
       </Card>
 
-      {/* Course Fees Table */}
       <Card 
         className="create-event-card"
         style={{ borderRadius: '8px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
@@ -668,7 +661,6 @@ const RepeatFreshCourseFeeList = () => {
           </Text>
         }
       >
-        {/* Desktop Table */}
         <div className="d-none d-md-block">
           <Table
             columns={desktopColumns}
@@ -691,7 +683,6 @@ const RepeatFreshCourseFeeList = () => {
           />
         </div>
 
-        {/* Mobile View */}
         <div className="d-block d-md-none">
           <Table
             columns={mobileColumns}
@@ -709,7 +700,6 @@ const RepeatFreshCourseFeeList = () => {
         </div>
       </Card>
 
-      {/* Payment Modal */}
       <Modal
         title={
           <Text strong style={{ fontSize: '18px', color: '#262626' }}>

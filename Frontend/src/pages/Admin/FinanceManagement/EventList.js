@@ -21,7 +21,7 @@ const { RangePicker } = DatePicker;
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
-  const [allEvents, setAllEvents] = useState([]); // Store all events for client-side filtering
+  const [allEvents, setAllEvents] = useState([]); 
   const [loading, setLoading] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [detailModalVisible, setDetailModalVisible] = useState(false);
@@ -36,22 +36,21 @@ const EventList = () => {
 
   useEffect(() => {
     fetchEvents();
-  }, []); // Remove filters from dependency to handle filtering client-side
-
+  }, []);
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:65000/api/event-payments', {
+      const response = await axios.get(`${API_URL}/api/event-payments`, {
         params: {
           page: 1,
-          limit: 1000 // Fetch more events for client-side filtering
+          limit: 1000 
         }
       });
       
       if (response.data.success) {
         const eventsData = response.data.data.eventPayments || [];
         setAllEvents(eventsData);
-        setEvents(eventsData); // Initially show all events
+        setEvents(eventsData); s
       }
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -61,7 +60,6 @@ const EventList = () => {
     }
   };
 
-  // Apply filters client-side
   useEffect(() => {
     applyFilters();
   }, [filters, allEvents]);
@@ -69,7 +67,6 @@ const EventList = () => {
   const applyFilters = () => {
     let filteredEvents = [...allEvents];
 
-    // Event Title & Place filter (search in both title and eventPlace)
     if (filters.eventTitle) {
       filteredEvents = filteredEvents.filter(event => 
         event.title?.toLowerCase().includes(filters.eventTitle.toLowerCase()) ||
@@ -77,35 +74,30 @@ const EventList = () => {
       );
     }
 
-    // Degree Level filter (search in degreeLevel field)
     if (filters.degreeLevel) {
       filteredEvents = filteredEvents.filter(event => 
         event.degreeLevel?.toLowerCase().includes(filters.degreeLevel.toLowerCase())
       );
     }
 
-    // Department filter (search in department field)
     if (filters.department) {
       filteredEvents = filteredEvents.filter(event => 
         event.department?.toLowerCase().includes(filters.department.toLowerCase())
       );
     }
 
-    // Batch filter (search in batch field)
     if (filters.batch) {
       filteredEvents = filteredEvents.filter(event => 
         event.batch?.toLowerCase().includes(filters.batch.toLowerCase())
       );
     }
 
-    // Status filter
     if (filters.status) {
       filteredEvents = filteredEvents.filter(event => 
         event.status === filters.status
       );
     }
 
-    // Date Range filter
     if (filters.dateRange && filters.dateRange.length === 2) {
       const startDate = filters.dateRange[0].startOf('day');
       const endDate = filters.dateRange[1].endOf('day');
@@ -121,7 +113,7 @@ const EventList = () => {
 
   const fetchEventDetails = async (eventId) => {
     try {
-      const response = await axios.get(`http://localhost:65000/api/event-payments/${eventId}`);
+      const response = await axios.get(`${API_URL}/api/event-payments/${eventId}`);
       if (response.data.success) {
         setSelectedEvent(response.data.data);
         setDetailModalVisible(true);
@@ -135,7 +127,7 @@ const EventList = () => {
   const downloadIndividualInvoice = async (eventId, studentId) => {
     try {
       const response = await axios.get(
-        `http://localhost:65000/api/event-payments/${eventId}/invoice/${studentId}`,
+        `${API_URL}/api/event-payments/${eventId}/invoice/${studentId}`,
         { 
           responseType: 'blob'
         }
@@ -161,7 +153,7 @@ const EventList = () => {
   const downloadAllInvoices = async (eventId) => {
     try {
       const response = await axios.get(
-        `http://localhost:65000/api/event-payments/${eventId}/invoices/all`,
+        `${API_URL}/api/event-payments/${eventId}/invoices/all`,
         { 
           responseType: 'blob'
         }
@@ -471,7 +463,6 @@ const EventList = () => {
     },
   ];
 
-  // Calculate statistics based on filtered events
   const totalEvents = events.length;
   const activeEvents = events.filter(e => e.status === 'active').length;
   const totalStudents = events.reduce((sum, e) => sum + (e.totalStudents || 0), 0);
@@ -508,7 +499,6 @@ const EventList = () => {
         </Button>
       </div>
 
-      {/* Statistics Cards */}
       <Row gutter={16} style={{ marginBottom: 24 }}>
         <Col xs={24} sm={6} md={6}>
           <Card size="small" style={{ textAlign: 'center', background: '#f0f8ff' }}>
@@ -564,7 +554,6 @@ const EventList = () => {
         </Col>
       </Row>
 
-      {/* Filters Section */}
       <Card 
         className="mb-4"
         style={{ borderRadius: '8px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
@@ -667,7 +656,6 @@ const EventList = () => {
         </Row>
       </Card>
 
-      {/* Events Table */}
       <Card 
         className="create-event-card"
         style={{ borderRadius: '8px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}
@@ -710,7 +698,6 @@ const EventList = () => {
         </div>
       </Card>
 
-      {/* Event Details Modal */}
       <Modal
         title={
           <Text strong style={{ fontSize: '18px', color: '#262626' }}>

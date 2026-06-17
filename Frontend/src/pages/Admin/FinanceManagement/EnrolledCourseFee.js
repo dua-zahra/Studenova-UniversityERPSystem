@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import API_URL from '../../../config';
+
 import axios from 'axios';
 import { 
   Form, Input, Button, DatePicker, InputNumber, 
@@ -66,7 +68,7 @@ const CreateRepeatFreshCourseFee = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get('http://localhost:65000/api/degree-levels');
+      const response = await axios.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -76,7 +78,7 @@ const CreateRepeatFreshCourseFee = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get('http://localhost:65000/api/departments/by-degree', {
+      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -98,7 +100,7 @@ const CreateRepeatFreshCourseFee = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get('http://localhost:65000/api/teacher-assignment/batches/active', {
+      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -129,7 +131,7 @@ const CreateRepeatFreshCourseFee = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get('http://localhost:65000/api/university-expenses/students-by-batch', {
+      const response = await axios.get(`${API_URL}/api/university-expenses/students-by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -259,7 +261,7 @@ const CreateRepeatFreshCourseFee = () => {
 
       console.log(' Sending course fee payload:', payload);
 
-      const response = await axios.post('http://localhost:65000/api/repeat-fresh-course-fees', payload);
+      const response = await axios.post(`${API_URL}/api/repeat-fresh-course-fees`, payload);
       
       if (response.data.success) {
         showSuccessToast();

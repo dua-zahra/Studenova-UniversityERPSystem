@@ -3,6 +3,7 @@ import axios from "axios";
 import { Table, InputNumber, Button, Spin, Modal, Input, message, Popconfirm, Tag } from "antd";
 import "antd/dist/reset.css";
 import { addDays, isAfter } from "date-fns";
+import API_URL from '../../../config';
 
 function FacultyResultsPage() {
   const [courses, setCourses] = useState([]);
@@ -16,7 +17,6 @@ function FacultyResultsPage() {
   const [canEdit, setCanEdit] = useState(true);
   const [savedResults, setSavedResults] = useState(null);
 
-  // ---------------- Fetch Courses ----------------
   useEffect(() => {
     const fetchCourses = async () => {
       try {
@@ -29,7 +29,7 @@ function FacultyResultsPage() {
         }
 
         const response = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -42,7 +42,7 @@ function FacultyResultsPage() {
         for (const course of activeCourses) {
           try {
             const res = await axios.get(
-              `http://localhost:65000/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
+              `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
               { params: { section: course.sectionName, batchId: course.batchId } }
             );
             const count = (res.data.students || []).length;
@@ -66,7 +66,6 @@ function FacultyResultsPage() {
     fetchCourses();
   }, []);
 
-  // ---------------- Fetch Students & Results ----------------
   const fetchStudents = async (course) => {
     try {
       setSelectedCourse(course);
@@ -79,9 +78,8 @@ function FacultyResultsPage() {
         setCanEdit(true);
       }
 
-      // 1️⃣ Fetch students
       const resStudents = await axios.get(
-        `http://localhost:65000/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
+        `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
         { params: { section: course.sectionName, batchId: course.batchId } }
       );
 
@@ -91,12 +89,11 @@ function FacultyResultsPage() {
         resultsRecords: [],
       }));
 
-      // 2️⃣ Fetch saved results
       let existingComponents = [];
       let savedResultsData = null;
 
       try {
-        const resResults = await axios.get("http://localhost:65000/api/results/by-course-section-with-teacher", {
+        const resResults = await axios.get(`${API_URL}/api/results/by-course-section-with-teacher`, {
           params: {
             batchName: course.batchName,
             courseCode: course.courseCode,
@@ -163,7 +160,6 @@ function FacultyResultsPage() {
     }
   };
 
-  // ---------------- Marks Change ----------------
   const handleMarksChange = (studentId, compKey, value) => {
     if (!canEdit) return;
     if (isNaN(value) || value < 0) value = 0;
@@ -209,7 +205,6 @@ function FacultyResultsPage() {
     );
   };
 
-  // ---------------- Modal / Add / Remove ----------------
   const openComponentModal = (comp = null) => {
     if (!canEdit) return;
     setCurrentComponent(
@@ -225,9 +220,7 @@ function FacultyResultsPage() {
     setModalVisible(true);
   };
 
-  // -----------------------------------------------------------------------
-  // ⭐⭐⭐ UPDATED handleModalSave() — FIX FOR MARKS INPUT BECOMING EDITABLE ⭐⭐⭐
-  // -----------------------------------------------------------------------
+
   const handleModalSave = () => {
     if (!currentComponent?.name || currentComponent.name.trim() === "") {
       message.error("Assessment name is required");
@@ -240,14 +233,12 @@ function FacultyResultsPage() {
 
     const compKey = `${currentComponent.name}-${currentComponent.totalMarks}-${currentComponent.weightage}`;
 
-    // Add new assessment to component list
     setComponents((prev) => {
       const exists = prev.find((c) => c.key === compKey);
       if (exists) return prev;
       return [...prev, { ...currentComponent, key: compKey }];
     });
 
-    // ⭐ FIX: Add empty record to each student so marks become editable
     setStudents((prevStudents) =>
       prevStudents.map((stu) => {
         const alreadyExists = stu.resultsRecords.some(
@@ -298,7 +289,6 @@ function FacultyResultsPage() {
     );
   };
 
-  // ---------------- Save/Update Results ----------------
   const handleSaveResults = async () => {
     if (!selectedCourse) return;
     if (components.length === 0) {
@@ -325,7 +315,6 @@ function FacultyResultsPage() {
         };
       });
 
-      // Include department from the course card
       const payload = {
         batchName,
         semester: semesterNumber,
@@ -333,13 +322,13 @@ function FacultyResultsPage() {
         courseName: selectedCourse.courseName,
         sectionName,
         students: studentsPayload,
-        department: selectedCourse.department // Add department from course
+        department: selectedCourse.department 
       };
 
-      const response = await axios.put("http://localhost:65000/api/results/update", payload);
+      const response = await axios.put(`${API_URL}/api/results/update`, payload);
 
       if (response.data.success) {
-        message.success("✅ Results updated successfully");
+        message.success(" Results updated successfully");
         fetchStudents(selectedCourse);
       } else {
         message.error(response.data.message || "Failed to update results");
@@ -354,11 +343,10 @@ function FacultyResultsPage() {
     }
   };
 
-  // ---------------- Delete All Results ----------------
   const handleDeleteResults = async () => {
     if (!selectedCourse) return;
     try {
-      const response = await axios.post("http://localhost:65000/api/results/delete", {
+      const response = await axios.post(`${API_URL}/api/results/delete`, {
         courseCode: selectedCourse.courseCode,
         batchName: selectedCourse.batchName,
         sectionName: selectedCourse.sectionName,
@@ -379,7 +367,6 @@ function FacultyResultsPage() {
     }
   };
 
-  // ---------------- Calculate Total Percentage ----------------
   const calculateTotalPercentage = (student) => {
     let totalWeightedPercentage = 0;
     let totalWeightage = 0;
@@ -392,7 +379,6 @@ function FacultyResultsPage() {
       }
     });
 
-    // Normalize to 100 if total weightage is not 100
     if (totalWeightage > 0 && totalWeightage !== 100) {
       totalWeightedPercentage = (totalWeightedPercentage / totalWeightage) * 100;
     }
@@ -400,7 +386,6 @@ function FacultyResultsPage() {
     return Math.min(Math.max(totalWeightedPercentage, 0), 100);
   };
 
-  // ---------------- Table Columns ----------------
   const generateColumns = () => {
     const baseColumns = [
       {
@@ -502,7 +487,6 @@ function FacultyResultsPage() {
               {percentage.toFixed(1)}%
             </div>
             <div style={{ fontSize: "11px", color: "#666" }}>
-              {/* Show weighted percentage out of 100 */}
               {percentage.toFixed(0)}/100
             </div>
           </div>

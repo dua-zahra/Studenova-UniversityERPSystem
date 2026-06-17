@@ -4,6 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Select, Input } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+import API_URL from '../../../config';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -24,7 +25,7 @@ const FacultyTaskManager = () => {
         const facultyEmail = facultyUser?.universityEmail || facultyUser?.email;
 
         const response = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -98,7 +99,7 @@ const FacultyTaskManager = () => {
       if (assignmentFile) formData.append("assignmentFile", assignmentFile);
 
       const res = await axios.post(
-        "http://localhost:65000/api/faculty-tasks",
+        `${API_URL}/api/faculty-tasks`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

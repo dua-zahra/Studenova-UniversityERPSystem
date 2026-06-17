@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import API_URL from '../../../config';
 
 function FacultyCourses() {
   const [courses, setCourses] = useState([]);
@@ -23,7 +24,7 @@ function FacultyCourses() {
         }
 
         const response = await axios.get(
-          "http://localhost:65000/api/faculty-courses/courses",
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail }, withCredentials: true, timeout: 10000 }
         );
 

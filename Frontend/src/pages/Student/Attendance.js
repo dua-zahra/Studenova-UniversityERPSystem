@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import API_URL from '../../../config';
+
 import {
   Accordion,
   ProgressBar,
@@ -16,7 +18,7 @@ export default function Attendance() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:65000/api/students/getstudentattendance", {
+    fetch(`${API_URL}/api/students/getstudentattendance`, {
       credentials: "include",
     })
       .then((res) => {

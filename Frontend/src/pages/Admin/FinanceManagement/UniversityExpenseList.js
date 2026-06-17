@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import API_URL from '../../../config';
+
 import { 
   Card, Table, Button, Tag, Space, Input, Select, DatePicker,
   Row, Col, Typography, Alert, Spin, message, Modal, List, Badge
