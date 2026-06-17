@@ -1,7 +1,7 @@
 import React from "react";
 import StudentSidebar from "./StudentSidebar";
 import AIChatbot from "../ERPChatBot/ERPChatBot";
-import API_URL from '../config';
+import API_URL from '../../config';
 const StudentLayout = ({ children }) => {
   return (
     <>

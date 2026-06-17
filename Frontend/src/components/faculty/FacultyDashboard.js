@@ -22,7 +22,7 @@ import {
 import moment from "moment";
 import "antd/dist/reset.css";
 import "../../assets/Facultystyle.css";
-import API_URL from '../config';
+import API_URL from '../../config';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, ChartTooltip, Legend);
 
 const { Text, Title: AntTitle } = Typography;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Loader2 } from 'lucide-react';
-import API_URL from '../config';
+import API_URL from '../../config';
 const api = axios.create({
   baseURL: `${API_URL}`,
   withCredentials: true,

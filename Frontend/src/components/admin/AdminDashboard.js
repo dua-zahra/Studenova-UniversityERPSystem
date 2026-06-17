@@ -12,7 +12,8 @@ import facultyImg from '../../assets/faculty.webp';
 import departmentImg from '../../assets/departments.jpg';
 import batchImg from '../../assets/batches.png';
 import "../../assets/style.css";
-import API_URL from '../config';
+import API_URL from '../../config';
+
 const localizer = momentLocalizer(moment);
 
 const AdminDashboard = () => {
