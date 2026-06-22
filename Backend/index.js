@@ -29,15 +29,14 @@ const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://studenova-university-erp-system.vercel.app'],
+  // origin: 'http://localhost:3000',
   credentials: true,
 }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// Add after app.use(express.json()) and before routes
 
-// Debug middleware to log all requests
 app.use((req, res, next) => {
   console.log(`📡 ${req.method} ${req.path} | IP: ${req.ip} | Time: ${new Date().toISOString()}`);
   console.log(`   Headers:`, {
@@ -48,7 +47,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Comprehensive debug endpoint
 app.get('/api/debug/session-full', (req, res) => {
   const sessionData = {
     sessionID: req.sessionID,
@@ -68,7 +66,6 @@ app.get('/api/debug/session-full', (req, res) => {
   res.json(sessionData);
 });
 
-// Test endpoint with CORS check
 app.get('/api/debug/test-cors', (req, res) => {
   res.json({
     success: true,
@@ -84,7 +81,6 @@ app.get('/api/debug/test-cors', (req, res) => {
   });
 });
 
-// Database connection test
 app.get('/api/debug/db-status', async (req, res) => {
   try {
     const dbStatus = {
@@ -109,7 +105,6 @@ app.get('/api/debug/db-status', async (req, res) => {
   }
 });
 
-// Session store test
 app.get('/api/debug/sessions-count', async (req, res) => {
   try {
     if (req.sessionStore && req.sessionStore.all) {
@@ -131,12 +126,10 @@ app.get('/api/debug/sessions-count', async (req, res) => {
   }
 });
 
-// Chatbot-specific debug
 app.post('/api/debug/chatbot-test', async (req, res) => {
   try {
     const { studentId, query } = req.body;
     
-    // Manually test Student model
     const student = await Student.findOne({
       $or: [
         { studentId },
@@ -145,7 +138,6 @@ app.post('/api/debug/chatbot-test', async (req, res) => {
       ]
     }).lean();
     
-    // Test session access
     const sessionInfo = {
       sessionUser: req.session?.user || null,
       sessionId: req.sessionID,
@@ -179,7 +171,6 @@ app.post('/api/debug/chatbot-test', async (req, res) => {
   }
 });
 
-// Test student lookup
 app.get('/api/debug/student/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -220,13 +211,14 @@ app.use('/default-avatar.png', express.static(path.join(__dirname, 'public/defau
       resave: false,
       saveUninitialized: false,
       store: MongoStore.create({
-        mongoUrl: "mongodb://127.0.0.1:27017/UniverityERP",
+        // mongoUrl: "mongodb://127.0.0.1:27017/UniverityERP"
+        mongoUrl: process.env.MONGODB_URI,
             ttl: 24 * 60 * 60
       }),
         cookie: {
-    secure: false, // Set to true in production with HTTPS
+    secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 1 day
+    maxAge: 24 * 60 * 60 * 1000 
   }
     }));
 
