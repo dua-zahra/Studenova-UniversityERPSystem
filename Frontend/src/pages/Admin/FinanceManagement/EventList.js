@@ -13,7 +13,7 @@ import {
   DollarOutlined, TeamOutlined, CalendarOutlined,
   FilterOutlined, ClearOutlined
 } from '@ant-design/icons';
-import "../../../assets/style.css";
+import API_URL from '../../../config';
 
 const { Title, Text } = Typography;
 const { Option } = Select;

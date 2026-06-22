@@ -10,7 +10,7 @@ import {
   Alert,
   Card,
 } from "react-bootstrap";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 export default function Results() {
   const [resultsData, setResultsData] = useState(null);

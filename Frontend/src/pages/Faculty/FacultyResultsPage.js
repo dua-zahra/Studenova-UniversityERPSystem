@@ -3,7 +3,7 @@ import axios from "axios";
 import { Table, InputNumber, Button, Spin, Modal, Input, message, Popconfirm, Tag } from "antd";
 import "antd/dist/reset.css";
 import { addDays, isAfter } from "date-fns";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 function FacultyResultsPage() {
   const [courses, setCourses] = useState([]);

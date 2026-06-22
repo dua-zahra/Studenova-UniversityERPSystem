@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, message, Spin } from "antd";
 import { BellOutlined } from "@ant-design/icons";
 import axios from "axios";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 function NotificationsPage() {
   const [todayClasses, setTodayClasses] = useState([]);

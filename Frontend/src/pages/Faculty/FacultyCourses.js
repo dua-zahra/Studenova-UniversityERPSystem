@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 function FacultyCourses() {
   const [courses, setCourses] = useState([]);

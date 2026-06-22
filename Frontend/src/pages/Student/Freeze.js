@@ -11,7 +11,7 @@ import {
   Button,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 export default function SemesterFreezePage() {
   const [freezeData] = useState({

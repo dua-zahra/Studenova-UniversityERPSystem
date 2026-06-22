@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Select, Input } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 const { TextArea } = Input;
 const { Option } = Select;

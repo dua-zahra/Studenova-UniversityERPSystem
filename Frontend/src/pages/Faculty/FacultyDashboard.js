@@ -1,6 +1,6 @@
 import React from "react";
 import FacultySidebar from "../../components/faculty/FacultySidebar";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 const FacultyDashboard = () => {
   return (

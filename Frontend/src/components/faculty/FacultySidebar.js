@@ -17,7 +17,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import API_URL from '../config';
+import API_URL from '../../config';
 import FacultyDashboard from "./FacultyDashboard";
 import FacultyCourses from "../../pages/Faculty/FacultyCourses";
 import FacultyAttendance from "../../pages/Faculty/FacultyAttendance";

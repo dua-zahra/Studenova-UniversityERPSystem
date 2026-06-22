@@ -6,7 +6,6 @@ import { Button } from 'antd';
 import { SaveOutlined } from '@ant-design/icons';
 import "../../../assets/style.css";
 import API_URL from '../../../config';
-
 const emptyCourse = { courseName: '', courseCode: '', creditHrs: 1, type: 'Core' };
 const emptySemester = { semesterNumber: 1, courses: [{ ...emptyCourse }] };
 

@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../../assets/style.css";
 import API_URL from '../../../config';
-
 const CourseList = () => {
   const [degreeLevel, setDegreeLevel] = useState('');
   const [department, setDepartment] = useState('');

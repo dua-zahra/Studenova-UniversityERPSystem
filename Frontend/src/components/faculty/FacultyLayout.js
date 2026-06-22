@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import FacultySidebar from "./FacultySidebar";
-import API_URL from '../config';
+import API_URL from '../../config';
 const FacultyLayout = () => {
   return (
     <div className="flex">

@@ -1,6 +1,6 @@
 import React from "react";
 import StudentSidebar from "../../components/student/StudentDashboard";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 const StudentDashboard = () => {
   return (

@@ -7,7 +7,7 @@ import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import 'react-toastify/dist/ReactToastify.css';
 import "../../assets/style.css";
-import API_URL from '../../../config';
+import API_URL from '../../config';
 
 import { 
   CalendarOutlined, 
