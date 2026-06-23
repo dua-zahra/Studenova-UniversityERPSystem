@@ -29,8 +29,13 @@ const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://studenova-university-erp-system.vercel.app'],
-  // origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://studenova-university-erp-system.vercel.app',
+    'https://studenova-university-erp-system-4rdvichj4-dua-zahras-projects.vercel.app',
+    'https://studenova-university-erp-system-git-demo-dua-zahras-projects.vercel.app',
+    /\.vercel\.app$/  
+  ],
   credentials: true,
 }));
 
