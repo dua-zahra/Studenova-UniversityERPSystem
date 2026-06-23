@@ -34,7 +34,7 @@ const upload = multer({
 });
 
 const ADMIN_CREDENTIALS = {
-  email: "admin@superioruniversity.com",
+  email: "admin@csuniversity.com",
   plainPassword: "universityadmin",
 };
 

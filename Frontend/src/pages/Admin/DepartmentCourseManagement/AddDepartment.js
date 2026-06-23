@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../../axiosConfig';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from 'antd';
@@ -18,7 +18,7 @@ const AddDepartment = ({ onClose }) => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels', { toastId: 'fetch-degree-error' });
@@ -69,7 +69,7 @@ const AddDepartment = ({ onClose }) => {
         departmentCode: departmentCode.trim()
       };
 
-      const res = await axios.post(`${API_URL}/departments`, payload);
+      const res = await axiosInstance.post(`${API_URL}/api/departments`, payload);
 
       if (res.data.success) {
         toast.success('Department created successfully', {

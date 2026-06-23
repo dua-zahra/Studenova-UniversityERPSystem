@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance  from '../../axiosConfig';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Select, Input } from "antd";
@@ -24,8 +24,8 @@ const FacultyTaskManager = () => {
         const facultyUser = JSON.parse(localStorage.getItem("user") || "{}");
         const facultyEmail = facultyUser?.universityEmail || facultyUser?.email;
 
-        const response = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const response = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -98,8 +98,8 @@ const FacultyTaskManager = () => {
       formData.append("taskDescription", taskDescription);
       if (assignmentFile) formData.append("assignmentFile", assignmentFile);
 
-      const res = await axios.post(
-        `${API_URL}/faculty-tasks`,
+      const res = await axiosInstance.post(
+        `${API_URL}/api/faculty-tasks`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

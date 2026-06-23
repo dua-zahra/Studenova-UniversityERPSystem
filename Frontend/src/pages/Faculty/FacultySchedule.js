@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance  from '../../axiosConfig';
 import { Spin, message, Card, Select, Button, Popover, Badge } from "antd";
 import { ToastContainer } from "react-toastify";
 import { Calendar, momentLocalizer } from 'react-big-calendar';
@@ -62,8 +62,8 @@ function FacultySchedulePage() {
           return;
         }
 
-        const resCourses = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const resCourses = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -74,8 +74,8 @@ function FacultySchedulePage() {
         // Fetch course slots
         for (const course of activeCourses) {
           try {
-            const resSlots = await axios.get(
-              `${API_URL}/faculty-timetable/course-slots`,
+            const resSlots = await axiosInstance.get(
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,

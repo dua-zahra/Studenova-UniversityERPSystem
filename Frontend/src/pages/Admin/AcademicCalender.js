@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../axiosConfig';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -10,23 +10,23 @@ const localizer = momentLocalizer(moment);
 
 const apiService = {
   fetchDegreeLevels: async () => {
-    const response = await axios.get(`${API_URL}/degree-levels`);
+    const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
     return response.data;
   },
   fetchDepartments: async (degreeLevel) => {
-    const response = await axios.get(`${API_URL}/departments/by-degree`, {
+    const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
       params: { degreeLevel }
     });
     return response.data.departments || [];
   },
   fetchBatches: async (degreeLevel, department) => {
-    const response = await axios.get(`${API_URL}/batches`, {
+    const response = await axiosInstance.get(`${API_URL}/api/batches`, {
       params: { department, degreeLevel }
     });
     return response.data.data || [];
   },
   fetchCalendar: async (batchId) => {
-    const response = await axios.get(`${API_URL}/batches/${batchId}/calendar`);
+    const response = await axiosInstance.get(`${API_URL}/api/batches/${batchId}/calendar`);
     return response.data;
   }
 };

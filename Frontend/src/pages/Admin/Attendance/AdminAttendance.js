@@ -4,7 +4,7 @@ import {
   Row, Col, Typography, Badge, Space, Tag
 } from "antd";
 import { TeamOutlined, EditOutlined, SaveOutlined, CalendarOutlined } from "@ant-design/icons";
-import axios from "axios";
+import axiosInstance  from '../../../axiosConfig';
 import moment from "moment";
 import "../../../assets/style.css";
 import API_URL from '../../../config';
@@ -43,7 +43,7 @@ const backendURL = `${API_URL}/api`;
     const fetchDegrees = async () => {
       setLoading(prev => ({ ...prev, degree: true }));
       try {
-        const res = await axios.get(`${backendURL}/degree-levels`);
+        const res = await axiosInstance.get(`${backendURL}/degree-levels`);
         const data = Array.isArray(res.data) ? res.data : res.data.degreeLevels || [];
         setDegreeLevels(data.map(dl => (typeof dl === "string" ? { _id: dl, name: dl } : dl)));
         message.success("Degree levels loaded successfully");
@@ -65,7 +65,7 @@ const backendURL = `${API_URL}/api`;
     const fetchDepartments = async () => {
       setLoading(prev => ({ ...prev, department: true }));
       try {
-        const res = await axios.get(`${backendURL}/departments/by-degree`, {
+        const res = await axiosInstance.get(`${backendURL}/departments/by-degree`, {
           params: { degreeLevel: selectedDegree }
         });
         setDepartments(Array.isArray(res.data) ? res.data : res.data.departments || []);
@@ -88,7 +88,7 @@ const backendURL = `${API_URL}/api`;
     const fetchActiveBatches = async () => {
       setLoading(prev => ({ ...prev, batch: true }));
       try {
-        const res = await axios.get(`${backendURL}/teacher-assignment/batches/active`, {
+        const res = await axiosInstance.get(`${backendURL}/teacher-assignment/batches/active`, {
           params: { degreeLevel: selectedDegree, department: selectedDepartment }
         });
         const data = Array.isArray(res.data) ? res.data : res.data.batches || res.data.data || [];
@@ -110,12 +110,12 @@ const backendURL = `${API_URL}/api`;
     if (!selectedDegree || !selectedDepartment || !selectedBatch) return;
     setLoading(prev => ({ ...prev, attendance: true, batchDetails: true }));
     try {
-      const res = await axios.get(`${backendURL}/course-entries`, {
+      const res = await axiosInstance.get(`${backendURL}/course-entries`, {
         params: { degreeLevel: selectedDegree, department: selectedDepartment }
       });
       
       const allSemesters = res.data?.semesters || [];
-      const batchRes = await axios.get(`${backendURL}/batches/${selectedBatch}`);
+      const batchRes = await axiosInstance.get(`${backendURL}/batches/${selectedBatch}`);
       const batchData = batchRes.data?.data || batchRes.data;
       const currentSemester = batchData?.currentSemester || 1;
       
@@ -148,7 +148,7 @@ const backendURL = `${API_URL}/api`;
     setIsEditing(false);
     try {
       const semesterNumber = semestersData[selectedSemesterIndex]?.semesterNumber;
-      const res = await axios.get(`${backendURL}/attendance/by-course-section`, {
+      const res = await axiosInstance.get(`${backendURL}/attendance/by-course-section`, {
         params: { batchId: selectedBatch, semester: semesterNumber, courseCode, sectionName }
       });
 
@@ -208,7 +208,7 @@ const backendURL = `${API_URL}/api`;
         }))
       };
 
-      const res = await axios.post(`${backendURL}/attendance/attendance/update`, payload);
+      const res = await axiosInstance.post(`${backendURL}/attendance/attendance/update`, payload);
 
       if (res.data?.success) {
         message.success("Attendance updated successfully");

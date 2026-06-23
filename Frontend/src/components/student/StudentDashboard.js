@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../axiosConfig';
 import { Loader2 } from 'lucide-react';
-import API_URL from '../../config';
-const api = axios.create({
-  baseURL: `${API_URL}`,
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
+import  API_URL  from '../../config'; 
+// const api = axios.create({
+//   baseURL: `${API_URL}/api`,
+//   withCredentials: true,
+
+
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// });
 
 const StudentDashboard = () => {
   const [payload, setPayload] = useState(null);
@@ -24,7 +26,7 @@ const StudentDashboard = () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await api.get('/api/students/getStudentDashboard');
+      const res = await axiosInstance.get('/students/getStudentDashboard');
       setPayload(res.data);
       
       if (res.data.student) {
@@ -98,7 +100,7 @@ const StudentDashboard = () => {
       return student.photoPath;
     }
     const cleanPath = student.photoPath.startsWith('/') ? student.photoPath.substring(1) : student.photoPath;
-    return `http://localhost:65000/${cleanPath}`;
+    return `${API_URL}/api/${cleanPath}`
   };
 
   const photoUrl = getPhotoUrl();

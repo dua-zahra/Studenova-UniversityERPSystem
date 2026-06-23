@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../../axiosConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addDays, subMonths, format, parseISO } from 'date-fns';
@@ -81,7 +81,7 @@ const AddBatch = ({ existingBatch }) => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels');
@@ -102,8 +102,8 @@ const AddBatch = ({ existingBatch }) => {
     const fetchDepartments = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_URL}/departments/by-degree`, {
-        // const response = await axios.get(`${API_URL}/departments/by-degree', {
+        const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
+        // const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree', {
           params: { degreeLevel: formData.degreeLevel, exactMatch: true }
         });
         setDepartments(response.data.departments || []);
@@ -122,8 +122,8 @@ const AddBatch = ({ existingBatch }) => {
     const fetchMaxSemesters = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_URL}/semester-credits`, {
-        // const response = await axios.get(`${API_URL}/semester-credits', {
+        const response = await axiosInstance.get(`${API_URL}/api/semester-credits`, {
+        // const response = await axiosInstance.get(`${API_URL}/api/semester-credits', {
           params: { degreeLevel: formData.degreeLevel, department: formData.departmentName }
         });
         setMaxSemesters(response.data.maxSemester || 8);
@@ -185,8 +185,8 @@ const AddBatch = ({ existingBatch }) => {
       };
 
       const url = existingBatch 
-        ? `${API_URL}/batches/${existingBatch._id}`
-        : `${API_URL}/batches`;
+        ? `${API_URL}/api/batches/${existingBatch._id}`
+        : `${API_URL}/api/batches`;
       
       const method = existingBatch ? 'put' : 'post';
       

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../../axiosConfig';
 import { FaTimes } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -113,7 +113,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const fetchDegreeLevels = async () => {
       try {
         setLoadingDegreeLevels(true);
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels');
@@ -134,7 +134,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const fetchDepartments = async () => {
       try {
         setLoadingDepartments(true);
-        const response = await axios.get(`${API_URL}/departments/by-degree`, {
+        const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: formData.degreeLevel }
         });
         setDepartments(response.data.departments || []);
@@ -164,7 +164,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
           degreeLevel: formData.degreeLevel
         });
 
-        const response = await axios.get(`${API_URL}/batches/open/enrollment`, {
+        const response = await axiosInstance.get(`${API_URL}/api/batches/open/enrollment`, {
           params: {
             department: formData.department,
             degreeLevel: formData.degreeLevel
@@ -595,8 +595,8 @@ const StudentEnrollmentPage = ({ onClose }) => {
     if (formData.intermediateQualification.document) formDataToSend.append('intermediateDocument', formData.intermediateQualification.document);
 
     try {
-      const response = await axios.post(
-        `${API_URL}/students/enroll`,
+      const response = await axiosInstance.post(
+        `${API_URL}/api/students/enroll`,
         formDataToSend,
         { 
           headers: { 'Content-Type': 'multipart/form-data' },

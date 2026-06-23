@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../axiosConfig';
 import { 
   Send, 
   Bot, 
@@ -18,13 +18,13 @@ import {
   HelpCircle
 } from 'lucide-react';
 import API_URL from '../../config';
-const api = axios.create({
-  baseURL: `${API_URL}`,
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
+// const api = axios.create({
+//   baseURL: `${API_URL}/api`,
+//   withCredentials: true,
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// });
 
 const AIChatbot = () => {
   const [isOpen, setIsOpen] = useState(false);

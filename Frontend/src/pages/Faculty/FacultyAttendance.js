@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance  from '../../axiosConfig';
 import { Table, Button, Spin, message, Select, Card, Row, Col, Tag, Modal, Statistic } from "antd";
 import "antd/dist/reset.css";
 import { format, addDays } from "date-fns";
@@ -41,8 +41,8 @@ function FacultyAttendancePage() {
           return;
         }
 
-        const resCourses = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const resCourses = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -52,8 +52,8 @@ function FacultyAttendancePage() {
 
         for (const course of activeCourses) {
           try {
-            const resStudents = await axios.get(
-              `${API_URL}/students/by-course/${encodeURIComponent(
+            const resStudents = await axiosInstance.get(
+              `${API_URL}/api/students/by-course/${encodeURIComponent(
                 course.courseCode
               )}`,
               {
@@ -70,8 +70,8 @@ function FacultyAttendancePage() {
           }
 
           try {
-            const resSlots = await axios.get(
-              `${API_URL}/faculty-timetable/course-slots`,
+            const resSlots = await axiosInstance.get(
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,
@@ -156,8 +156,8 @@ function FacultyAttendancePage() {
       const selectedClassDate = date || classDates[0] || null;
       setSelectedDate(selectedClassDate);
 
-      const res = await axios.get(
-        `${API_URL}/students/by-course/${encodeURIComponent(
+      const res = await axiosInstance.get(
+        `${API_URL}/api/students/by-course/${encodeURIComponent(
           course.courseCode
         )}`,
         {
@@ -180,8 +180,8 @@ function FacultyAttendancePage() {
 
       if (selectedClassDate) {
         try {
-          const resAttendance = await axios.get(
-            `${API_URL}/attendance/by-date`,
+          const resAttendance = await axiosInstance.get(
+            `${API_URL}/api/attendance/by-date`,
             {
               params: {
                 courseCode: course.courseCode,
@@ -291,8 +291,8 @@ function FacultyAttendancePage() {
         })),
       };
 
-      const res = await axios.post(
-        `${API_URL}/attendance/save`,
+      const res = await axiosInstance.post(
+        `${API_URL}/api/attendance/save`,
         payload
       );
 

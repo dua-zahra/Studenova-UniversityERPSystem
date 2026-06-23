@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance  from '../../axiosConfig';
 import { Table, InputNumber, Button, Spin, Modal, Input, message, Popconfirm, Tag } from "antd";
 import "antd/dist/reset.css";
 import { addDays, isAfter } from "date-fns";
@@ -28,8 +28,8 @@ function FacultyResultsPage() {
           return;
         }
 
-        const response = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const response = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -41,8 +41,8 @@ function FacultyResultsPage() {
 
         for (const course of activeCourses) {
           try {
-            const res = await axios.get(
-              `${API_URL}/students/by-course/${encodeURIComponent(course.courseCode)}`,
+            const res = await axiosInstance.get(
+              `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
               { params: { section: course.sectionName, batchId: course.batchId } }
             );
             const count = (res.data.students || []).length;
@@ -78,8 +78,8 @@ function FacultyResultsPage() {
         setCanEdit(true);
       }
 
-      const resStudents = await axios.get(
-        `${API_URL}/students/by-course/${encodeURIComponent(course.courseCode)}`,
+      const resStudents = await axiosInstance.get(
+        `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
         { params: { section: course.sectionName, batchId: course.batchId } }
       );
 
@@ -93,7 +93,7 @@ function FacultyResultsPage() {
       let savedResultsData = null;
 
       try {
-        const resResults = await axios.get(`${API_URL}/results/by-course-section-with-teacher`, {
+        const resResults = await axiosInstance.get(`${API_URL}/api/results/by-course-section-with-teacher`, {
           params: {
             batchName: course.batchName,
             courseCode: course.courseCode,
@@ -325,7 +325,7 @@ function FacultyResultsPage() {
         department: selectedCourse.department 
       };
 
-      const response = await axios.put(`${API_URL}/results/update`, payload);
+      const response = await axiosInstance.put(`${API_URL}/api/results/update`, payload);
 
       if (response.data.success) {
         message.success(" Results updated successfully");
@@ -346,7 +346,7 @@ function FacultyResultsPage() {
   const handleDeleteResults = async () => {
     if (!selectedCourse) return;
     try {
-      const response = await axios.post(`${API_URL}/results/delete`, {
+      const response = await axiosInstance.post(`${API_URL}/api/results/delete`, {
         courseCode: selectedCourse.courseCode,
         batchName: selectedCourse.batchName,
         sectionName: selectedCourse.sectionName,

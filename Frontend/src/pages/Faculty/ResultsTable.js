@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance  from '../../axiosConfig';
 import { Table, InputNumber, Button, Spin, Modal, Input, message } from "antd";
 import "antd/dist/reset.css";
 import API_URL from '../../config';
@@ -26,8 +26,8 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
   const fetchStudents = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(
-        `${API_URL}/results/${batchId}/course-students`,
+      const res = await axiosInstance.get(
+        `${API_URL}/api/results/${batchId}/course-students`,
         { params: { courseCode: courseId, sectionName } }
       );
 
@@ -221,7 +221,7 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
     }
 
     try {
-      await axios.post(`${API_URL}/results/save-results`, {
+      await axiosInstance.post(`${API_URL}/api/results/save-results`, {
         results: students,
         components,
         batchId,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance  from '../../../axiosConfig';
 import { FaTimes } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,7 +40,7 @@ const AddProfessor = ({ onClose }) => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error("Failed to fetch degree levels");
@@ -54,7 +54,7 @@ const AddProfessor = ({ onClose }) => {
     const fetchFacultyDepartments = async () => {
       if (formData.degreeLevel) {
         try {
-          const response = await axios.get(`${API_URL}/departments/by-degree`, {
+          const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
             params: { degreeLevel: formData.degreeLevel }
           });
           setFacultyDepartments(response.data.departments || []);
@@ -128,7 +128,7 @@ const AddProfessor = ({ onClose }) => {
 
     try {
       setLoading(true);
-      await axios.post(`${API_URL}/faculty`, formPayload);
+      await axiosInstance.post(`${API_URL}/api/faculty`, formPayload);
       toast.success("Professor added successfully!");
       setFormData(initialFormState);
     } catch (error) {

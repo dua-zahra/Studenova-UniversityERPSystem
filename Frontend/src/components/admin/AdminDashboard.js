@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../axiosConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
@@ -132,15 +132,15 @@ const AdminDashboard = () => {
         batchesRes, 
         facultyRes
       ] = await Promise.allSettled([
-        axios.get(`${API_URL}/students/count`),
-        axios.get(`${API_URL}/courses/count`),
-        axios.get(`${API_URL}/departments/count`),
-        axios.get(`${API_URL}/batches/count`),
-        axios.get(`${API_URL}/faculty/count`)
+        axiosInstance.get(`${API_URL}/api/students/count`),
+        axiosInstance.get(`${API_URL}/api/courses/count`),
+        axiosInstance.get(`${API_URL}/api/departments/count`),
+        axiosInstance.get(`${API_URL}/api/batches/count`),
+        axiosInstance.get(`${API_URL}/api/faculty/count`)
       ]);
 
       const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-      const recentStudentsRes = await axios.get(`${API_URL}/students/recent/count`, {
+      const recentStudentsRes = await axiosInstance.get(`${API_URL}/api/students/recent/count`, {
         params: { enrolledAfter: thirtyDaysAgo.toISOString() }
       });
 
@@ -192,7 +192,7 @@ const AdminDashboard = () => {
     try {
       setTrendLoading(true);
       
-      const response = await axios.get(`${API_URL}/students/enrollment-trend`);
+      const response = await axiosInstance.get(`${API_URL}/api/students/enrollment-trend`);
       
       if (response.data.success) {
         setEnrollmentData(response.data.data);
@@ -213,7 +213,7 @@ const AdminDashboard = () => {
     try {
       setDistributionLoading(true);
       
-      const response = await axios.get(`${API_URL}/counts`);
+      const response = await axiosInstance.get(`${API_URL}/api/counts`);
       
       if (response.data.success) {
         setCourseDistributionData(response.data.data);
@@ -232,7 +232,7 @@ const AdminDashboard = () => {
 
   const fetchRecentActivities = async () => {
     try {
-      const response = await axios.get(`${API_URL}/activities/recent`);
+      const response = await axiosInstance.get(`${API_URL}/api/activities/recent`);
       
       if (response.data.success) {
         setRecentActivities(response.data.data);
@@ -247,7 +247,7 @@ const AdminDashboard = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/degree-levels`);
+      const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
       setCalendarData(prev => ({
         ...prev,
         degreeLevels: response.data
@@ -260,7 +260,7 @@ const AdminDashboard = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get(`${API_URL}/departments/by-degree`, {
+      const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setCalendarData(prev => ({
@@ -280,7 +280,7 @@ const AdminDashboard = () => {
   const fetchBatches = async (departmentId) => {
     try {
       const degreeLevel = calendarData.selectedDegree;
-      const response = await axios.get(`${API_URL}/batches`, {
+      const response = await axiosInstance.get(`${API_URL}/api/batches`, {
         params: { department: departmentId, degreeLevel }
       });
       setCalendarData(prev => ({
@@ -299,7 +299,7 @@ const AdminDashboard = () => {
   const fetchCalendar = async (batchId) => {
     try {
       setCalendarLoading(true);
-      const response = await axios.get(`${API_URL}/batches/${batchId}/calendar`);
+      const response = await axiosInstance.get(`${API_URL}/api/batches/${batchId}/calendar`);
       
       const transformCalendarData = (academicCalendar) => {
         return academicCalendar.flatMap(semester => {

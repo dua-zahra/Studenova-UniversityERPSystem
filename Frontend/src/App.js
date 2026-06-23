@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { ToastContainer } from 'react-toastify';  
 import 'react-toastify/dist/ReactToastify.css'; 
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import DemoBanner from './components/DemoBanner';
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useAuth } from "./context/AuthContext";
@@ -63,6 +63,8 @@ const App = () => {
   }, [setUserRole]);
 
   return (
+    <>
+    <DemoBanner />
     <Router>
       <ToastContainer />
     <Routes>
@@ -129,6 +131,7 @@ const App = () => {
 
 
     </Router>
+     </>
   );
 };
 

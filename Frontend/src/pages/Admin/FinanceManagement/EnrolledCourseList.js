@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance  from '../../../axiosConfig';
 import API_URL from '../../../config';
 
 import { 
@@ -63,7 +63,7 @@ const RepeatFreshCourseFeeList = () => {
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get(`${API_URL}/repeat-fresh-course-fees`, { params });
+      const response = await axiosInstance.get(`${API_URL}/api/repeat-fresh-course-fees`, { params });
       
       if (response.data.success) {
         setCourseFees(response.data.data);
@@ -84,8 +84,8 @@ const RepeatFreshCourseFeeList = () => {
     setDownloading(prev => ({ ...prev, [courseFeeId]: true }));
     
     try {
-      const response = await axios.get(
-        `${API_URL}/repeat-fresh-course-fees/${courseFeeId}/invoice`,
+      const response = await axiosInstance.get(
+        `${API_URL}/api/repeat-fresh-course-fees/${courseFeeId}/invoice`,
         { 
           responseType: 'blob',
           headers: {
@@ -137,8 +137,8 @@ const RepeatFreshCourseFeeList = () => {
 
     setPaymentLoading(true);
     try {
-      const response = await axios.post(
-        `${API_URL}/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
+      const response = await axiosInstance.post(
+        `${API_URL}/api/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
         paymentData
       );
 
