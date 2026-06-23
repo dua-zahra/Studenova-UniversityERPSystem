@@ -205,7 +205,7 @@ app.use('/default-avatar.png', express.static(path.join(__dirname, 'public/defau
 (async () => {
   try {
     await dbConnection();
-
+app.set('trust proxy', 1);
     app.use(session({
       secret: process.env.SESSION_SECRET || '*&()*()*KLJ:JSDWALKDE(**)',
       resave: false,
@@ -219,7 +219,7 @@ app.use('/default-avatar.png', express.static(path.join(__dirname, 'public/defau
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000 ,
-    sameSite: 'lax'
+    sameSite: 'none'
   }
     }));
 
