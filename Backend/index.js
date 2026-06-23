@@ -256,7 +256,7 @@ app.get("/api/test", async (req, res) => {
 
 
 
-    const port = process.env.PORT || 50000;
+    const port = process.env.PORT || 5000;
     app.listen(port, () => {
       console.log(`Server is running on port ${port}.`);
     });
