@@ -31,8 +31,8 @@ const ManageResults = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [assessmentDetails, setAssessmentDetails] = useState({});
 
-  // const backendURL = "http://localhost:65000/api";
-const backendURL = API_URL;
+  // `${API_URL}/api` = "http://localhost:65000/api";
+const backendURL = `${API_URL}/api`;
   useEffect(() => {
     const fetchDegrees = async () => {
       setLoading(prev => ({ ...prev, degree: true }));

@@ -34,7 +34,6 @@ import EnrolledCourseFee from "./pages/Admin/FinanceManagement/EnrolledCourseFee
 import EnrolledCourseList from "./pages/Admin/FinanceManagement/EnrolledCourseList";
 import ManageTimetable from './pages/Admin/SemesterTimetable/ManageTimetable'
 import PublishedTimetable from './pages/Admin/SemesterTimetable/PublishedTimetable'
-//import StudentResults from "./pages/Admin/ResultManagement/StudentResults"
 import AdminAttendance from "./pages/Admin/Attendance/AdminAttendance";
 import AdminResults from "./pages/Admin/Results/AdminResults";
 // Faculty Pages
