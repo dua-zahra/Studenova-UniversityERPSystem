@@ -47,7 +47,7 @@ const FacultyDashboard = () => {
         if (!email) return;
 
         const resCourses = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: email } }
         );
         if (resCourses.data.success) {
@@ -75,7 +75,7 @@ const FacultyDashboard = () => {
         for (const course of activeCourses) {
           try {
             const resSlots = await axios.get(
-              `${API_URL}/api/faculty-timetable/course-slots`,
+              `${API_URL}/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId: facultyUser?._id,
@@ -119,7 +119,7 @@ const FacultyDashboard = () => {
         for (const course of activeCourses) {
           try {
             const resCalendar = await axios.get(
-              `${API_URL}/api/batches/${course.batchId}/calendar`
+              `${API_URL}/batches/${course.batchId}/calendar`
             );
 
             const academicCalendar = resCalendar.data.academicCalendar || [];

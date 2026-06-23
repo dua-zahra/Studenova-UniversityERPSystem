@@ -10,23 +10,23 @@ const localizer = momentLocalizer(moment);
 
 const apiService = {
   fetchDegreeLevels: async () => {
-    const response = await axios.get(`${API_URL}/api/degree-levels`);
+    const response = await axios.get(`${API_URL}/degree-levels`);
     return response.data;
   },
   fetchDepartments: async (degreeLevel) => {
-    const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+    const response = await axios.get(`${API_URL}/departments/by-degree`, {
       params: { degreeLevel }
     });
     return response.data.departments || [];
   },
   fetchBatches: async (degreeLevel, department) => {
-    const response = await axios.get(`${API_URL}/api/batches`, {
+    const response = await axios.get(`${API_URL}/batches`, {
       params: { department, degreeLevel }
     });
     return response.data.data || [];
   },
   fetchCalendar: async (batchId) => {
-    const response = await axios.get(`${API_URL}/api/batches/${batchId}/calendar`);
+    const response = await axios.get(`${API_URL}/batches/${batchId}/calendar`);
     return response.data;
   }
 };

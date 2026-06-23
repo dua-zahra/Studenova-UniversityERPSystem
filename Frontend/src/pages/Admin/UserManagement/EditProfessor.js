@@ -47,7 +47,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const response = await axios.get(`${API_URL}/api/degree-levels`);
+        const response = await axios.get(`${API_URL}/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error("Failed to fetch degree levels");
@@ -61,7 +61,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
 
   const fetchProfessor = async () => {
     try {
-      const res = await axios.get(`${API_URL}/api/faculty/${id}`);
+      const res = await axios.get(`${API_URL}/faculty/${id}`);
       const data = res.data;
       const fmtDate = d => d ? new Date(d).toISOString().split('T')[0] : "";
 
@@ -87,7 +87,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const res = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const res = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       return res.data.departments || [];
@@ -175,7 +175,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
 
   try {
     await axios.put(
-      `${API_URL}/api/faculty/${id}`,
+      `${API_URL}/faculty/${id}`,
       payload,
       { headers: { "Content-Type": "multipart/form-data" } }
     );

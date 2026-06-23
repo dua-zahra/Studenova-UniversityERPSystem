@@ -13,7 +13,7 @@ const StudentTasks = () => {
     const fetchTasks = async () => {
       try {
         const { data } = await axios.get(
-          `${API_URL}/api/students/getStudentTasks`,
+          `${API_URL}/students/getStudentTasks`,
           { withCredentials: true }
         );
         if (data.success) {
@@ -91,7 +91,7 @@ const StudentTasks = () => {
 
               {task.assignmentFile && (
                 <a
-                  href={`${API_URL}/api/students/taskfile/${task.assignmentFile}`}
+                  href={`${API_URL}/students/taskfile/${task.assignmentFile}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline text-sm mb-2 inline-block"

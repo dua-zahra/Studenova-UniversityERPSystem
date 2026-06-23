@@ -29,7 +29,7 @@ function FacultyResultsPage() {
         }
 
         const response = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -42,7 +42,7 @@ function FacultyResultsPage() {
         for (const course of activeCourses) {
           try {
             const res = await axios.get(
-              `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
+              `${API_URL}/students/by-course/${encodeURIComponent(course.courseCode)}`,
               { params: { section: course.sectionName, batchId: course.batchId } }
             );
             const count = (res.data.students || []).length;
@@ -79,7 +79,7 @@ function FacultyResultsPage() {
       }
 
       const resStudents = await axios.get(
-        `${API_URL}/api/students/by-course/${encodeURIComponent(course.courseCode)}`,
+        `${API_URL}/students/by-course/${encodeURIComponent(course.courseCode)}`,
         { params: { section: course.sectionName, batchId: course.batchId } }
       );
 
@@ -93,7 +93,7 @@ function FacultyResultsPage() {
       let savedResultsData = null;
 
       try {
-        const resResults = await axios.get(`${API_URL}/api/results/by-course-section-with-teacher`, {
+        const resResults = await axios.get(`${API_URL}/results/by-course-section-with-teacher`, {
           params: {
             batchName: course.batchName,
             courseCode: course.courseCode,
@@ -325,7 +325,7 @@ function FacultyResultsPage() {
         department: selectedCourse.department 
       };
 
-      const response = await axios.put(`${API_URL}/api/results/update`, payload);
+      const response = await axios.put(`${API_URL}/results/update`, payload);
 
       if (response.data.success) {
         message.success(" Results updated successfully");
@@ -346,7 +346,7 @@ function FacultyResultsPage() {
   const handleDeleteResults = async () => {
     if (!selectedCourse) return;
     try {
-      const response = await axios.post(`${API_URL}/api/results/delete`, {
+      const response = await axios.post(`${API_URL}/results/delete`, {
         courseCode: selectedCourse.courseCode,
         batchName: selectedCourse.batchName,
         sectionName: selectedCourse.sectionName,

@@ -45,7 +45,7 @@ const FacultyList = () => {
   const fetchFaculty = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`${API_URL}/api/faculty`);
+      const res = await axios.get(`${API_URL}/faculty`);
       const facultyData = Array.isArray(res.data) ? res.data : (res.data.data || []);
       setFaculty(facultyData);
       setFilteredFaculty(facultyData);
@@ -80,7 +80,7 @@ const FacultyList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.put(`${API_URL}/api/faculty/block/${id}`, { isActive: false });
+          await axios.put(`${API_URL}/faculty/block/${id}`, { isActive: false });
           toast.success("Professor blocked successfully!");
           fetchFaculty();
         } catch (err) {
@@ -103,7 +103,7 @@ const FacultyList = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.put(`${API_URL}/api/faculty/unblock/${id}`, { isActive: true });
+          await axios.put(`${API_URL}/faculty/unblock/${id}`, { isActive: true });
           toast.success("Professor unblocked successfully!");
           fetchFaculty();
         } catch (err) {

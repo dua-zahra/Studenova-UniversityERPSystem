@@ -106,7 +106,7 @@ const CourseEnrollment = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-levels`);
+      const response = await axios.get(`${API_URL}/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -115,7 +115,7 @@ const CourseEnrollment = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const response = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -136,7 +136,7 @@ const CourseEnrollment = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
+      const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -166,7 +166,7 @@ const CourseEnrollment = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/by-batch`, {
+      const response = await axios.get(`${API_URL}/students/by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -199,7 +199,7 @@ const CourseEnrollment = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/academic-status`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/academic-status`);
       
       if (response.data.success) {
         setStudentAcademicData(response.data.data);
@@ -219,7 +219,7 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/credit-limits`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/credit-limits`);
       
       if (response.data.success) {
         setCreditLimits(response.data.data.creditLimits);
@@ -233,7 +233,7 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/repeatable-courses`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/repeatable-courses`);
       
       if (response.data.success) {
         setRepeatableCourses(response.data.data);
@@ -250,7 +250,7 @@ const CourseEnrollment = () => {
     if (!selectedStudent) return;
 
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/available-fresh-courses`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/available-fresh-courses`);
       
       if (response.data.success) {
         const pastCourses = response.data.data.filter(course => 
@@ -280,7 +280,7 @@ const CourseEnrollment = () => {
     try {
       for (const course of courses) {
         try {
-          const response = await axios.get(`${API_URL}/api/batches/active-for-course`, {
+          const response = await axios.get(`${API_URL}/batches/active-for-course`, {
             params: {
               courseCode: course.courseCode,
               targetSemester: course.originalSemester,
@@ -418,7 +418,7 @@ const CourseEnrollment = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/students/${selectedStudent._id}/repeat-course`,
+        `${API_URL}/students/${selectedStudent._id}/repeat-course`,
         repeatData
       );
 
@@ -447,7 +447,7 @@ const CourseEnrollment = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/students/${selectedStudent._id}/enroll-fresh-course`,
+        `${API_URL}/students/${selectedStudent._id}/enroll-fresh-course`,
         freshData
       );
 

@@ -18,7 +18,7 @@ export default function Results() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_URL}/api/students/getstudentresults`, {
+    fetch(`${API_URL}/students/getstudentresults`, {
       method: "GET",
       credentials: "include",
     })

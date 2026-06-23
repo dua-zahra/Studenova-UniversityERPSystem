@@ -46,7 +46,7 @@ const FacultySidebar = () => {
       setFaculty(storedUser);
 
       axios
-        .get(`${API_URL}/api/faculty/email/${storedUser.universityEmail}`)
+        .get(`${API_URL}/faculty/email/${storedUser.universityEmail}`)
         .then((res) => setFaculty(res.data))
         .catch(() => {
         });

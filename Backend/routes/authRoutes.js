@@ -122,19 +122,16 @@ router.post('/login',
       //     }
       //   });
       // }
-// In your student login section, update to include studentId:
 let student = await Student.findOne({ universityEmail: email }).select('+password');
 if (student) {
-  // ✅ ADD THIS: Check if password matches
   const isValid = await bcrypt.compare(password, student.password);
   if (!isValid) return res.status(401).json({ error: "Invalid student password" });
 
-  // ✅ FIXED: Store studentId in session
   req.session.user = { 
     id: student._id, 
     email: student.universityEmail, 
     role: 'student',
-    studentId: student.studentId, // ← THIS IS CRITICAL!
+    studentId: student.studentId, 
     name: `${student.firstName} ${student.lastName}`,
     fullName: `${student.firstName} ${student.lastName}`,
     username: student.studentId
@@ -152,7 +149,7 @@ if (student) {
       universityEmail: student.universityEmail,
       profilePic: student.profilePic || null,
       role: "student",
-      studentId: student.studentId, // ← ALSO RETURN TO FRONTEND
+      studentId: student.studentId,
       fullName: `${student.firstName} ${student.lastName}`
     }
   });
@@ -230,7 +227,6 @@ router.get('/me', async (req, res) => {
     if (role === "student") {
       user = await Student.findById(id);
       if (user) {
-        // ✅ Return studentId for students
         return res.json({
           user: {
             _id: user._id,
@@ -239,7 +235,7 @@ router.get('/me', async (req, res) => {
             email: user.universityEmail,
             profilePic: user.profilePic || null,
             role,
-            studentId: user.studentId, // ← ADD THIS
+            studentId: user.studentId, 
             fullName: `${user.firstName} ${user.lastName}`
           }
         });

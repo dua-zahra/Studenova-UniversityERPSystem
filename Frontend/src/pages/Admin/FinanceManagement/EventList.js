@@ -40,7 +40,7 @@ const EventList = () => {
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/api/event-payments`, {
+      const response = await axios.get(`${API_URL}/event-payments`, {
         params: {
           page: 1,
           limit: 1000 
@@ -113,7 +113,7 @@ const EventList = () => {
 
   const fetchEventDetails = async (eventId) => {
     try {
-      const response = await axios.get(`${API_URL}/api/event-payments/${eventId}`);
+      const response = await axios.get(`${API_URL}/event-payments/${eventId}`);
       if (response.data.success) {
         setSelectedEvent(response.data.data);
         setDetailModalVisible(true);
@@ -127,7 +127,7 @@ const EventList = () => {
   const downloadIndividualInvoice = async (eventId, studentId) => {
     try {
       const response = await axios.get(
-        `${API_URL}/api/event-payments/${eventId}/invoice/${studentId}`,
+        `${API_URL}/event-payments/${eventId}/invoice/${studentId}`,
         { 
           responseType: 'blob'
         }
@@ -153,7 +153,7 @@ const EventList = () => {
   const downloadAllInvoices = async (eventId) => {
     try {
       const response = await axios.get(
-        `${API_URL}/api/event-payments/${eventId}/invoices/all`,
+        `${API_URL}/event-payments/${eventId}/invoices/all`,
         { 
           responseType: 'blob'
         }

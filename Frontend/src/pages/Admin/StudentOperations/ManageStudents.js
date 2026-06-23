@@ -87,7 +87,7 @@ const FreezeUnfreeze = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-levels`);
+      const response = await axios.get(`${API_URL}/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -96,7 +96,7 @@ const FreezeUnfreeze = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const response = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -117,7 +117,7 @@ const FreezeUnfreeze = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
+      const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -149,7 +149,7 @@ const FreezeUnfreeze = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/by-batch`, {
+      const response = await axios.get(`${API_URL}/students/by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -183,7 +183,7 @@ const FreezeUnfreeze = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/academic-status`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/academic-status`);
       
       if (response.data.success) {
         setStudentAcademicData(response.data.data);
@@ -290,7 +290,7 @@ const FreezeUnfreeze = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/students/${selectedStudent._id}/freeze-semester`,
+        `${API_URL}/students/${selectedStudent._id}/freeze-semester`,
         {
           semesterNumber: studentAcademicData.currentSemester,
           reason: freezeData.reason
@@ -316,7 +316,7 @@ const FreezeUnfreeze = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/students/${selectedStudent._id}/unfreeze-semester`,
+        `${API_URL}/students/${selectedStudent._id}/unfreeze-semester`,
         unfreezeData
       );
 

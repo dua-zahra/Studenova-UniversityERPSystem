@@ -78,7 +78,7 @@ const DropCourse = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-levels`);
+      const response = await axios.get(`${API_URL}/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -87,7 +87,7 @@ const DropCourse = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const response = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -108,7 +108,7 @@ const DropCourse = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
+      const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -140,7 +140,7 @@ const DropCourse = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/by-batch`, {
+      const response = await axios.get(`${API_URL}/students/by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -176,7 +176,7 @@ const DropCourse = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/api/students/${selectedStudent._id}/academic-status`);
+      const response = await axios.get(`${API_URL}/students/${selectedStudent._id}/academic-status`);
       console.log('Academic data response:', response.data);
       
       if (response.data.success) {
@@ -295,7 +295,7 @@ const DropCourse = () => {
       console.log('Drop course payload:', payload);
 
       const response = await axios.post(
-        `${API_URL}/api/students/${selectedStudent._id}/drop-course`,
+        `${API_URL}/students/${selectedStudent._id}/drop-course`,
         payload
       );
 

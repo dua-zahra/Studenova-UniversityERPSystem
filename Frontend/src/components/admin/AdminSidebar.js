@@ -112,7 +112,7 @@ const AdminSidebar = () => {
 
   const fetchProfilePic = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/admin/profile/profile-pic`, {
+      const response = await fetch(`${API_URL}/admin/profile/profile-pic`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -159,7 +159,7 @@ const AdminSidebar = () => {
       setUploading(true);
       setShowOptions(false);
 
-      const response = await fetch(`${API_URL}/api/admin/profile/upload`, {
+      const response = await fetch(`${API_URL}/admin/profile/upload`, {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -190,7 +190,7 @@ const AdminSidebar = () => {
     try {
       setShowOptions(false);
       
-      const response = await fetch(`${API_URL}/api/admin/profile/delete`, {
+      const response = await fetch(`${API_URL}/admin/profile/delete`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {

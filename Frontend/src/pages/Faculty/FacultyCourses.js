@@ -24,7 +24,7 @@ function FacultyCourses() {
         }
 
         const response = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail }, withCredentials: true, timeout: 10000 }
         );
 

@@ -25,7 +25,7 @@ const FacultyTaskManager = () => {
         const facultyEmail = facultyUser?.universityEmail || facultyUser?.email;
 
         const response = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -99,7 +99,7 @@ const FacultyTaskManager = () => {
       if (assignmentFile) formData.append("assignmentFile", assignmentFile);
 
       const res = await axios.post(
-        `${API_URL}/api/faculty-tasks`,
+        `${API_URL}/faculty-tasks`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

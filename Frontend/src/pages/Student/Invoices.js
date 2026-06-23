@@ -14,7 +14,7 @@ const StudentFeeDashboard = () => {
 
   const fetchStudentFee = async () => {
     try {
-      const res = await axios.get(`${API_URL}/api/students/getStudentFee`, {
+      const res = await axios.get(`${API_URL}/students/getStudentFee`, {
         withCredentials: true
       });
       setData(res.data);

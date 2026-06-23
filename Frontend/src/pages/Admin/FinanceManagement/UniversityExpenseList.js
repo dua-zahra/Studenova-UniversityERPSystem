@@ -36,7 +36,6 @@ const StudentExpenseList = () => {
     total: 0
   });
 
-  // Fetch expenses on component mount and when filters change
   useEffect(() => {
     fetchExpenses();
   }, [filters, pagination.current, pagination.pageSize]);
@@ -50,13 +49,12 @@ const StudentExpenseList = () => {
         ...filters
       };
 
-      // Add date range filters if provided
       if (filters.dateRange && filters.dateRange.length === 2) {
         params.startDate = filters.dateRange[0].format('YYYY-MM-DD');
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get('http://localhost:65000/api/university-expenses/expenses', { params });
+      const response = await axios.get(`${API_URL}/university-expenses/expenses`, { params });
       
       if (response.data.success) {
         setExpenses(response.data.data);
@@ -75,7 +73,7 @@ const StudentExpenseList = () => {
 
   const fetchStudentInvoices = async (studentId) => {
     try {
-      const response = await axios.get(`http://localhost:65000/api/university-expenses/invoices/student/${studentId}`);
+      const response = await axios.get(`${API_URL}/university-expenses/invoices/student/${studentId}`);
       if (response.data.success) {
         return response.data.data;
       }
@@ -91,7 +89,6 @@ const StudentExpenseList = () => {
     setSelectedExpense(expense);
     setInvoiceModalVisible(true);
     
-    // Fetch latest invoice data for this student
     const invoiceData = await fetchStudentInvoices(expense.studentId);
     if (invoiceData) {
       setSelectedExpense(prev => ({
@@ -107,7 +104,7 @@ const StudentExpenseList = () => {
     
     try {
       const response = await axios.get(
-        `http://localhost:65000/api/university-expenses/invoices/${expenseId}/${invoiceNumber}/download`,
+        `${API_URL}/university-expenses/invoices/${expenseId}/${invoiceNumber}/download`,
         { 
           responseType: 'blob',
           headers: {
@@ -116,7 +113,6 @@ const StudentExpenseList = () => {
         }
       );
       
-      // Create blob link and download
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -209,7 +205,6 @@ const StudentExpenseList = () => {
     return icons[status] || <ExclamationCircleOutlined />;
   };
 
-  // Desktop columns
   const desktopColumns = [
     {
       title: 'Student ID',

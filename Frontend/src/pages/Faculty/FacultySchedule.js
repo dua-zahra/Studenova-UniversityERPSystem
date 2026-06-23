@@ -63,7 +63,7 @@ function FacultySchedulePage() {
         }
 
         const resCourses = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -75,7 +75,7 @@ function FacultySchedulePage() {
         for (const course of activeCourses) {
           try {
             const resSlots = await axios.get(
-              `${API_URL}/api/faculty-timetable/course-slots`,
+              `${API_URL}/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,

@@ -42,7 +42,7 @@ function FacultyAttendancePage() {
         }
 
         const resCourses = await axios.get(
-          `${API_URL}/api/faculty-courses/courses`,
+          `${API_URL}/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail } }
         );
 
@@ -53,7 +53,7 @@ function FacultyAttendancePage() {
         for (const course of activeCourses) {
           try {
             const resStudents = await axios.get(
-              `${API_URL}/api/students/by-course/${encodeURIComponent(
+              `${API_URL}/students/by-course/${encodeURIComponent(
                 course.courseCode
               )}`,
               {
@@ -71,7 +71,7 @@ function FacultyAttendancePage() {
 
           try {
             const resSlots = await axios.get(
-              `${API_URL}/api/faculty-timetable/course-slots`,
+              `${API_URL}/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId,
@@ -157,7 +157,7 @@ function FacultyAttendancePage() {
       setSelectedDate(selectedClassDate);
 
       const res = await axios.get(
-        `${API_URL}/api/students/by-course/${encodeURIComponent(
+        `${API_URL}/students/by-course/${encodeURIComponent(
           course.courseCode
         )}`,
         {
@@ -181,7 +181,7 @@ function FacultyAttendancePage() {
       if (selectedClassDate) {
         try {
           const resAttendance = await axios.get(
-            `${API_URL}/api/attendance/by-date`,
+            `${API_URL}/attendance/by-date`,
             {
               params: {
                 courseCode: course.courseCode,
@@ -292,7 +292,7 @@ function FacultyAttendancePage() {
       };
 
       const res = await axios.post(
-        `${API_URL}/api/attendance/save`,
+        `${API_URL}/attendance/save`,
         payload
       );
 

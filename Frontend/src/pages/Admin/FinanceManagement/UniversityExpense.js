@@ -82,7 +82,7 @@ const CreateStudentExpense = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-levels`);
+      const response = await axios.get(`${API_URL}/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       console.error('Error fetching degree levels:', error);
@@ -92,7 +92,7 @@ const CreateStudentExpense = () => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const response = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       
@@ -114,7 +114,7 @@ const CreateStudentExpense = () => {
 
   const fetchBatches = async (degreeLevel, department) => {
     try {
-      const response = await axios.get(`${API_URL}/api/teacher-assignment/batches/active`, {
+      const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
         params: { 
           degreeLevel: degreeLevel,
           department: department 
@@ -145,7 +145,7 @@ const CreateStudentExpense = () => {
 
     setFetchingStudents(true);
     try {
-      const response = await axios.get(`${API_URL}/api/university-expenses/students-by-batch`, {
+      const response = await axios.get(`${API_URL}/university-expenses/students-by-batch`, {
         params: {
           degreeLevel: selectedDegree,
           department: selectedDepartment,
@@ -432,7 +432,7 @@ const CreateStudentExpense = () => {
 
       console.log(' Sending payload:', payload);
 
-      const response = await axios.post(`${API_URL}/api/university-expenses/student-expense`, payload);
+      const response = await axios.post(`${API_URL}/university-expenses/student-expense`, payload);
       
       if (response.data.success) {
         showSuccessToast();

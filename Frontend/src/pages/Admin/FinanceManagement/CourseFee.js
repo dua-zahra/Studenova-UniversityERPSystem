@@ -53,7 +53,7 @@ const CourseFee = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-levels`);
+      const response = await axios.get(`${API_URL}/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -62,7 +62,7 @@ const CourseFee = () => {
 
   const fetchDegreeConfig = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/degree-config`);
+      const response = await axios.get(`${API_URL}/degree-config`);
       window.degreeConfig = response.data;
     } catch (error) {
       console.error('Failed to load degree config');
@@ -76,7 +76,7 @@ const CourseFee = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+      const response = await axios.get(`${API_URL}/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -95,7 +95,7 @@ const CourseFee = () => {
 
       for (const semester of semesters) {
         try {
-          const response = await axios.get(`${API_URL}/api/fees/courses-for-fees`, {
+          const response = await axios.get(`${API_URL}/fees/courses-for-fees`, {
             params: { 
               degreeLevel, 
               department: department.trim(),
@@ -127,7 +127,7 @@ const CourseFee = () => {
 
   const fetchAssignedFees = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/fees/assigned-course-fees`, {
+      const response = await axios.get(`${API_URL}/fees/assigned-course-fees`, {
         params: { degreeLevel, department: department.trim() }
       });
       
@@ -197,7 +197,7 @@ const CourseFee = () => {
         courseFees: feesToSave
       };
 
-      const response = await axios.post(`${API_URL}/api/fees/save-course-fees`, payload);
+      const response = await axios.post(`${API_URL}/fees/save-course-fees`, payload);
       
       if (response.data.success) {
         toast.success(`Fees for semester ${semester} saved successfully!`);

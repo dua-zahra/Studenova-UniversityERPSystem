@@ -113,7 +113,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const fetchDegreeLevels = async () => {
       try {
         setLoadingDegreeLevels(true);
-        const response = await axios.get(`${API_URL}/api/degree-levels`);
+        const response = await axios.get(`${API_URL}/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error('Failed to load degree levels');
@@ -134,7 +134,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
     const fetchDepartments = async () => {
       try {
         setLoadingDepartments(true);
-        const response = await axios.get(`${API_URL}/api/departments/by-degree`, {
+        const response = await axios.get(`${API_URL}/departments/by-degree`, {
           params: { degreeLevel: formData.degreeLevel }
         });
         setDepartments(response.data.departments || []);
@@ -164,7 +164,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
           degreeLevel: formData.degreeLevel
         });
 
-        const response = await axios.get(`${API_URL}/api/batches/open/enrollment`, {
+        const response = await axios.get(`${API_URL}/batches/open/enrollment`, {
           params: {
             department: formData.department,
             degreeLevel: formData.degreeLevel
@@ -596,7 +596,7 @@ const StudentEnrollmentPage = ({ onClose }) => {
 
     try {
       const response = await axios.post(
-        `${API_URL}/api/students/enroll`,
+        `${API_URL}/students/enroll`,
         formDataToSend,
         { 
           headers: { 'Content-Type': 'multipart/form-data' },

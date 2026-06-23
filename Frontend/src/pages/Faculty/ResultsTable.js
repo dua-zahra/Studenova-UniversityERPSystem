@@ -27,7 +27,7 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `${API_URL}/api/results/${batchId}/course-students`,
+        `${API_URL}/results/${batchId}/course-students`,
         { params: { courseCode: courseId, sectionName } }
       );
 
@@ -221,7 +221,7 @@ const ResultsTable = ({ courseId, batchId, sectionName }) => {
     }
 
     try {
-      await axios.post(`${API_URL}/api/results/save-results`, {
+      await axios.post(`${API_URL}/results/save-results`, {
         results: students,
         components,
         batchId,

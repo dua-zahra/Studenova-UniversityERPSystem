@@ -63,7 +63,7 @@ const RepeatFreshCourseFeeList = () => {
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get(`${API_URL}/api/repeat-fresh-course-fees`, { params });
+      const response = await axios.get(`${API_URL}/repeat-fresh-course-fees`, { params });
       
       if (response.data.success) {
         setCourseFees(response.data.data);
@@ -85,7 +85,7 @@ const RepeatFreshCourseFeeList = () => {
     
     try {
       const response = await axios.get(
-        `${API_URL}/api/repeat-fresh-course-fees/${courseFeeId}/invoice`,
+        `${API_URL}/repeat-fresh-course-fees/${courseFeeId}/invoice`,
         { 
           responseType: 'blob',
           headers: {
@@ -138,7 +138,7 @@ const RepeatFreshCourseFeeList = () => {
     setPaymentLoading(true);
     try {
       const response = await axios.post(
-        `${API_URL}/api/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
+        `${API_URL}/repeat-fresh-course-fees/${selectedCourseFee._id}/payment`,
         paymentData
       );
 
