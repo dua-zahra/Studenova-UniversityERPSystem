@@ -11,7 +11,6 @@ const axiosInstance = axios.create({
   }
 });
 
-// ✅ INTERCEPTOR - Blocks all write operations in demo mode
 axiosInstance.interceptors.request.use(
   (config) => {
     if (DEMO_MODE) {

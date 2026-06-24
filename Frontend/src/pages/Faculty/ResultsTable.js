@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axiosInstance from '../axiosConfig';import { Table, InputNumber, Button, Spin, Modal, Input, message } from "antd";
+import axiosInstance from '../../axiosConfig';
+import { Table, InputNumber, Button, Spin, Modal, Input, message } from "antd";
 import "antd/dist/reset.css";
 import API_URL from '../../config';
 
