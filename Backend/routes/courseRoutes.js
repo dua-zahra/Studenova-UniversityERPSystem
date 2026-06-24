@@ -15,6 +15,15 @@ const {
 } = require('../controllers/courseController');
 router.get('/counts', getAllSemesterCourseCounts);
 router.get('/degree-config', getDegreeConfig);
+router.get('/count', async (req, res) => {
+  try {
+    const Course = require('../models/Course');
+    const count = await Course.countDocuments();
+    res.json({ count });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 router.post('/courses', addOrUpdateCourseEntry);
 router.get('/courses/semester', getCourses);
 router.get('/semester-credits', getSemesterCredits);
