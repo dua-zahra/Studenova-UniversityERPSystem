@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import API_URL from '../../../config';
 
 import { 
@@ -54,7 +54,7 @@ const StudentExpenseList = () => {
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get(`${API_URL}/university-expenses/expenses`, { params });
+      const response = await axiosInstance.get(`${API_URL}/api/university-expenses/expenses`, { params });
       
       if (response.data.success) {
         setExpenses(response.data.data);
@@ -73,7 +73,7 @@ const StudentExpenseList = () => {
 
   const fetchStudentInvoices = async (studentId) => {
     try {
-      const response = await axios.get(`${API_URL}/university-expenses/invoices/student/${studentId}`);
+      const response = await axiosInstance.get(`${API_URL}/api/university-expenses/invoices/student/${studentId}`);
       if (response.data.success) {
         return response.data.data;
       }
@@ -103,8 +103,8 @@ const StudentExpenseList = () => {
     setDownloading(prev => ({ ...prev, [invoiceNumber]: true }));
     
     try {
-      const response = await axios.get(
-        `${API_URL}/university-expenses/invoices/${expenseId}/${invoiceNumber}/download`,
+      const response = await axiosInstance.get(
+        `${API_URL}/api/university-expenses/invoices/${expenseId}/${invoiceNumber}/download`,
         { 
           responseType: 'blob',
           headers: {

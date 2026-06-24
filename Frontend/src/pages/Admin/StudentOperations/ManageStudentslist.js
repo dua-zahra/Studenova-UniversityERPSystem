@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import "../../../assets/style.css";
 import API_URL from '../../../config';
 
@@ -67,7 +67,7 @@ const StudentAcademicOperationsList = () => {
 
       console.log('Fetching operations with params:', params);
       
-      const response = await axios.get(`${API_URL}/students/academic-operations`, { params });
+      const response = await axiosInstance.get(`${API_URL}/api/students/academic-operations`, { params });
       
       console.log('Operations response:', response.data);
       
@@ -99,7 +99,7 @@ const StudentAcademicOperationsList = () => {
         params.endDate = filters.dateRange[1].format('YYYY-MM-DD');
       }
 
-      const response = await axios.get(`${API_URL}/students/academic-operations/statistics`, { params });
+      const response = await axiosInstance.get(`${API_URL}/api/students/academic-operations/statistics`, { params });
       
       if (response.data.success) {
         setStatistics(response.data.data.summary || {
@@ -118,7 +118,7 @@ const StudentAcademicOperationsList = () => {
 
   const fetchOperationDetails = async (operationId) => {
     try {
-      const response = await axios.get(`${API_URL}/students/academic-operations/${operationId}/details`);
+      const response = await axiosInstance.get(`${API_URL}/api/students/academic-operations/${operationId}/details`);
       if (response.data.success) {
         return response.data.data;
       }

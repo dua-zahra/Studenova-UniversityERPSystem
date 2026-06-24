@@ -18,7 +18,7 @@ export default function Attendance() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_URL}/students/getstudentattendance`, {
+    fetch(`${API_URL}/api/students/getstudentattendance`, {
       credentials: "include",
     })
       .then((res) => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import API_URL from '../../../config';
 
@@ -64,7 +64,7 @@ const BatchResultsManagement = () => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(prev => ({ ...prev, degree: true }));
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         console.error('Error fetching degree levels:', error);
@@ -85,7 +85,7 @@ const BatchResultsManagement = () => {
     const fetchDepartments = async () => {
       try {
         setLoading(prev => ({ ...prev, department: true }));
-        const response = await axios.get(`${API_URL}/departments/by-degree`, {
+        const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: selectedDegree }
         });
         
@@ -119,7 +119,7 @@ const BatchResultsManagement = () => {
     const fetchBatches = async () => {
       try {
         setLoading(prev => ({ ...prev, batch: true }));
-        const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
+        const response = await axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/active`, {
           params: { 
             degreeLevel: selectedDegree,
             department: selectedDepartment 
@@ -159,8 +159,8 @@ const BatchResultsManagement = () => {
         setLoading(prev => ({ ...prev, details: true, results: true }));
         
         const [detailsResponse, resultsResponse] = await Promise.all([
-          axios.get(`${API_URL}/teacher-assignment/batches/${selectedBatch}`),
-          axios.get(`${API_URL}/results/batch/${selectedBatch}`)
+          axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+          axiosInstance.get(`${API_URL}/api/results/batch/${selectedBatch}`)
         ]);
 
         const batchData = detailsResponse.data;
@@ -313,7 +313,7 @@ const BatchResultsManagement = () => {
     try {
       setLoading(prev => ({ ...prev, results: true, studentResults: true }));
       
-      const response = await axios.get(`${API_URL}/results/batch/${selectedBatch}`);
+      const response = await axiosInstance.get(`${API_URL}/api/results/batch/${selectedBatch}`);
       
       if (response.data.success) {
         const resultsData = response.data.data || [];
@@ -335,7 +335,7 @@ const BatchResultsManagement = () => {
 
   const downloadResults = async (format = 'excel') => {
     try {
-      const response = await axios.get(`${API_URL}/results/batch/${selectedBatch}/export`, {
+      const response = await axiosInstance.get(`${API_URL}/api/results/batch/${selectedBatch}/export`, {
         params: { format },
         responseType: 'blob'
       });

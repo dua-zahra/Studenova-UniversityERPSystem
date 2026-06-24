@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from '../../axiosConfig';
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import API_URL from '../../config';
@@ -23,8 +23,8 @@ function FacultyCourses() {
           return;
         }
 
-        const response = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const response = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: facultyEmail }, withCredentials: true, timeout: 10000 }
         );
 

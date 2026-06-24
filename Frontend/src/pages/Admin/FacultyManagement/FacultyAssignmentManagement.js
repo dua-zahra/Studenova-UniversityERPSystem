@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import API_URL from '../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faTrash, faSync, faSearch, faCheckCircle, faClock, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
@@ -64,7 +64,7 @@ const FacultyManagement = () => {
         
         let facultyData = [];
         try {
-          const response = await axios.get(`${API_URL}/faculty`);
+          const response = await axiosInstance.get(`${API_URL}/api/faculty`);
           
           if (response.data.data && Array.isArray(response.data.data)) {
             facultyData = response.data.data;
@@ -76,7 +76,7 @@ const FacultyManagement = () => {
         } catch (error) {
           console.log('General faculty endpoint failed, trying teacher assignment endpoint');
           
-          const fallbackResponse = await axios.get(`${API_URL}/teacher-assignment/faculty`);
+          const fallbackResponse = await axiosInstance.get(`${API_URL}/api/teacher-assignment/faculty`);
           
           if (fallbackResponse.data.data && Array.isArray(fallbackResponse.data.data)) {
             facultyData = fallbackResponse.data.data;
@@ -139,7 +139,7 @@ const FacultyManagement = () => {
     const fetchDegreeLevels = async () => {
       try {
         setLoading(prev => ({ ...prev, degree: true }));
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         message.error('Failed to load degree levels');
@@ -160,7 +160,7 @@ const FacultyManagement = () => {
     const fetchDepartments = async () => {
       try {
         setLoading(prev => ({ ...prev, department: true }));
-        const response = await axios.get(`${API_URL}/departments/by-degree`, {
+        const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
           params: { degreeLevel: selectedDegree }
         });
         
@@ -193,7 +193,7 @@ const FacultyManagement = () => {
     const fetchBatches = async () => {
       try {
         setLoading(prev => ({ ...prev, batch: true }));
-        const response = await axios.get(`${API_URL}/teacher-assignment/batches/active`, {
+        const response = await axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/active`, {
           params: { 
             degreeLevel: selectedDegree,
             department: selectedDepartment 
@@ -233,8 +233,8 @@ const FacultyManagement = () => {
         setLoading(prev => ({ ...prev, details: true, courses: true }));
         
         const [detailsResponse, advancementResponse] = await Promise.all([
-          axios.get(`${API_URL}/teacher-assignment/batches/${selectedBatch}`),
-          axios.get(`${API_URL}/teacher-assignment/batches/${selectedBatch}/check-advancement`)
+          axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+          axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
         ]);
 
         const batchData = detailsResponse.data;
@@ -287,8 +287,8 @@ const FacultyManagement = () => {
 
     for (let sem = 1; sem <= totalSemesters; sem++) {
       try {
-        const response = await axios.get(
-          `${API_URL}/teacher-assignment/batches/${selectedBatch}/semesters/${sem}/courses`
+        const response = await axiosInstance.get(
+          `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${sem}/courses`
         );
         
         const coursesData = response.data.data || response.data || [];
@@ -320,8 +320,8 @@ const FacultyManagement = () => {
       setLoading(prev => ({ ...prev, details: true, courses: true, faculty: true }));
       
       const [detailsResponse, advancementResponse] = await Promise.all([
-        axios.get(`${API_URL}/teacher-assignment/batches/${selectedBatch}`),
-        axios.get(`${API_URL}/teacher-assignment/batches/${selectedBatch}/check-advancement`)
+        axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}`),
+        axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/check-advancement`)
       ]);
 
       const batchData = detailsResponse.data;
@@ -427,9 +427,9 @@ const FacultyManagement = () => {
         throw new Error('Missing required assignment data');
       }
 
-      const url = `${API_URL}/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${currentAssignment.courseCode}/sections/${encodeURIComponent(currentAssignment.sectionName)}`;
+      const url = `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${currentAssignment.courseCode}/sections/${encodeURIComponent(currentAssignment.sectionName)}`;
 
-      const response = await axios.put(
+      const response = await axiosInstance.put(
         url,
         { 
           facultyId,
@@ -481,8 +481,8 @@ const FacultyManagement = () => {
             throw new Error('Missing required data');
           }
 
-          const response = await axios.delete(
-            `${API_URL}/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${courseCode}/sections/${encodeURIComponent(sectionName)}`
+          const response = await axiosInstance.delete(
+            `${API_URL}/api/teacher-assignment/batches/${selectedBatch}/semesters/${batchDetails.currentSemester}/courses/${courseCode}/sections/${encodeURIComponent(sectionName)}`
           );
 
           if (response.data.success) {
@@ -506,7 +506,7 @@ const FacultyManagement = () => {
       content: 'Are you sure you want to advance this batch to the next semester? This action cannot be undone.',
       onOk: async () => {
         try {
-          await axios.post(`${API_URL}/teacher-assignment/batches/${selectedBatch}/advance-semester`);
+          await axiosInstance.post(`${API_URL}/api/teacher-assignment/batches/${selectedBatch}/advance-semester`);
           message.success('Semester advanced successfully');
           await refreshBatchData();
         } catch (error) {

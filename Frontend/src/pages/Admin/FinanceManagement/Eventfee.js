@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import API_URL from '../../../config';
@@ -48,7 +48,7 @@ const CreateEvent = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/degree-levels`);
+      const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -57,7 +57,7 @@ const CreateEvent = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get(`${API_URL}/departments/by-degree`, {
+      const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -68,7 +68,7 @@ const CreateEvent = () => {
 
   const fetchBatches = async () => {
     try {
-      const response = await axios.get(`${API_URL}/batches`);
+      const response = await axiosInstance.get(`${API_URL}/api/batches`);
       
       if (response.data.success) {
         const filteredBatches = response.data.data.filter(batchItem => 
@@ -253,7 +253,7 @@ const CreateEvent = () => {
 
       console.log('Sending event data:', eventData);
 
-      const response = await axios.post(`${API_URL}/event-payments`, eventData);
+      const response = await axiosInstance.post(`${API_URL}/api/event-payments`, eventData);
       
       if (response.data.success) {
         toast.success('Event payment created successfully!', { toastId: 'success' });

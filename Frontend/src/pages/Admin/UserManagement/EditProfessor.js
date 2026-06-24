@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from '../../../axiosConfig';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from 'antd';
@@ -47,7 +47,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
   useEffect(() => {
     const fetchDegreeLevels = async () => {
       try {
-        const response = await axios.get(`${API_URL}/degree-levels`);
+        const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
         setDegreeLevels(response.data);
       } catch (error) {
         toast.error("Failed to fetch degree levels");
@@ -61,7 +61,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
 
   const fetchProfessor = async () => {
     try {
-      const res = await axios.get(`${API_URL}/faculty/${id}`);
+      const res = await axiosInstance.get(`${API_URL}/api/faculty/${id}`);
       const data = res.data;
       const fmtDate = d => d ? new Date(d).toISOString().split('T')[0] : "";
 
@@ -87,7 +87,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
 
   const fetchDepartments = async (degreeLevel) => {
     try {
-      const res = await axios.get(`${API_URL}/departments/by-degree`, {
+      const res = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       return res.data.departments || [];
@@ -174,8 +174,8 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
   }
 
   try {
-    await axios.put(
-      `${API_URL}/faculty/${id}`,
+    await axiosInstance.put(
+      `${API_URL}/api/faculty/${id}`,
       payload,
       { headers: { "Content-Type": "multipart/form-data" } }
     );
@@ -350,7 +350,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
                 <div className="mb-3">
                   <div>
                     <img
-                      src={`${API_URL}/uploads/${formData.photoUrl}`}
+                      src={`${API_URL}/api/uploads/${formData.photoUrl}`}
                       alt="Current"
                       style={{
                         width: "150px",
@@ -467,7 +467,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
                     className="btn btn-primary btn-sm"
                     onClick={() =>
                       window.open(
-                        `${API_URL}/uploads/${formData.resumeUrl}`,
+                        `${API_URL}/api/uploads/${formData.resumeUrl}`,
                         '_blank',
                         'noopener,noreferrer'
                       )
@@ -544,7 +544,7 @@ const EditProfessor = ({ toggleEditMode, id, refreshFacultyList }) => {
                     className="btn btn-primary btn-sm"
                     onClick={() =>
                       window.open(
-                        `${API_URL}/uploads/${formData.degreeUrl}`,
+                        `${API_URL}/api/uploads/${formData.degreeUrl}`,
                         '_blank',
                         'noopener,noreferrer'
                       )

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../axiosConfig';
 import { Loader2 } from 'lucide-react';
 import API_URL from '../../config';
-const api = axios.create({
-  baseURL: `${API_URL}`,
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
+// const api = axios.create({
+//   baseURL: `${API_URL}/api`,
+//   withCredentials: true,
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// });
 
 const StudentDashboard = () => {
   const [payload, setPayload] = useState(null);

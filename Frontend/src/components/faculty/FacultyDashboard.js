@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import axiosInstance from '../../axiosConfig';
 import {
   Card, Row, Col, Progress, List, Spin, Badge, Typography, Dropdown, Tag, Tooltip
 } from "antd";
@@ -46,8 +46,8 @@ const FacultyDashboard = () => {
         const email = facultyUser?.universityEmail || facultyUser?.email;
         if (!email) return;
 
-        const resCourses = await axios.get(
-          `${API_URL}/faculty-courses/courses`,
+        const resCourses = await axiosInstance.get(
+          `${API_URL}/api/faculty-courses/courses`,
           { params: { universityEmail: email } }
         );
         if (resCourses.data.success) {
@@ -74,8 +74,8 @@ const FacultyDashboard = () => {
 
         for (const course of activeCourses) {
           try {
-            const resSlots = await axios.get(
-              `${API_URL}/faculty-timetable/course-slots`,
+            const resSlots = await axiosInstance.get(
+              `${API_URL}/api/faculty-timetable/course-slots`,
               {
                 params: {
                   facultyId: facultyUser?._id,
@@ -118,8 +118,8 @@ const FacultyDashboard = () => {
 
         for (const course of activeCourses) {
           try {
-            const resCalendar = await axios.get(
-              `${API_URL}/batches/${course.batchId}/calendar`
+            const resCalendar = await axiosInstance.get(
+              `${API_URL}/api/batches/${course.batchId}/calendar`
             );
 
             const academicCalendar = resCalendar.data.academicCalendar || [];

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import API_URL from '../../../config';
@@ -100,7 +100,7 @@ const Addfee = () => {
     if (!batch) return;
     
     try {
-      const response = await axios.get(`${API_URL}/batches`);
+      const response = await axiosInstance.get(`${API_URL}/api/batches`);
       if (response.data.success) {
         const batchInfo = response.data.data.find(batchItem => 
           batchItem.batchName === batch &&
@@ -236,7 +236,7 @@ const Addfee = () => {
 
   const fetchDegreeLevels = async () => {
     try {
-      const response = await axios.get(`${API_URL}/degree-levels`);
+      const response = await axiosInstance.get(`${API_URL}/api/degree-levels`);
       setDegreeLevels(response.data);
     } catch (error) {
       toast.error('Failed to load degree levels');
@@ -245,7 +245,7 @@ const Addfee = () => {
 
   const fetchDepartments = async () => {
     try {
-      const response = await axios.get(`${API_URL}/departments/by-degree`, {
+      const response = await axiosInstance.get(`${API_URL}/api/departments/by-degree`, {
         params: { degreeLevel }
       });
       setDepartments(response.data.departments || []);
@@ -256,7 +256,7 @@ const Addfee = () => {
 
   const fetchBatches = async () => {
     try {
-      const response = await axios.get(`${API_URL}/batches`);
+      const response = await axiosInstance.get(`${API_URL}/api/batches`);
       
       if (response.data.success) {
         const filteredBatches = response.data.data.filter(batchItem => 
@@ -279,7 +279,7 @@ const Addfee = () => {
 
   const fetchAssignedFees = async () => {
     try {
-      const response = await axios.get(`${API_URL}/fees/assigned-course-fees`, {
+      const response = await axiosInstance.get(`${API_URL}/api/fees/assigned-course-fees`, {
         params: { degreeLevel, department: department.trim() }
       });
       
@@ -303,7 +303,7 @@ const Addfee = () => {
 
       for (const semester of semesters) {
         try {
-          const response = await axios.get(`${API_URL}/fees/courses-for-fees`, {
+          const response = await axiosInstance.get(`${API_URL}/api/fees/courses-for-fees`, {
             params: { 
               degreeLevel, 
               department: department.trim(),
@@ -338,7 +338,7 @@ const Addfee = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/fees/structure`, {
+      const response = await axiosInstance.get(`${API_URL}/api/fees/structure`, {
         params: { degreeLevel, department: department.trim(), batch }
       });
 
@@ -488,7 +488,7 @@ const Addfee = () => {
         semesterBaseFees: Object.keys(semesterBaseFees).length > 0 ? semesterBaseFees : undefined
       };
 
-      const response = await axios.post(`${API_URL}/fees/structure`, payload);
+      const response = await axiosInstance.post(`${API_URL}/api/fees/structure`, payload);
       
       if (response.data.success) {
         toast.success(response.data.message);
@@ -581,7 +581,7 @@ const Addfee = () => {
 
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/fees/students-for-batch`, {
+      const response = await axiosInstance.get(`${API_URL}/api/fees/students-for-batch`, {
         params: { degreeLevel, department: department.trim(), batch }
       });
 
@@ -607,7 +607,7 @@ const Addfee = () => {
 
     setSaving(true);
     try {
-      const response = await axios.post(`${API_URL}/fees/generate-student-records`, {
+      const response = await axiosInstance.post(`${API_URL}/api/fees/generate-student-records`, {
         degreeLevel,
         department: department.trim(),
         batch

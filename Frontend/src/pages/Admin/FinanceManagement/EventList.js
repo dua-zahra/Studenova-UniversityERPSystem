@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { 
@@ -40,7 +40,7 @@ const EventList = () => {
   const fetchEvents = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`${API_URL}/event-payments`, {
+      const response = await axiosInstance.get(`${API_URL}/api/event-payments`, {
         params: {
           page: 1,
           limit: 1000 
@@ -113,7 +113,7 @@ const EventList = () => {
 
   const fetchEventDetails = async (eventId) => {
     try {
-      const response = await axios.get(`${API_URL}/event-payments/${eventId}`);
+      const response = await axiosInstance.get(`${API_URL}/api/event-payments/${eventId}`);
       if (response.data.success) {
         setSelectedEvent(response.data.data);
         setDetailModalVisible(true);
@@ -126,8 +126,8 @@ const EventList = () => {
 
   const downloadIndividualInvoice = async (eventId, studentId) => {
     try {
-      const response = await axios.get(
-        `${API_URL}/event-payments/${eventId}/invoice/${studentId}`,
+      const response = await axiosInstance.get(
+        `${API_URL}/api/event-payments/${eventId}/invoice/${studentId}`,
         { 
           responseType: 'blob'
         }
@@ -152,8 +152,8 @@ const EventList = () => {
 
   const downloadAllInvoices = async (eventId) => {
     try {
-      const response = await axios.get(
-        `${API_URL}/event-payments/${eventId}/invoices/all`,
+      const response = await axiosInstance.get(
+        `${API_URL}/api/event-payments/${eventId}/invoices/all`,
         { 
           responseType: 'blob'
         }

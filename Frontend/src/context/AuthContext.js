@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchSession = async () => {
       try {
-        const res = await fetch(`${API_URL}/auth/session`, {
+        const res = await fetch(`${API_URL}/api/auth/session`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await fetch(`${API_URL}/auth/logout`, {
+      await fetch(`${API_URL}/api/auth/logout`, {
         method: "POST",
         credentials: "include",
       });

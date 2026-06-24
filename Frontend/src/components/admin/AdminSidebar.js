@@ -112,7 +112,7 @@ const AdminSidebar = () => {
 
   const fetchProfilePic = async () => {
     try {
-      const response = await fetch(`${API_URL}/admin/profile/profile-pic`, {
+      const response = await fetch(`${API_URL}/api/admin/profile/profile-pic`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -123,7 +123,7 @@ const AdminSidebar = () => {
       if (response.ok) {
         const data = await response.json();
         if (data.success && data.profilePic) {
-          setProfilePic(`${API_URL}${data.profilePic}?t=${Date.now()}`);
+          setProfilePic(`${API_URL}/api${data.profilePic}?t=${Date.now()}`);
         } else {
           setProfilePic(null);
         }
@@ -159,7 +159,7 @@ const AdminSidebar = () => {
       setUploading(true);
       setShowOptions(false);
 
-      const response = await fetch(`${API_URL}/admin/profile/upload`, {
+      const response = await fetch(`${API_URL}/api/admin/profile/upload`, {
         method: 'POST',
         body: formData,
         credentials: 'include',
@@ -170,7 +170,7 @@ const AdminSidebar = () => {
       if (response.ok && data.success) {
         toast.success("Profile picture updated successfully!");
         if (data.profilePic) {
-          setProfilePic(`${API_URL}${data.profilePic}?t=${Date.now()}`);
+          setProfilePic(`${API_URL}/api${data.profilePic}?t=${Date.now()}`);
         }
       } else {
         throw new Error(data.message || "Upload failed");
@@ -190,7 +190,7 @@ const AdminSidebar = () => {
     try {
       setShowOptions(false);
       
-      const response = await fetch(`${API_URL}/admin/profile/delete`, {
+      const response = await fetch(`${API_URL}/api/admin/profile/delete`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {

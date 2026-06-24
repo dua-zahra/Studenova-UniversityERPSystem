@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axiosInstance from '../../axiosConfig';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTachometerAlt,
@@ -46,14 +46,14 @@ const FacultySidebar = () => {
       setFaculty(storedUser);
 
       axios
-        .get(`${API_URL}/faculty/email/${storedUser.universityEmail}`)
+        .get(`${API_URL}/api/faculty/email/${storedUser.universityEmail}`)
         .then((res) => setFaculty(res.data))
         .catch(() => {
         });
     }
   }, []);
 
-  const imageBasePath = `${API_URL}/uploads/`;
+  const imageBasePath = `${API_URL}/api/uploads/`;
 
  const profileImage = faculty?.profilePic
   ? `${imageBasePath}${faculty.profilePic}` 

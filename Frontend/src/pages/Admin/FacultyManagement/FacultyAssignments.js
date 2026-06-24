@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import API_URL from '../../../config';
-import axios from 'axios';
+import axiosInstance from '../../../axiosConfig';
 import { 
   Card, Table, Button, Tag, Space, Input, Select, 
   Row, Col, Typography, Alert, Spin, Empty, Tooltip
@@ -37,7 +37,7 @@ const TeacherAssignmentsListView = () => {
 
   const fetchFiltersData = async () => {
     try {
-      const degreeResponse = await axios.get(`${API_URL}/degree-levels`);
+      const degreeResponse = await axiosInstance.get(`${API_URL}/api/degree-levels`);
       console.log('Degree Levels Response:', degreeResponse.data);
       
       let degreeData = [];
@@ -57,7 +57,7 @@ const TeacherAssignmentsListView = () => {
       setDegreeLevels(formattedDegreeLevels);
       console.log('Formatted Degree Levels:', formattedDegreeLevels);
 
-      const deptResponse = await axios.get(`${API_URL}/departments/by-degree`);
+      const deptResponse = await axiosInstance.get(`${API_URL}/api/departments/by-degree`);
       console.log('Departments Response:', deptResponse.data);
       
       let deptData = [];
@@ -85,7 +85,7 @@ const TeacherAssignmentsListView = () => {
   const fetchTeacherAssignments = async () => {
     setLoading(true);
     try {
-      const batchesResponse = await axios.get(`${API_URL}/teacher-assignment/batches/active`);
+      const batchesResponse = await axiosInstance.get(`${API_URL}/api/teacher-assignment/batches/active`);
       
       let batchesData = [];
       if (Array.isArray(batchesResponse.data)) {
@@ -94,7 +94,7 @@ const TeacherAssignmentsListView = () => {
         batchesData = batchesResponse.data.data;
       }
 
-      const facultyResponse = await axios.get(`${API_URL}/teacher-assignment/faculty/with-teaching-status`);
+      const facultyResponse = await axiosInstance.get(`${API_URL}/api/teacher-assignment/faculty/with-teaching-status`);
       
       let facultyData = [];
       if (Array.isArray(facultyResponse.data)) {
@@ -111,8 +111,8 @@ const TeacherAssignmentsListView = () => {
         const currentSemester = batch.currentSemester || 1;
         
         try {
-          const coursesResponse = await axios.get(
-            `${API_URL}/teacher-assignment/batches/${batch._id}/semesters/${currentSemester}/courses`
+          const coursesResponse = await axiosInstance.get(
+            `${API_URL}/api/teacher-assignment/batches/${batch._id}/semesters/${currentSemester}/courses`
           );
 
           const coursesData = coursesResponse.data.data || coursesResponse.data || [];
